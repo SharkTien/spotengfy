@@ -263,7 +263,7 @@ const formatTime = (time) => {
 setInterval(() => {
     seekBar.value = music.currentTime;
     currentTime.innerHTML = formatTime(music.currentTime);
-    if (Math.floor(music.currentTime) === Math.floor(seekBar.max)) {
+    if (music.currentTime === music.duration) {
         if (albumSongs.length > 0) {
             currentMusic_finish = (shuffle) ? albumSongsShuffle[albumSongsShuffle.length - 1] : albumSongs[albumSongs.length - 1]
         } else {
