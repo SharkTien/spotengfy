@@ -1,0 +1,791 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+}
+
+@font-face {
+    font-family: "Be Vietnam Pro";
+    src: url("font/BeVietnamPro-Light.ttf");
+}
+
+@font-face {
+    font-family: "Be Vietnam Pro Black";
+    src: url("font/BeVietnamPro-Black.ttf")
+}
+
+button {
+    cursor: pointer;
+}
+
+.banner {
+    width: 100%;
+}
+
+input, select {
+    vertical-align: middle;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+}
+
+header .header-brand {
+    font-family: 'Be Vietnam Pro';
+    font-size: 34px;
+    font-weight: 900;
+    color: #111;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5px 0;
+}
+
+header nav {
+    float: center;
+}
+
+header nav ul {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+header nav ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 0 16px;
+}
+
+header nav ul li button {
+    border: none;
+    background: transparent;
+    font-family: 'Be Vietnam Pro';
+    font-size: 20px;
+    color: #111;
+}
+
+header nav .search {
+    align-items: center;
+    display: flex;
+    position: relative;
+    width: 35%;
+    height: 40px;
+    padding: 43px;
+    border-radius: 20px;
+    color: gray;
+    margin-left: 58%;
+}
+
+header nav .search::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    background: rgba(184, 184, 184,.1);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+
+header nav .search .bi {
+    position: absolute;
+    font-size: 30px;
+    padding: 3px 0px 0px 10px;
+}
+
+header nav .search input {
+    position: absolute;
+    width: 80%;
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0px 10px;
+    color: #111;
+    font-size: 20px;
+    font-family: 'Be Vietnam Pro';
+    margin-left: 10%;
+}
+
+.index-banner {
+    width: 100%;
+    height: 80vh;
+    background-image: url(img/banner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.box {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 90vh;
+    background: #111;
+}
+
+.box2, .artists-boxx {
+    align-items: center;
+    padding: 20px 0 0 50px;
+    width: 100%;
+    height: 90vh;
+    background: #111;
+    overflow: hidden;
+    overflow-y: scroll;
+    border: none;
+}
+
+.artists-boxx {
+    padding: 0;
+}
+
+.artists-boxx .name-artist {
+    font-size: 70px;
+    color: #fff;
+    font-family: 'Be Vietnam Pro Black';
+    margin-top: 100px;
+}
+
+.artists-boxx {
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -100px;
+    overflow-y: scroll;
+}
+
+.artists-boxx .subtitle {
+    font-family: "Be Vietnam Pro";
+    font-weight: 900;
+    font-size: 30px;
+    color: #fff;
+    margin-left: 50px;
+}
+
+.artists-play {
+    height: 100px;
+    width: 100%;
+    background: #111;
+    padding: 25px 50px 0 50px;
+}
+
+.artists-play button {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: none;
+}
+
+.artists-boxx .introduce-artist {
+    display: flex;
+    width: 100%;
+    height: 65vh;
+    background: transparent;
+    color: #fff;
+    align-items: center;
+    padding: 50px 50px 50px 50px;
+}
+
+.artists-boxx .playlist-artists {
+    width: 100%;
+    height: 75vh;
+    background: #111;
+}
+
+.music-box {
+    height: 100%;
+    width: 100%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.music-box ul {
+    width: 90%;
+    height: 70%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(225, 120, 90, 255);
+    border-radius: 12px;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+.music-box::-webkit-scrollbar {
+    display: block;
+}
+
+
+.box2::-webkit-scrollbar {
+    display: block;
+}
+
+.scrollAlbumArtists::-webkit-scrollbar,
+.scrollAlbumCustom::-webkit-scrollbar {
+    display: block;
+}
+
+
+.songItemAlbum,
+.songItem,
+.checkpoint {
+    width: 100%;
+    list-style-type: none;
+    padding: 10px 0 10px 50px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    font-family: 'Be Vietnam Pro';
+}
+
+
+.songItemAlbum span,
+.songItem span,
+.checkpoint span {
+    width: 100px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff;
+}
+
+
+.songItemAlbum img,
+.songItem img,
+.checkpoint img {
+    width: 50px;
+    height: 50px;
+    margin-left: 25px;
+    object-fit: cover;
+}
+
+.songItemAlbum h5,
+.songItem h5,
+.checkpoint h5 {
+    font-size: 20px;
+    margin-left: 180px;
+    color: #fff;
+}
+
+.albumItem h1,
+.albumcustomItem h1,
+.create-album h1 {
+    margin-top: 10px;
+    color: #dedede;
+    font-size: 25px;
+    position: center;
+}
+
+.songItemAlbum h5 .subtitle,
+.songItem h5 .subtitle,
+.checkpoint h5 .subtitle,
+.albumItem .subtitle,
+.albumcustomItem .subtitle,
+.create-album .subtitle {
+    font-size: 15px;
+    color: #dedede;
+}
+
+
+.songItemAlbum .run,
+.songItem .run,
+.checkpoint .run {
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    float: left;
+    border: none;
+    margin-right: 100px;
+    color: rgba(163, 133, 133, 0.15)
+}
+
+.notfound {
+    color: #fff;
+    font-size: 25px;
+    font-family: 'Be Vietnam Pro';
+    display: flex;
+    text-align: center;
+    display: none;
+}
+
+.songItem.hide {
+    display: none;
+}
+
+.songItemAlbum:hover,
+.songItem:hover {
+    background: rgba(255, 255, 255, 0.15)
+}
+
+.checkpoint .run {
+    cursor: default;
+}
+
+.container {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    font-family: 'Be Vietnam Pro';
+
+}
+
+.music-player {
+    width: 1200px;
+    border-radius: 12px;
+    height: 285px;
+    background: #111;
+    box-shadow: 0 40px 100px rgba(255,255,255,0.1);
+    padding: 20px;
+    overflow: hidden;
+    color: #fff;
+}
+
+.panel {
+    align-items: center;
+    justify-content: center;
+    display: block;
+}
+
+.music-name,
+.artist-name {
+    display: block;
+    text-align: center;
+    height: 48px;
+}
+
+#artists-suggested, 
+#created-album {
+    width: 100%;
+    height: 100%;
+}
+
+.layer-create-album {
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    color: #fff;
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+}   
+
+.mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    opacity: 0.7;
+}
+
+.create-album-box {
+    width: 800px;
+    height: 350px;
+    background: rgb(25, 25, 25);
+    border-radius: 15px;
+    border: none;
+    position: absolute;
+}
+
+.layer-create-album .title {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.create-album-box .title .close {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: transparent;
+    border: none;   
+}
+
+.create-album-box .title h5 {
+    width: 100%;
+    color: #fff;
+    font-family: 'Be Vietnam Pro';
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.create-album-box .body {
+    padding: 20px;
+    align-items: center;
+    line-height: 80px;
+    height: 100%;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Be Vietnam Pro';
+    margin-left: 20px;
+}
+
+.create-album-box .body input {
+    height: 50px;
+    width: 500px;
+    border-radius: 20px;
+    color: gray;
+    border: none;
+    margin-left: 20px; 
+    padding: 0 20px 0 20px;
+    font-size: 20px;
+}
+
+
+.create-album-box .body .create {
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    margin-left: 330px;
+}
+
+.artist-name {
+    font-size: 20px;
+}
+
+.disk {
+    float: left;
+    position: relative;
+    display: block;
+    margin: 30px 100px 0px 100px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-image: url('img/banner/00000.jpg');
+    background-size: cover;
+    box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.08);
+    animation: rotate 20s linear infinite;
+    animation-play-state: paused;
+}
+
+.panel {
+    align-items: center;
+    justify-content: center;
+}
+.disk::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #111;
+}
+
+.song-slider {
+    display: inline-block;
+    width: 750px;
+    position: absolute;
+    margin-bottom: 20px;
+}
+.seek-bar {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    background: #fff;
+    overflow: hidden;
+    
+}
+.seek-bar::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 1px;
+    height: 20px;
+    background: transparent;
+    box-shadow: -800px 0 0 800px rgba(225, 120, 90, 255);
+}
+
+.current-time,
+.song-duration {
+    font-size: 14px;
+}
+
+.song-duration{
+    position: absolute;
+    right: 0;
+}
+
+.volume-bar {
+    float: right;
+    -webkit-appearance: none;
+    width: 100px;
+    height: 5px;
+    border-radius: 10px;
+    background: #fff;
+    overflow: hidden;
+    margin: 0 -140px 0 100px;
+}
+
+.volume-bar::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 1px;
+    height: 20px;
+    background: transparent;
+    box-shadow: -200px 0 0 200px rgb(225, 120, 90, 255);
+}
+
+.volume-btn,
+.volume-btn-mute {
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    
+    margin: 0 -115px 0 75px;
+}
+
+.volume-btn-mute {
+    margin: 0 -119px 0 74px;
+}
+
+.controls {
+    width: 38%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.play-btn {
+    position: relative;
+    display: inline-flex;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #d5eebb;
+    
+    border: none;
+}
+
+.play-btn span {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 30px;
+    background: #5f7a61;
+    border-radius: 2px; 
+    transition: .5s;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)
+}
+
+.play-btn span:nth-child(2) {
+    left: 55%;
+    transform-origin: center;
+}
+
+.play-btn.pause span:nth-child(2) {
+    transform: translateY(-50%) scaleY(0);
+}
+
+.play-btn.pause span:nth-child(1) {
+    width: 35%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    border-radius: 0;
+    clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
+}
+
+.play-btn.pause {
+    animation: pulse 2s linear infinite;
+}
+
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0;
+    }
+    50% {
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
+    }
+    100% {
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.4);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.disk.play {
+    animation-play-state: running;
+}
+
+
+.btn {
+    width: 40px;
+    height: 40px;
+    background: #d5eebb;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    
+    margin: 0 5px 0 5px;
+}
+
+.repeat-btn.active,
+.shuffle-btn.active {
+    background: #fff;
+}
+
+.album {
+    width: 100%;
+    height: 360px;
+    overflow: hidden;
+}
+
+.album.artists.extent,
+.album.custom.extent {
+    height: 100%;
+}
+
+
+.album h5 {
+    width: 100%;
+    color: #fff;
+    font-size: 25px;
+    font-family: 'Be Vietnam Pro';
+}
+
+.box2 .scrollAlbumArtists,
+.box2 .scrollAlbumCustom {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.box2 .scrollAlbumArtists.extent,
+.box2 .scrollAlbumCustom.extent {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.album .extent-button,
+.album .back-button,
+.album .extent-button2,
+.album .back-button2 {
+    border: none;
+    font-size: 20px;
+    font-family: "Be Vietnam Pro";
+    color: gray;
+    background: transparent;
+    width: 100px;
+    transition: .2s linear;
+}
+
+.album .extent-button:hover,
+.album .back-button:hover,
+.album .extent-button2:hover,
+.album .back-button2:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+.album .albumTitle {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.albumItem,
+.albumcustomItem,
+.create-album {
+    width: 230px;
+    height: 280px;
+    border: none;
+    background:rgba(184, 184, 184,.1);
+    border-radius: 12px;
+    list-style-type: none;
+    font-family: 'Be Vietnam Pro';    
+    margin: 0 30px 80px 40px;
+    transition: .2s linear;
+}
+
+.albumItem:hover,
+.albumcustomItem:hover,
+.create-album:hover {
+    background: rgba(255, 255, 255, 0.15)
+}
+
+.albumItem img,
+.albumcustomItem img,
+.create-album svg {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.albumcustomItem img,
+.create-album svg {
+    border-radius: 12px;
+}
+
+.headline {
+    display: flex;
+    width: 100%;
+    height: 50px;
+}
+
+
+@media only screen and (min-width: 1000px) {
+    header .header-brand {
+        margin: 31px 0;
+        text-align: left;
+        padding: 0px 20px 0px 40px;
+        line-height: 38px;
+        border-right: 3px solid #111;
+        float: left;
+    }
+    header nav {
+        float: center;
+    }
+    
+    header nav ul {
+        margin: 20px 0 0 20px;
+        float: left;
+    }
+    
+    header nav ul li button {
+        line-height: 60px;
+    }
+    
+    .mb {
+        display: none;
+    }
+}
