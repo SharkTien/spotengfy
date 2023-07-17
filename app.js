@@ -163,6 +163,9 @@ forwardBtn.addEventListener('click', () => {
         }
     }
     setMusic(currentMusic);
+    if (disk.classList.contains('play')) {
+        music.play()
+    }
 })
 
 
@@ -180,6 +183,9 @@ backwardBtn.addEventListener('click', () => {
         }
     }
     setMusic(currentMusic);
+    if (disk.classList.contains('play')) {
+        music.play()
+    }
 })
 
 repeatBtn.addEventListener('click', () => {
