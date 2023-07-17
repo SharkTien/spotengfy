@@ -27,6 +27,7 @@ const repeatBtn = document.querySelector('.repeat-btn');
 const shuffleBtn = document.querySelector('.shuffle-btn');
 const homeBtn = document.querySelector('.Home');
 const Library = document.querySelector('.Library');
+const Discover = document.querySelector('.Discover');
 const MusicTab = document.querySelector('.container');
 const volumeMuteBtn = document.querySelector('.volume-btn-mute');
 const volumeBtn = document.querySelector('.volume-btn');
@@ -111,6 +112,16 @@ Library.addEventListener('click', () => {
     artistsBoxx.style.display = "none";
 })
 
+Discover.addEventListener('click', () => {
+    albumtemp = [];
+    musicBox.style.display = "flex";
+    banner.style.display = "none";
+    albumBox.style.display = "none";
+    artistsBoxx.style.display = "none";
+    input.value = '';
+    search('')
+})
+
 volumeBtn.addEventListener('click', () => {
     volumeBtn.style.display = "none";
     volumeMuteBtn.style.display = "block";
@@ -152,7 +163,6 @@ forwardBtn.addEventListener('click', () => {
         }
     }
     setMusic(currentMusic);
-    playMusic();
 })
 
 
@@ -170,7 +180,6 @@ backwardBtn.addEventListener('click', () => {
         }
     }
     setMusic(currentMusic);
-    playMusic();
 })
 
 repeatBtn.addEventListener('click', () => {
@@ -212,6 +221,18 @@ closeAlbumGeneratorBtn.addEventListener('click', () => {
 
 // SETUP MUSIC
 
+const formatTime = (time) => {
+    let min = Math.floor(time / 60);
+    if (min < 10) {
+        min = `0${min}`;
+    }
+    let sec = Math.floor(time % 60);
+    if (sec < 10) {
+        sec = `0${sec}`;
+    }
+    return `${min} : ${sec}`;
+}
+
 const setMusic = (i) => {  
     if (albumSongs.includes(i)) {
     } else {
@@ -236,7 +257,7 @@ const setMusic = (i) => {
     setTimeout (() => {
         seekBar.max = music.duration;
         musicDuration.innerHTML = formatTime(music.duration);
-    }, 300);
+    }, 400);
     title.textContent = 'Spotengfy | ' + song.name + ' - ' + song.artist;
     
     link.rel = 'shortcut icon';
@@ -248,18 +269,6 @@ const setMusic = (i) => {
 setMusic(0);
 music.volume = 0.8;
 volumeBar.value = 80;
-
-const formatTime = (time) => {
-    let min = Math.floor(time / 60);
-    if (min < 10) {
-        min = `0${min}`;
-    }
-    let sec = Math.floor(time % 60);
-    if (sec < 10) {
-        sec = `0${sec}`;
-    }
-    return `${min} : ${sec}`;
-}
 
 setInterval(() => {
     seekBar.value = music.currentTime;
