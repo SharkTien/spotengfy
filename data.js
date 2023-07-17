@@ -105,6 +105,13 @@ let songs = [
         cover: 'img/banner/00018.jpg',
     },
     {
+        id: '00061',
+        name: 'Close To The Edge',
+        path: 'audio/Close To The Edge by Fulton Lee.mp3',
+        artist: 'Fulton Lee',
+        cover: 'img/banner/00061.jpg',
+    },
+    {
         id: '00007',
         name: 'ガランド (Garando)',
         path: 'audio/ガランド _ NORISTRY.ogg',

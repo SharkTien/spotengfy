@@ -246,7 +246,8 @@ const setMusic = (i) => {
 }
 
 setMusic(0);
-music.volume = 0.5;
+music.volume = 0.8;
+volumeBar.value = 80;
 
 const formatTime = (time) => {
     let min = Math.floor(time / 60);
