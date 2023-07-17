@@ -433,5 +433,40 @@ let songs = [
         path: 'audio/다운 (Dvwn) - 마지막 (Last).mp3',
         artist: 'Dvwn',
         cover: 'img/banner/00060.jpg',
+    },
+    {
+        id: '00062',
+        name: 'Champagne Shots',
+        path: 'audio/Sainté - Champagne Shots.mp3',
+        artist: 'Sainté',
+        cover: 'img/banner/00062.jpg',
+    },
+    {
+        id: '00063',
+        name: 'Tell Em',
+        path: 'audio/Cochise, $NOT - Tell Em.mp3',
+        artist: 'Cochise, $NOT',
+        cover: 'img/banner/00063.jpg',
+    },
+    {
+        id: '00064',
+        name: 'Honest',
+        path: 'audio/rei brown - Honest.mp3',
+        artist: 'rei brown',
+        cover: 'img/banner/00064.jpg',
+    },
+    {
+        id: '00065',
+        name: "If I Ain't Got You - Acoustic",
+        path: "audio/John Adams - If I Ain't Got You (Alicia Keys Acoustic Cover).mp3",
+        artist: 'John Adams',
+        cover: 'img/banner/00065.jpg',
+    },
+    {
+        id: '00066',
+        name: "Oceane (feat. Olivia Escuyos)",
+        path: "audio/RINI - Oceane ft.mp3",
+        artist: 'RINI, Olivia Escuyos',
+        cover: 'img/banner/00066.jpg',
     }
 ]
