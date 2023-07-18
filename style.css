@@ -8,6 +8,7 @@
     user-select: none;
     -webkit-user-drag: none;
     -moz-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -407,10 +408,6 @@ header nav ul li button {
     color: #fff;
 }
 
-.panel {
-    width: 100%;
-    display: block;
-}
 
 .music-name,
 .artist-name {
@@ -615,7 +612,7 @@ header nav ul li button {
 .btnbox {
     display: flex;
     width: 100%;
-    margin: 10px auto;
+    margin: 0 auto;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -724,7 +721,7 @@ header nav ul li button {
     height: 30px;
     background: transparent;
     border: none;
-    margin: 0 20px 0 20px;
+    margin: 0 15px 0 15px;
 }
 
 .btn svg{
