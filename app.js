@@ -1,7 +1,7 @@
 let currentMusic = 0;
 repeat = !!false
-repeat2 = !!false
 shuffle = !!false
+typing = !!false
 
 window.onbeforeunload = function() {
     return "Stop the music and refresh the page?";
@@ -30,7 +30,6 @@ const forwardBtn = document.querySelector('.forward-btn');
 const backwardBtn = document.querySelector('.backward-btn');
 const repeatBtn = document.querySelector('.repeat-btn');
 const shuffleBtn = document.querySelector('.shuffle-btn');
-const repeatBtn2 = document.querySelector('.repeat-current-btn');
 const homeBtn = document.querySelector('.Home');
 const homeBtn2 = document.querySelector('.Home2')
 const Library = document.querySelector('.Library');
@@ -70,6 +69,7 @@ const searchbox = document.querySelector('.search2')
 const spacebarkey = 32;
 const leftKey = 37;
 const rightKey = 39;
+const tabKey = 9;
 
 layerCreateAlbum.style.display = "none";
 volumeMuteBtn.style.display = "none";
@@ -82,8 +82,9 @@ searchbox.style.display = 'none';
 albumSongs = [];
 albumSongsShuffle = [];
 
+
 function handlePress(event) {
-    if (event.keyCode === spacebarkey && input.value == '' && input2.value == '' && albumname.value == '') {
+    if (event.keyCode === spacebarkey && !typing) {
         playBtn.click();
     }
 
@@ -96,9 +97,28 @@ function handlePress(event) {
         music.currentTime += seekBar.value/60;
         seekBar.value = music.currentTime;
     }
+    if (event.keyCode === tabKey) {
+        event.preventDefault();
+    }
 }
 
 document.addEventListener("keydown",handlePress);
+
+input.addEventListener('focus', () => {
+    typing = true
+})
+
+input2.addEventListener('focus', () => {
+    typing = true
+})
+
+input.addEventListener('blur', () => {
+    typing = false
+})
+
+input2.addEventListener('blur', () => {
+    typing = false
+})
 
 input.addEventListener('input', () => {
     input2.value = '';
@@ -215,19 +235,17 @@ playBtn.addEventListener('click', () => {
 })
 
 forwardBtn.addEventListener('click', () => {
-    if (!repeat2) {
-        if (albumSongs.length > 0) {
-            if (currentMusic == ((shuffle) ? albumSongsShuffle[albumSongsShuffle.length - 1] : albumSongs[albumSongs.length - 1]))  {
-                currentMusic = (shuffle) ? albumSongsShuffle[0] : albumSongs[0];
-            } else {
-                currentMusic = (shuffle) ? albumSongsShuffle[albumSongsShuffle.indexOf(currentMusic) + 1] : albumSongs[albumSongs.indexOf(currentMusic) + 1]
-            }
+    if (albumSongs.length > 0) {
+        if (currentMusic == ((shuffle) ? albumSongsShuffle[albumSongsShuffle.length - 1] : albumSongs[albumSongs.length - 1]))  {
+            currentMusic = (shuffle) ? albumSongsShuffle[0] : albumSongs[0];
         } else {
-            if (currentMusic >= songs.length - 1) {
-                currentMusic = 0;
-            } else {
-                currentMusic ++;
-            }
+            currentMusic = (shuffle) ? albumSongsShuffle[albumSongsShuffle.indexOf(currentMusic) + 1] : albumSongs[albumSongs.indexOf(currentMusic) + 1]
+        }
+    } else {
+        if (currentMusic >= songs.length - 1) {
+            currentMusic = 0;
+        } else {
+            currentMusic ++;
         }
     }
 
@@ -269,19 +287,6 @@ repeatBtn.addEventListener('click', () => {
 })
 
 
-repeatBtn2.addEventListener('click', () => {
-    if (repeat2) {
-        repeat2 = !!false;
-        repeatBtn2.setAttribute('title','Enable repeat this song');
-    } else {
-        repeat2 = !!true;
-        if (!repeatBtn.classList.contains('active')) {
-            repeatBtn.click()
-        }
-        repeatBtn2.setAttribute('title', 'Disable repeat this song');
-    }
-    repeatBtn2.classList.toggle('active');
-})
 
 shuffleBtn.addEventListener('click', () => {
     if (shuffle) {

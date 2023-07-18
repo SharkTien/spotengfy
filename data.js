@@ -58,7 +58,7 @@ let songs = [
     {
         id: '00003',
         name: 'Cắt kéo trên Lênin',
-        path: 'audio/Cắt kéo trên Lênin _ Low G.ogg',
+        path: 'audio/Cắt kéo trên Lênin _ Low G _ Rap Nhà Làm.mp3',
         artist: 'Low G',
         cover: 'img/banner/00003.jpg',
     },

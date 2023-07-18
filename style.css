@@ -40,7 +40,7 @@ input, select {
 
 header {
     width: 100%;
-    height: 55px;
+    height: 65px;
 }
 
 .pc {
@@ -153,7 +153,7 @@ header nav ul li button {
     color: #111;
     font-size: 20px;
     font-family: 'Be Vietnam Pro';
-    margin-left: 10%;
+    margin-left: 50px;
 }
 
 .index-banner {
@@ -177,7 +177,7 @@ header nav ul li button {
 
 .box2, .artists-boxx {
     align-items: center;
-    padding: 20px 0 0 50px;
+    padding: 10px 0 0 10px;
     width: 100%;
     height: 55vh;
     background: #111;
@@ -556,6 +556,7 @@ header nav ul li button {
 .song-slider {
     width: 100%;
     position: relative;
+    margin-top: 10px;
     margin-bottom: 20px;
     align-items: center;
 }
@@ -652,10 +653,11 @@ header nav ul li button {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: #d5eebb;
+    background: #fff;
     margin: 0 20px 0 20px;
     border: none;
 }
+
 
 .play-btn span {
     position: absolute;
@@ -664,7 +666,7 @@ header nav ul li button {
     transform: translateY(-50%);
     width: 10px;
     height: 30px;
-    background: #5f7a61;
+    background: #111;
     border-radius: 2px; 
     transition: .5s;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)
@@ -717,17 +719,35 @@ header nav ul li button {
     animation-play-state: running;
 }
 
-
 .btn {
-    width: 40px;
-    height: 40px;
-    background: #d5eebb;
-    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    margin: 0 20px 0 20px;
+}
+
+.btn svg{
+    width: 30px;
+    height: 30px;
+    background: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
-    margin: 0 12px 0 12px;
+}
+
+.btn:active svg {
+    fill: #ffffff;
+}
+
+.shuffle-btn svg, .repeat-btn svg{
+    width: 20px;
+    height: 20px;
+}
+
+.shuffle-btn.active svg, .repeat-btn.active svg{
+    fill: #ffffff;
 }
 
 .btnbox {
@@ -742,11 +762,6 @@ header nav ul li button {
     display: flex;
 }
 
-.repeat-btn.active,
-.shuffle-btn.active,
-.repeat-current-btn.active {
-    background: #fff;
-}
 
 .album {
     width: 100%;
@@ -790,7 +805,7 @@ header nav ul li button {
     font-family: "Be Vietnam Pro";
     color: gray;
     background: transparent;
-    width: 90px;
+    width: 100px;
     transition: .2s linear;
 }
 
@@ -807,6 +822,7 @@ header nav ul li button {
     display: flex;
     margin-bottom: 12px;
     margin-right: 10px;
+    margin-left: 10px;
 }
 
 .albumItem,
@@ -816,10 +832,10 @@ header nav ul li button {
     height: 180px;
     border: none;
     background:rgba(184, 184, 184,.1);
-    border-radius: 6px;
+    border-radius: 8px;
     list-style-type: none;
     font-family: 'Be Vietnam Pro';    
-    margin: 0 20px 35px 20px;
+    margin: 0 10px 25px 10px;
     transition: .2s linear;
 }
 
@@ -832,8 +848,8 @@ header nav ul li button {
 .albumItem img,
 .albumcustomItem img,
 .create-album svg {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     object-fit: cover;
 }
