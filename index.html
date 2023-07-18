@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="style.css">
@@ -9,7 +10,7 @@
 <body>
     <header>
         <a class="header-brand">spotengfy</a>
-        <nav>
+        <nav class="pc">
             <ul>    
                 <li><button class="Home">HOME</button></li>
                 <!-- <li><button class="About">ABOUT ME</button></li> -->
@@ -22,11 +23,35 @@
                 <input class="search-bar" type="text" spellcheck="false" placeholder="Search music...">
             </div>
         </nav>
+        <nav class="mb">
+            <ul>
+                <li><button class="Home2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="home"><path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.65721519,18.7714023 L6.65721519,15.70467 C6.65719744,14.9246392 7.29311743,14.2908272 8.08101266,14.2855921 L10.9670886,14.2855921 C11.7587434,14.2855921 12.4005063,14.9209349 12.4005063,15.70467 L12.4005063,15.70467 L12.4005063,18.7809263 C12.4003226,19.4432001 12.9342557,19.984478 13.603038,20 L15.5270886,20 C17.4451246,20 19,18.4606794 19,16.5618312 L19,16.5618312 L19,7.8378351 C18.9897577,7.09082692 18.6354747,6.38934919 18.0379747,5.93303245 L11.4577215,0.685301154 C10.3049347,-0.228433718 8.66620456,-0.228433718 7.51341772,0.685301154 L0.962025316,5.94255646 C0.362258604,6.39702249 0.00738668938,7.09966612 0,7.84735911 L0,16.5618312 C0,18.4606794 1.55487539,20 3.47291139,20 L5.39696203,20 C6.08235439,20 6.63797468,19.4499381 6.63797468,18.7714023 L6.63797468,18.7714023" transform="translate(2.5 2)" class="colorStroke200e32 svgStroke"></path></svg>
+                    <p>HOME</p>
+                </button></li>
+                <li><button class="Search2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="search"><g data-name="Layer 2"><path d="m20.71 19.29-3.4-3.39A7.92 7.92 0 0 0 19 11a8 8 0 1 0-8 8 7.92 7.92 0 0 0 4.9-1.69l3.39 3.4a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 11a6 6 0 1 1 6 6 6 6 0 0 1-6-6z" data-name="search" fill="#ffffff"></path></g></svg>
+                    <p>SEARCH</p>
+                </button></li>
+                <!-- <li><button class="Discover2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="discovery"><path fill="#ffffff" d="M9.99602972,7.55281494e-06 C10.7278853,-0.000908807126 11.4574685,0.0815620999 12.1706951,0.245835907 C14.7690443,0.817784239 17.0313145,2.40571737 18.4541827,4.65634271 C19.8770509,6.90696806 20.3424908,9.63359719 19.7469485,12.2295938 L19.7469485,12.2295938 L19.7203347,12.3348969 C19.6419116,12.5739163 19.4519358,12.7630594 19.2074268,12.8380238 C18.9279881,12.9236974 18.624158,12.8458804 18.4201377,12.6363831 C18.2161175,12.4268859 18.1461022,12.1208213 18.2387129,11.8433042 C19.1744696,7.65891833 16.8162387,3.43964592 12.7647251,2.04941778 C8.71321149,0.659189634 4.26573039,2.54316386 2.44111466,6.42254844 C0.616498926,10.301933 1.99899977,14.9345293 5.65021208,17.1758532 C9.30142439,19.4171771 14.0522115,18.5495452 16.6778644,15.1618833 L16.6778644,15.1618833 L16.7666515,15.0907986 C17.0446853,14.8996201 17.4202979,14.9074143 17.6917725,15.1220966 C17.993411,15.3606325 18.076654,15.7835483 17.8879604,16.1188281 C15.0246868,19.8239019 9.976095,21.0422036 5.74127001,19.0500085 C1.50644501,17.0578135 -0.77936521,12.389178 0.241710838,7.81747642 C1.26278689,3.2457748 5.31702489,-0.0034370198 9.99602972,7.55281494e-06 Z M12.9686569,6.05773901 C13.1160512,6.00480074 13.2772409,6.00480074 13.4246352,6.05773901 C13.6212811,6.11636288 13.7860516,6.25182094 13.8817486,6.43353266 C13.9774457,6.61524438 13.9960013,6.82788989 13.9332263,7.02346309 L13.9332263,7.02346309 L12.3723777,11.9135387 C12.3102136,12.1162927 12.1675296,12.284544 11.9777812,12.3788421 L11.9777812,12.3788421 L11.1009,12.8178076 L10.9971067,12.8472603 C10.6491605,12.920513 10.2887444,12.7475145 10.1322491,12.4176563 C9.96010423,12.0548122 10.0907985,11.6204038 10.4344703,11.413118 L10.4344703,11.413118 L11.02199,11.1234008 L12.0040876,7.98040786 L8.93500348,8.94613194 L7.53199358,13.4323593 L7.49427436,13.53029 C7.33404138,13.8749395 6.94029581,14.0567931 6.56742427,13.9415592 L6.56742427,13.9415592 L6.4532389,13.8962719 C6.30696934,13.8242877 6.18618132,13.7072065 6.10972828,13.5607161 C6.01416199,13.377603 5.99583206,13.1637956 6.05883318,12.9670558 L6.05883318,12.9670558 L7.58460645,8.08575958 C7.66366118,7.84662719 7.85301245,7.66031782 8.09319754,7.58533892 L8.09319754,7.58533892 Z" transform="translate(2 2)" class="color200e32 svgShape"></path></svg>
+                    <p>DISCOVER</p>
+                </button></li> -->
+                <li><button class="Library2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12zm-7.5-1c1.38 0 2.5-1.12 2.5-2.5V7h3V5h-4v5.51c-.42-.32-.93-.51-1.5-.51-1.38 0-2.5 1.12-2.5 2.5s1.12 2.5 2.5 2.5zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6z" fill="#ffffff"></path></svg>
+                    <p>LIBRARY</p>
+                </button></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section class="index-banner"></section>
+        <div class="search2">
+            <div class="bi"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#b8b8b8}</style><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></div>
+            <input class="search-bar2" type="text" spellcheck="false" placeholder="Search music...">
+        </div>
         <div class = "box">
-            <div class = "music-box">
+            <div class = "music-box">    
                 <ul id="song-list">
                     <li class = "checkpoint">
                         <button class = "run"></button>
@@ -39,7 +64,6 @@
             </div>
         </div>
         <div class = "box2">
-
             <div class="layer-create-album">
                 <div class="mask"></div>
                 <div class="create-album-box">
@@ -68,7 +92,7 @@
 
             <div class="album custom"> 
                 <div class="albumTitle">
-                    <h5>Your custom Album</h5> 
+                    <h5>Your custom Album (coming soon)</h5> 
                     <button class="extent-button2">Show all</button>
                     <button class="back-button2">Back</button>
                 </div>
@@ -96,28 +120,38 @@
         <section class="container">
             <audio src="" id="audio"></audio>
             <div class="music-player">
-                <div class="disk"></div>
+                <div class="disk-box">
+                    <div class="disk"></div>
+                </div>
                 <div class="panel">
                     <h1 class="music-name">song one</h1>
                     <p class="artist-name">artist</p>
                     <div class="song-slider">
                         <input type="range" value="0" class="seek-bar">
-                        <span class="current-time">00:00</span>
-                        <span class="song-duration">00:00</span>
+                        <div class="timebox">
+                            <span class="current-time">00:00</span>
+                            <span class="song-duration">00:00</span>
+                        </div>
                     </div>
 
                     <div class="controls">
-                        <button class="btn shuffle-btn" title="Enable shuffle"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#5f7a61}</style><path d="M403.8 34.4c12-5 25.7-2.2 34.9 6.9l64 64c6 6 9.4 14.1 9.4 22.6s-3.4 16.6-9.4 22.6l-64 64c-9.2 9.2-22.9 11.9-34.9 6.9s-19.8-16.6-19.8-29.6V160H352c-10.1 0-19.6 4.7-25.6 12.8L284 229.3 244 176l31.2-41.6C293.3 110.2 321.8 96 352 96h32V64c0-12.9 7.8-24.6 19.8-29.6zM164 282.7L204 336l-31.2 41.6C154.7 401.8 126.2 416 96 416H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H96c10.1 0 19.6-4.7 25.6-12.8L164 282.7zm274.6 188c-9.2 9.2-22.9 11.9-34.9 6.9s-19.8-16.6-19.8-29.6V416H352c-30.2 0-58.7-14.2-76.8-38.4L121.6 172.8c-6-8.1-15.5-12.8-25.6-12.8H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H96c30.2 0 58.7 14.2 76.8 38.4L326.4 339.2c6 8.1 15.5 12.8 25.6 12.8h32V320c0-12.9 7.8-24.6 19.8-29.6s25.7-2.2 34.9 6.9l64 64c6 6 9.4 14.1 9.4 22.6s-3.4 16.6-9.4 22.6l-64 64z"/></svg></button>
-                        <button class="btn backward-btn"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#5f7a61}</style><path d="M267.5 440.6c9.5 7.9 22.8 9.7 34.1 4.4s18.4-16.6 18.4-29V96c0-12.4-7.2-23.7-18.4-29s-24.5-3.6-34.1 4.4l-192 160L64 241V96c0-17.7-14.3-32-32-32S0 78.3 0 96V416c0 17.7 14.3 32 32 32s32-14.3 32-32V271l11.5 9.6 192 160z"/></svg></button>
-                        <button class="play-btn pause">
-                            <span></span>
-                            <span></span>
-                        </button>
-                        <button class="btn forward-btn"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#5f7a61}</style><path d="M52.5 440.6c-9.5 7.9-22.8 9.7-34.1 4.4S0 428.4 0 416V96C0 83.6 7.2 72.3 18.4 67s24.5-3.6 34.1 4.4l192 160L256 241V96c0-17.7 14.3-32 32-32s32 14.3 32 32V416c0 17.7-14.3 32-32 32s-32-14.3-32-32V271l-11.5 9.6-192 160z"/></svg></button>
-                        <button class="btn repeat-btn" title="Enable repeat"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#5f7a61}</style><path d="M0 224c0 17.7 14.3 32 32 32s32-14.3 32-32c0-53 43-96 96-96H320v32c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l64-64c12.5-12.5 12.5-32.8 0-45.3l-64-64c-9.2-9.2-22.9-11.9-34.9-6.9S320 19.1 320 32V64H160C71.6 64 0 135.6 0 224zm512 64c0-17.7-14.3-32-32-32s-32 14.3-32 32c0 53-43 96-96 96H192V352c0-12.9-7.8-24.6-19.8-29.6s-25.7-2.2-34.9 6.9l-64 64c-12.5 12.5-12.5 32.8 0 45.3l64 64c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V448H352c88.4 0 160-71.6 160-160z"/></svg></button>
-                        <button class="volume-btn-mute" title ="Unmute"><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#9e9e9e}</style><path d="M301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zM425 167l55 55 55-55c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-55 55 55 55c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-55-55-55 55c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l55-55-55-55c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg></button>
-                        <button class="volume-btn" title = "Mute"><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#9e9e9e}</style><path d="M301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zM412.6 181.5C434.1 199.1 448 225.9 448 256s-13.9 56.9-35.4 74.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C393.1 284.4 400 271 400 256s-6.9-28.4-17.7-37.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5z"/></svg></button>
-                        <input type="range" value="50" class="volume-bar">
+                        <div class="btnbox">
+                            <div class="btn-box">
+                                <button class="btn shuffle-btn" title="Enable shuffle"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#5f7a61}</style><path d="M403.8 34.4c12-5 25.7-2.2 34.9 6.9l64 64c6 6 9.4 14.1 9.4 22.6s-3.4 16.6-9.4 22.6l-64 64c-9.2 9.2-22.9 11.9-34.9 6.9s-19.8-16.6-19.8-29.6V160H352c-10.1 0-19.6 4.7-25.6 12.8L284 229.3 244 176l31.2-41.6C293.3 110.2 321.8 96 352 96h32V64c0-12.9 7.8-24.6 19.8-29.6zM164 282.7L204 336l-31.2 41.6C154.7 401.8 126.2 416 96 416H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H96c10.1 0 19.6-4.7 25.6-12.8L164 282.7zm274.6 188c-9.2 9.2-22.9 11.9-34.9 6.9s-19.8-16.6-19.8-29.6V416H352c-30.2 0-58.7-14.2-76.8-38.4L121.6 172.8c-6-8.1-15.5-12.8-25.6-12.8H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H96c30.2 0 58.7 14.2 76.8 38.4L326.4 339.2c6 8.1 15.5 12.8 25.6 12.8h32V320c0-12.9 7.8-24.6 19.8-29.6s25.7-2.2 34.9 6.9l64 64c6 6 9.4 14.1 9.4 22.6s-3.4 16.6-9.4 22.6l-64 64z"/></svg></button>
+                                <button class="btn backward-btn"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#5f7a61}</style><path d="M267.5 440.6c9.5 7.9 22.8 9.7 34.1 4.4s18.4-16.6 18.4-29V96c0-12.4-7.2-23.7-18.4-29s-24.5-3.6-34.1 4.4l-192 160L64 241V96c0-17.7-14.3-32-32-32S0 78.3 0 96V416c0 17.7 14.3 32 32 32s32-14.3 32-32V271l11.5 9.6 192 160z"/></svg></button>
+                                <button class="play-btn pause">
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                                <button class="btn forward-btn"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#5f7a61}</style><path d="M52.5 440.6c-9.5 7.9-22.8 9.7-34.1 4.4S0 428.4 0 416V96C0 83.6 7.2 72.3 18.4 67s24.5-3.6 34.1 4.4l192 160L256 241V96c0-17.7 14.3-32 32-32s32 14.3 32 32V416c0 17.7-14.3 32-32 32s-32-14.3-32-32V271l-11.5 9.6-192 160z"/></svg></button>
+                                <button class="btn repeat-btn" title="Enable repeat"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#5f7a61}</style><path d="M0 224c0 17.7 14.3 32 32 32s32-14.3 32-32c0-53 43-96 96-96H320v32c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l64-64c12.5-12.5 12.5-32.8 0-45.3l-64-64c-9.2-9.2-22.9-11.9-34.9-6.9S320 19.1 320 32V64H160C71.6 64 0 135.6 0 224zm512 64c0-17.7-14.3-32-32-32s-32 14.3-32 32c0 53-43 96-96 96H192V352c0-12.9-7.8-24.6-19.8-29.6s-25.7-2.2-34.9 6.9l-64 64c-12.5 12.5-12.5 32.8 0 45.3l64 64c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V448H352c88.4 0 160-71.6 160-160z"/></svg></button>    
+                            </div>
+                        </div>
+                        <div class="volbox">
+                            <button class="volume-btn-mute" title ="Unmute"><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#9e9e9e}</style><path d="M301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zM425 167l55 55 55-55c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-55 55 55 55c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-55-55-55 55c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l55-55-55-55c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg></button>
+                            <button class="volume-btn" title = "Mute"><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#9e9e9e}</style><path d="M301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zM412.6 181.5C434.1 199.1 448 225.9 448 256s-13.9 56.9-35.4 74.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C393.1 284.4 400 271 400 256s-6.9-28.4-17.7-37.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5z"/></svg></button>
+                            <input type="range" value="50" class="volume-bar">
+                        </div>
                     </div>
                 </div>
             </div>

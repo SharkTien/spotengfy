@@ -26,8 +26,12 @@ const backwardBtn = document.querySelector('.backward-btn');
 const repeatBtn = document.querySelector('.repeat-btn');
 const shuffleBtn = document.querySelector('.shuffle-btn');
 const homeBtn = document.querySelector('.Home');
+const homeBtn2 = document.querySelector('.Home2')
 const Library = document.querySelector('.Library');
+const Library2 = document.querySelector('.Library2');
 const Discover = document.querySelector('.Discover');
+// const Discover2 = document.querySelector('.Discover2');
+const Search2 = document.querySelector('.Search2');
 const MusicTab = document.querySelector('.container');
 const volumeMuteBtn = document.querySelector('.volume-btn-mute');
 const volumeBtn = document.querySelector('.volume-btn');
@@ -38,6 +42,7 @@ const banner = document.querySelector('.index-banner');
 const title = document.querySelector('title');
 const link = document.createElement('link');
 const input = document.querySelector('.search-bar');
+const input2 = document.querySelector('.search-bar2');
 const albumBox = document.querySelector('.box2')
 const failsearch = document.querySelector('.notfound');
 const extentButton = document.querySelector('.extent-button');
@@ -54,6 +59,7 @@ const layerCreateAlbum = document.querySelector('.layer-create-album');
 const closeAlbumGeneratorBtn = document.querySelector('.create-album-box .title .close');
 const createBtn = document.querySelector('.create-album-box .body .create');
 const albumname = document.getElementById('albumname');
+const searchbox = document.querySelector('.search2')
 
 const spacebarkey = 32;
 const leftKey = 37;
@@ -66,11 +72,12 @@ albumBox.style.display = "none";
 backButton.style.display = 'none';
 backButton2.style.display = 'none';
 artistsBoxx.style.display = 'none';
+searchbox.style.display = 'none';
 albumSongs = [];
 albumSongsShuffle = [];
 
 function handlePress(event) {
-    if (event.keyCode === spacebarkey && input.value == '' && albumname.value == '') {
+    if (event.keyCode === spacebarkey && input.value == '' && input2.value == '' && albumname.value == '') {
         playBtn.click();
     }
 
@@ -88,6 +95,7 @@ function handlePress(event) {
 document.addEventListener("keydown",handlePress);
 
 input.addEventListener('input', () => {
+    input2.value = '';
     banner.style.display = "none";
     musicBox.style.display = "flex";
     albumBox.style.display = "none";
@@ -95,12 +103,28 @@ input.addEventListener('input', () => {
     search(removeToneMark(input.value.toLowerCase()));
 })
 
+input2.addEventListener('input', () => {
+    input.value = '';
+    search(removeToneMark(input2.value.toLowerCase()));
+})
+
+
 homeBtn.addEventListener('click', () => {
     musicBox.style.display = "none";
     banner.style.display = "flex";
     albumBox.style.display = "none";
     artistsBoxx.style.display = "none";
 })
+
+homeBtn2.addEventListener('click', () => {
+    musicBox.style.display = "none";
+    banner.style.display = "flex";
+    searchbox.style.display = "none"
+    albumBox.style.display = "none";
+    artistsBoxx.style.display = "none";
+    window.scrollTo(0,0)
+})
+
 
 
 Library.addEventListener('click', () => {
@@ -112,6 +136,17 @@ Library.addEventListener('click', () => {
     artistsBoxx.style.display = "none";
 })
 
+Library2.addEventListener('click', () => {
+    albumtemp = [];
+    musicBox.style.display = "none";
+    searchbox.style.display = "none";
+    banner.style.display = "none";
+    albumBox.style.display = "";
+    artistsBoxx.scrollTo(0,0);
+    artistsBoxx.style.display = "none";
+    window.scrollTo(0,0)
+})
+
 Discover.addEventListener('click', () => {
     albumtemp = [];
     musicBox.style.display = "flex";
@@ -119,7 +154,32 @@ Discover.addEventListener('click', () => {
     albumBox.style.display = "none";
     artistsBoxx.style.display = "none";
     input.value = '';
+    input2.value = '';
     search('')
+})
+
+// Discover2.addEventListener('click', () => {
+//     albumtemp = [];
+//     searchbox.style.display = "none";
+//     musicBox.style.display = "flex";
+//     banner.style.display = "none";
+//     albumBox.style.display = "none";
+//     artistsBoxx.style.display = "none";
+//     input.value = '';
+//     input2.value = '';
+//     search('')
+// })
+
+Search2.addEventListener('click', () => {
+    searchbox.style.removeProperty('display');
+    musicBox.style.removeProperty('display');
+    banner.style.display = "none";
+    albumBox.style.display = "none";
+    artistsBoxx.style.display = "none";
+    input.value = '';
+    input2.value = '';
+    search('');
+    window.scrollTo(0,0)
 })
 
 volumeBtn.addEventListener('click', () => {
@@ -460,9 +520,9 @@ const getAlbum = () => {
         // li.addEventListener('click', () => artistsBox(i.albumName));
         albumListcustom.appendChild(createAlbumBtn);
     
-        createAlbumBtn.addEventListener('click', () => {
-            layerCreateAlbum.style.display = "flex";  
-        })
+        // createAlbumBtn.addEventListener('click', () => {
+        //     layerCreateAlbum.style.display = "flex";  
+        // })
     }    
     add_createAlbumBtn();
     for (customAlbum of custom_albums) {
