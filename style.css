@@ -743,7 +743,8 @@ header nav ul li button {
 }
 
 .repeat-btn.active,
-.shuffle-btn.active {
+.shuffle-btn.active,
+.repeat-current-btn.active {
     background: #fff;
 }
 

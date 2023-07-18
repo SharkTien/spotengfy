@@ -1,5 +1,6 @@
 let currentMusic = 0;
 repeat = !!false
+repeat2 = !!false
 shuffle = !!false
 
 window.onbeforeunload = function() {
@@ -29,6 +30,7 @@ const forwardBtn = document.querySelector('.forward-btn');
 const backwardBtn = document.querySelector('.backward-btn');
 const repeatBtn = document.querySelector('.repeat-btn');
 const shuffleBtn = document.querySelector('.shuffle-btn');
+const repeatBtn2 = document.querySelector('.repeat-current-btn');
 const homeBtn = document.querySelector('.Home');
 const homeBtn2 = document.querySelector('.Home2')
 const Library = document.querySelector('.Library');
@@ -213,19 +215,22 @@ playBtn.addEventListener('click', () => {
 })
 
 forwardBtn.addEventListener('click', () => {
-    if (albumSongs.length > 0) {
-        if (currentMusic == ((shuffle) ? albumSongsShuffle[albumSongsShuffle.length - 1] : albumSongs[albumSongs.length - 1]))  {
-            currentMusic = (shuffle) ? albumSongsShuffle[0] : albumSongs[0];
+    if (!repeat2) {
+        if (albumSongs.length > 0) {
+            if (currentMusic == ((shuffle) ? albumSongsShuffle[albumSongsShuffle.length - 1] : albumSongs[albumSongs.length - 1]))  {
+                currentMusic = (shuffle) ? albumSongsShuffle[0] : albumSongs[0];
+            } else {
+                currentMusic = (shuffle) ? albumSongsShuffle[albumSongsShuffle.indexOf(currentMusic) + 1] : albumSongs[albumSongs.indexOf(currentMusic) + 1]
+            }
         } else {
-            currentMusic = (shuffle) ? albumSongsShuffle[albumSongsShuffle.indexOf(currentMusic) + 1] : albumSongs[albumSongs.indexOf(currentMusic) + 1]
-        }
-    } else {
-        if (currentMusic >= songs.length - 1) {
-            currentMusic = 0;
-        } else {
-            currentMusic ++;
+            if (currentMusic >= songs.length - 1) {
+                currentMusic = 0;
+            } else {
+                currentMusic ++;
+            }
         }
     }
+
     setMusic(currentMusic);
     if (disk.classList.contains('play')) {
         music.play()
@@ -255,12 +260,27 @@ backwardBtn.addEventListener('click', () => {
 repeatBtn.addEventListener('click', () => {
     if (repeat) {
         repeat = !!false;
-        repeatBtn.setAttribute('title','Enable repeat');
+        repeatBtn.setAttribute('title','Enable repeat album');
     } else {
         repeat = !!true;
-        repeatBtn.setAttribute('title', 'Disable repeat');
+        repeatBtn.setAttribute('title', 'Disable repeat album');
     }
     repeatBtn.classList.toggle('active');
+})
+
+
+repeatBtn2.addEventListener('click', () => {
+    if (repeat2) {
+        repeat2 = !!false;
+        repeatBtn2.setAttribute('title','Enable repeat this song');
+    } else {
+        repeat2 = !!true;
+        if (!repeatBtn.classList.contains('active')) {
+            repeatBtn.click()
+        }
+        repeatBtn2.setAttribute('title', 'Disable repeat this song');
+    }
+    repeatBtn2.classList.toggle('active');
 })
 
 shuffleBtn.addEventListener('click', () => {
