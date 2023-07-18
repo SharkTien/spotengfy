@@ -2,6 +2,10 @@ let currentMusic = 0;
 repeat = !!false
 shuffle = !!false
 
+window.onbeforeunload = function() {
+    return "Stop the music and refresh the page?";
+}
+
 const shuffleSongs = songs.slice();
 
 for (let i = shuffleSongs.length - 1; i >= 0; i--) {
