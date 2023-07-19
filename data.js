@@ -23,7 +23,7 @@ let songs = [
     {
         id: '00012',
         name: 'Matsuri',
-        path: 'audio/Fujii Kaze -  Matsuri.ogg',
+        path: 'audio/Fujii Kaze - Matsuri (まつり).mp3',
         artist: 'Fujii Kaze',
         cover: 'img/banner/00012.jpg',
     },
@@ -386,6 +386,13 @@ let songs = [
         cover: 'img/banner/00049.jpg',
     },
     {
+        id: '00069',
+        name: "Shed a Light",
+        path: 'audio/ROBIN SCHULZ & DAVID GUETTA & CHEAT CODES _ SHED A LIGHT.mp3',
+        artist: 'Robin Schulz, David Guetta, Cheat Codes',
+        cover: 'img/banner/00069.jpg',
+    },
+    {
         id: '00050',
         name: 'Endless Love',
         path: 'audio/ENDLESS LOVE - Lionel Ritchie duet w Diana Ross w lyrics.mp3',
@@ -468,5 +475,47 @@ let songs = [
         path: "audio/RINI - Oceane ft.mp3",
         artist: 'RINI, Olivia Escuyos',
         cover: 'img/banner/00066.jpg',
+    },
+    {
+        id: '00067',
+        name: "Honey",
+        path: "audio/Johnny Balik - Honey.mp3",
+        artist: 'Johnny Balik',
+        cover: 'img/banner/00067.jpg',
+    },
+    {
+        id: '00068',
+        name: "Broke",
+        path: "audio/Samm Henshaw - Broke.mp3",
+        artist: 'Samm Henshaw',
+        cover: 'img/banner/00068.jpg',
+    },
+    {
+        id: '00070',
+        name: "No Promises (feat. Demi Lovato)",
+        path: "audio/Cheat Codes - No Promises.mp3",
+        artist: 'Cheat Codes, Demi Lovato',
+        cover: 'img/banner/00070.jpg',
+    },
+    {
+        id: '00071',
+        name: "Future",
+        path: "audio/Future.mp3",
+        artist: 'KIDO3008',
+        cover: 'img/banner/00071.jpg',
+    },
+    {
+        id: '00072',
+        name: "Cherry Blossom",
+        path: "audio/BOBBY Cherry Blossom.mp3",
+        artist: 'BOBBY',
+        cover: 'img/banner/00072.jpg',
+    },
+    {
+        id: '00073',
+        name: "Flower",
+        path: "audio/Johnny Stimson - Flower.mp3",
+        artist: 'Johnny Stimson',
+        cover: 'img/banner/00073.jpg',
     }
 ]

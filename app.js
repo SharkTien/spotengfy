@@ -4,8 +4,8 @@ shuffle = !!false
 typing = !!false
 
 window.onbeforeunload = function() {
-    return "Stop the music and refresh the page?";
-}
+    return "Stop playing your music and refresh this page?";
+};
 
 const shuffleSongs = songs.slice();
 
@@ -26,6 +26,7 @@ const disk = document.querySelector('.disk');
 const currentTime = document.querySelector('.current-time');
 const musicDuration = document.querySelector('.song-duration');
 const playBtn = document.querySelector('.play-btn');
+const playBtn2 = document.querySelector('.play-btn2');
 const forwardBtn = document.querySelector('.forward-btn');
 const backwardBtn = document.querySelector('.backward-btn');
 const repeatBtn = document.querySelector('.repeat-btn');
@@ -65,6 +66,8 @@ const closeAlbumGeneratorBtn = document.querySelector('.create-album-box .title 
 const createBtn = document.querySelector('.create-album-box .body .create');
 const albumname = document.getElementById('albumname');
 const searchbox = document.querySelector('.search2')
+const miniplayer = document.querySelector('.mini-player');
+const miniplayerbox = document.querySelector('.box-mini-player');
 
 const spacebarkey = 32;
 const leftKey = 37;
@@ -79,6 +82,7 @@ backButton.style.display = 'none';
 backButton2.style.display = 'none';
 artistsBoxx.style.display = 'none';
 searchbox.style.display = 'none';
+miniplayerbox.style.display = 'none';
 albumSongs = [];
 albumSongsShuffle = [];
 
@@ -140,6 +144,7 @@ homeBtn.addEventListener('click', () => {
     banner.style.display = "flex";
     albumBox.style.display = "none";
     artistsBoxx.style.display = "none";
+    MusicTab.style.display = "flex"
 })
 
 homeBtn2.addEventListener('click', () => {
@@ -148,6 +153,8 @@ homeBtn2.addEventListener('click', () => {
     searchbox.style.display = "none"
     albumBox.style.display = "none";
     artistsBoxx.style.display = "none";
+    MusicTab.style.display = "flex"
+    miniplayerbox.style.display = 'none';
     window.scrollTo(0,0)
 })
 
@@ -160,6 +167,7 @@ Library.addEventListener('click', () => {
     albumBox.style.display = "";
     artistsBoxx.scrollTo(0,0);
     artistsBoxx.style.display = "none";
+    MusicTab.style.display = "flex"
 })
 
 Library2.addEventListener('click', () => {
@@ -170,6 +178,8 @@ Library2.addEventListener('click', () => {
     albumBox.style.display = "";
     artistsBoxx.scrollTo(0,0);
     artistsBoxx.style.display = "none";
+    MusicTab.style.display = "none";
+    miniplayerbox.style.display = 'flex';
     window.scrollTo(0,0)
 })
 
@@ -179,6 +189,7 @@ Discover.addEventListener('click', () => {
     banner.style.display = "none";
     albumBox.style.display = "none";
     artistsBoxx.style.display = "none";
+    MusicTab.style.display = "flex";
     input.value = '';
     input2.value = '';
     search('')
@@ -202,6 +213,8 @@ Search2.addEventListener('click', () => {
     banner.style.display = "none";
     albumBox.style.display = "none";
     artistsBoxx.style.display = "none";
+    MusicTab.style.display = "none";
+    miniplayerbox.style.display = 'flex';
     input.value = '';
     input2.value = '';
     search('');
@@ -231,6 +244,18 @@ playBtn.addEventListener('click', () => {
         music.pause();
     }
     playBtn.classList.toggle('pause');
+    playBtn2.classList.toggle('pause');
+    disk.classList.toggle('play');
+})
+
+playBtn2.addEventListener('click', () => {
+    if (playBtn2.className.includes('pause')) {
+        music.play();
+    } else {
+        music.pause();
+    }
+    playBtn.classList.toggle('pause');
+    playBtn2.classList.toggle('pause');
     disk.classList.toggle('play');
 })
 
@@ -358,8 +383,15 @@ const setMusic = (i) => {
     link.rel = 'shortcut icon';
     link.href = song.cover;
     document.head.appendChild(link);
-    
+    miniplayer.innerHTML = `
+        <img id='image' src=${song.cover}>
+        <div>
+        <h1>${song.name}</h1>
+        <h1 class="mini-artist">${song.artist}</h1>
+        </div>
+    `
 }
+
 
 setMusic(0);
 music.volume = 0.8;
@@ -377,6 +409,7 @@ setInterval(() => {
         if ((!repeat) && (currentMusic == currentMusic_finish)) {
             currentMusic = (albumSongs.length > 0) ? ((shuffle) ? albumSongsShuffle[0] : albumSongs[0]) : 0;
             playBtn.classList.toggle('pause');
+            playBtn2.classList.toggle('pause');
             disk.classList.toggle('play');
             setMusic(currentMusic);
         } else {
@@ -398,6 +431,7 @@ volumeBar.addEventListener('input', () => {
 const playMusic = () => {
     music.play();
     playBtn.classList.remove('pause');
+    playBtn2.classList.remove('pause');
     disk.classList.add('play');
 }
 
@@ -435,6 +469,9 @@ for (let i = 0; i < songs.length; i++) {
     num += 1;
     addSongItem(num, i, "song-list", "songItem");
 }
+const div = document.createElement("div");
+div.style.height = "150px";
+songList.appendChild(div);
 
 path_cover_artists = 'img/artists/'
 
@@ -477,7 +514,6 @@ const artistsBox = (artist_name) => {
         
     playAlbumBtn.addEventListener('click', () => {
         albumSongs = albumtemp;
-        console.log(albumSongs);
         activeMusic(albumSongs[0]);
     })    
 }
