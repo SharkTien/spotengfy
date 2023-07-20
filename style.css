@@ -44,7 +44,7 @@ input, select {
 
 header {
     width: 100%;
-    height: 65px;
+    height: 55px;
 }
 
 .pc {
@@ -57,7 +57,7 @@ header {
     background-color: #111;
     width: 100%;
     bottom: 0;
-    height: 70px;
+    height: 50px;
     background: linear-gradient(to top, rgba(0,0,0,1), 40%, rgba(0,0,0,0.8), rgba(0,0,0,0));
     display: flex;
     align-items: center;
@@ -73,18 +73,18 @@ header {
 }
 
 .mb svg {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
 }
 
 .mb p {
     color: #fff;
-    font-size: 10px;
+    font-size: 8px;
 }
 
 header .header-brand {
     font-family: 'Be Vietnam Pro';
-    font-size: 34px;
+    font-size: 30px;
     font-weight: 900;
     color: #111;
     display: block;
@@ -122,7 +122,7 @@ header nav ul li button {
     display: flex;
     position: relative;
     width: 80%;
-    height: 30px;
+    height: 20px;
     /* padding: 25px; */
     border-radius: 20px;
     color: gray;
@@ -143,8 +143,8 @@ header nav ul li button {
 
 .search2 .bi {
     position: absolute;
-    font-size: 30px;
-    padding: 3px 0px 0px 10px;
+    font-size: 20px;
+    padding: 5px 0px 0px 15px;
 }
 
 .search2 input {
@@ -155,9 +155,9 @@ header nav ul li button {
     border: none;
     padding: 0px 10px;
     color: #111;
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'Be Vietnam Pro';
-    margin-left: 50px;
+    margin-left: 45px;
 }
 
 .index-banner {
@@ -171,11 +171,11 @@ header nav ul li button {
 
 .box-mini-player {
     position: fixed;
-    bottom: 70px;
+    bottom: 50px;
     width: 100%;
     justify-content: center;
     align-items: center;
-    height: 80px;
+    height: 60px;
     background: transparent;
     display: flex;
 }
@@ -184,7 +184,7 @@ header nav ul li button {
     padding: 5px 100px 5px 5px;
     width: 95%;
     border-radius: 5px;
-    bottom: 70px;
+    bottom: 55px;
     position: fixed;
     z-index: 10;
     background: rgb(25,25,25);
@@ -195,8 +195,7 @@ header nav ul li button {
 .mini-player h1 {
     width: 100%;
     font-family: "Be Vietnam Pro";
-    font-weight: 900;
-    font-size: 15px;
+    font-size: 12px;
     color: #fff;
     white-space: nowrap;
     overflow: hidden;
@@ -208,10 +207,10 @@ header nav ul li button {
 }
 
 .mini-player img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 5px;
-    margin: 0 20px 0 5px;
+    margin: 0 15px 0 0;
 }
 
 .box {
@@ -239,8 +238,8 @@ header nav ul li button {
 
 
 .artists-boxx .name-artist, .creator-boxx h1 {
-    font-size: 40px;
-    text-align: center;
+    font-size: 28px;
+    text-align: left;
     color: #fff;
     font-family: 'Be Vietnam Pro Black';
 }
@@ -267,16 +266,16 @@ header nav ul li button {
 }
 
 .artists-play, .button-play-cover-box {
-    height: 100px;
+    height: 70px;
     width: 100%;
     background: #111;
-    padding-left: 25px;
-    padding: 20px;
+    padding: 0px;
+    padding-left: 10px;
 }
 
 .artists-play button, .button-play-cover-box button {
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
     background-color: #fff;
     border: none;
@@ -301,7 +300,7 @@ header nav ul li button {
 }
 
 .creator-boxx .introduce-album {
-    height: 450px;
+    height: fit-content;
     background: linear-gradient(to bottom, rgba(147,71,71,255), #111);
 }
 
@@ -374,10 +373,10 @@ header nav ul li button {
 .checkpoint {
     width: 100%;
     list-style-type: none;
-    padding: 10px 10px 10px 25px;
+    padding: 5px 5px 5px 20px;
     display: flex;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 5px;
     font-family: 'Be Vietnam Pro';
 }
 
@@ -385,11 +384,7 @@ header nav ul li button {
 .songItemAlbum span,
 .songItem span,
 .checkpoint span {
-    width: fit-content;
-    font-size: 18px;
-    font-weight: 600;
-    color: #fff;
-    margin-right: 10px;
+    display: none
 }
 
 .checkpoint {
@@ -402,13 +397,14 @@ header nav ul li button {
 .checkpoint img {
     width: 40px;
     height: 40px;
-    margin-left: 10px;
+    margin-left: 5px;
     object-fit: cover;
 }
 
 .songItemAlbum h5,
 .songItem h5,
 .checkpoint h5 {
+    font-family: "Be Vietnam Pro";
     width: 100%;
     font-size: 15px;
     margin-left: 20px;
@@ -432,16 +428,19 @@ header nav ul li button {
 }
 
 .checkpoint h5 .subtitle,
-.albumItem .subtitle,
-.create-album .subtitle {
+.albumItem .subtitle {
     display: none;
 }
 
+.create-album .subtitle,
 .songItemAlbum h5 .subtitle,
 .songItem h5 .subtitle,
 .albumcustomItem .subtitle {
-    font-size: 15px;
+    font-size: 11px;
     color: gray;
+    margin-top: 2px;
+    font-family: 'Be Vietnam Pro';
+    font-weight: 900;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -454,7 +453,7 @@ header nav ul li button {
     height: 25px;
     background: transparent;
     border: none;
-    margin-right: 20px;
+    margin-right: 10px;
     color: rgba(163, 133, 133, 0.15)
 }
 
@@ -507,6 +506,7 @@ header nav ul li button {
 
 .music-name,
 .artist-name {
+    font-size: 18px;
     margin: 0 auto;
     margin-top: 0;
     margin-bottom: 0;
@@ -659,10 +659,12 @@ header nav ul li button {
 
 .timebox .current-time {
     position: absolute;
+    font-size: 10px;
     left: 0;
 }
 
 .timebox .song-duration {
+    font-size: 10px;
     position: absolute;
     right: 0;
 }
@@ -744,11 +746,12 @@ header nav ul li button {
 }
 
 .play-btn,
-.play-btn2 {
+.play-btn2,
+.play-btn3 {
     position: relative;
     display: inline-flex;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background: #fff;
     margin: 0 20px 0 20px;
@@ -761,20 +764,21 @@ header nav ul li button {
     position: fixed;
     background: transparent;
     width: 50px;
-    height: 30px;
+    height: 25px;
     margin: 0;
     right: 10px;
-    bottom: 85px;
+    bottom: 68px;
 }
 
 .play-btn span,
-.play-btn2 span {
+.play-btn2 span,
+.play-btn3 span {
     position: absolute;
     top: 50%;
     left: 25%;
     transform: translateY(-50%);
-    width: 10px;
-    height: 30px;
+    width: 9px;
+    height: 25px;
     background: #111;
     border-radius: 2px; 
     transition: .5s;
@@ -782,22 +786,29 @@ header nav ul li button {
 }
 
 .play-btn2 span {
+    width: 7px;
+}
+
+.play-btn2 span {
     background: #fff;
 }
 
 .play-btn span:nth-child(2),
-.play-btn2 span:nth-child(2) {
+.play-btn2 span:nth-child(2),
+.play-btn3 span:nth-child(2) {
     left: 55%;
     transform-origin: center;
 }
 
 .play-btn.pause span:nth-child(2),
-.play-btn2.pause span:nth-child(2) {
+.play-btn2.pause span:nth-child(2),
+.play-btn3.pause span:nth-child(2) {
     transform: translateY(-50%) scaleY(0);
 }
 
 .play-btn.pause span:nth-child(1),
-.play-btn2.pause span:nth-child(1) {
+.play-btn2.pause span:nth-child(1),
+.play-btn3.pause span:nth-child(1) {
     width: 35%;
     left: 53%;
     transform: translate(-50%, -50%);
@@ -894,7 +905,7 @@ header nav ul li button {
 .album h5 {
     width: 100%;
     color: #fff;
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'Be Vietnam Pro';
 }
 
@@ -928,7 +939,7 @@ header nav ul li button {
 
 .album .albumTitle {
     display: flex;
-    margin: 20px;
+    margin: 10px 10px 0 10px;
 }
 
 .albumItem,
@@ -1152,9 +1163,9 @@ header nav ul li button {
     .songItemAlbum span,
     .songItem span,
     .checkpoint span {
+        display: block;
         width: 100px;
         font-size: 25px;
-        font-weight: 600;
         color: #fff;
     }
 
@@ -1362,6 +1373,7 @@ header nav ul li button {
 
     .music-name,
     .artist-name {
+        font-size: 25px;
         display: block;
         text-align: center;
         height: 45px;

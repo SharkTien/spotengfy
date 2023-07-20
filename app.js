@@ -59,7 +59,7 @@ const backButton2 = document.querySelector('.back-button2');
 const albumArtists = document.querySelector('.album.artists');
 const artistsBoxx = document.querySelector('.artists-boxx');
 const playAlbumBtn = document.querySelector('.play-album');
-const playAlbumcustomBtn = document.querySelector('.play-album-btn');
+const playAlbumcustomBtn = document.querySelector('.play-btn3');
 const albumCustom = document.querySelector('.album.custom');
 const layerCreateAlbum = document.querySelector('.layer-create-album');
 const closeAlbumGeneratorBtn = document.querySelector('.create-album-box .title .close');
@@ -287,6 +287,7 @@ playBtn2.addEventListener('click', () => {
     playBtn.classList.toggle('pause');
     playBtn2.classList.toggle('pause');
     disk.classList.toggle('play');
+    playBtn2.blur()
 })
 
 forwardBtn.addEventListener('click', () => {
@@ -490,7 +491,9 @@ const addSongItem = (number, i, songList_id, IdItem) => {
     li.innerHTML = `
     <button class="run" onclick="activeMusic(${i})"><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></button>
     <span>${number}</span>
+    <div>
     <img src=${songs[i].cover}>
+    </div>
     <h5>
         ${songs[i].name}
         <div class="subtitle">${songs[i].artist}</div>
@@ -506,7 +509,7 @@ for (let i = 0; i < songs.length; i++) {
 }
 const div = document.createElement("div");
 div.classList.add('gap');
-div.style.height = "150px";
+div.style.height = "120px";
 songList.appendChild(div);
 
 path_cover_artists = 'img/artists/'
@@ -545,7 +548,7 @@ const artistsBox = (artist_name) => {
     
     const div = document.createElement("div");
     div.classList.add('gap');
-    div.style.height = "150px";
+    div.style.height = "120px";
     songList.appendChild(div)
 
     albumSongsShuffle = albumtemp.slice();
@@ -670,7 +673,7 @@ const customAlbumBox = (ID,albumname, creator, cover, description, items) => {
     coverinfor.innerHTML = `
         <h1>${albumname}</h1>   
         <p>${description}</p>
-        <h3>${creator} • ${items.length} songs</h3>
+        <h3>${creator}  •  ${items.length} songs</h3>
     `;
     // Playlist generating
     songListCreator = document.getElementById('song-list-creator');
@@ -687,7 +690,7 @@ const customAlbumBox = (ID,albumname, creator, cover, description, items) => {
 
     const div = document.createElement("div");
     div.classList.add('gap');
-    div.style.height = "150px";
+    div.style.height = "120px";
     songList.appendChild(div)
 
     albumSongsShuffle = albumtemp.slice();
@@ -698,11 +701,21 @@ const customAlbumBox = (ID,albumname, creator, cover, description, items) => {
         albumSongsShuffle[randIndex] = temp;
     }
         
+    
     playAlbumcustomBtn.addEventListener('click', () => {
-        albumSongs = albumtemp;
-        activeMusic(albumSongs[0]);
+        if (playBtn.className.includes('pause')) {
+            albumSongs = albumtemp;
+            activeMusic(albumSongs[0]);
+            // music.play();
+        } else {
+            music.pause();
+        }
+        playBtn.classList.toggle('pause');
+        playBtn2.classList.toggle('pause');
+        playAlbumcustomBtn.classList.toggle('pause');
+        disk.classList.toggle('play');
         playAlbumcustomBtn.blur()
-    })    
+    })
 }
 
 
@@ -743,7 +756,7 @@ const search = (a) => {
 
     const div = document.createElement("div");
     div.classList.add('gap');
-    div.style.height = "150px";
+    div.style.height = "120px";
     songList.appendChild(div);
 
     if (songList.children.length <= 2) {
