@@ -175,14 +175,14 @@ let songs = [
         cover: 'img/banner/00001.jpg',
     },
     {
-        id: '000075',
+        id: '00075',
         name: 'Những vì tinh tú trong đôi mắt em (Soft Version)',
         path: 'audio/Những Vì Tinh Tú Trong Đôi Mắt Em.mp3',
         artist: 'HaiSam',
         cover: 'img/banner/00075.jpg',
     },
     {
-        id: '000076',
+        id: '00076',
         name: 'Name (feat. Tori Kelly)',
         path: 'audio/Justin Bieber - Name.mp3',
         artist: 'Justin Bieber, Tori Kelly',

@@ -70,6 +70,7 @@ const searchbox = document.querySelector('.search2')
 const miniplayer = document.querySelector('.mini-player');
 const miniplayerbox = document.querySelector('.box-mini-player');
 const creatorBoxx = document.querySelector('.creator-boxx');
+const coverartist = document.querySelector('.cover-artist');
 
 const spacebarkey = 32;
 const leftKey = 37;
@@ -149,6 +150,8 @@ homeBtn.addEventListener('click', () => {
     artistsBoxx.style.display = "none";
     MusicTab.style.display = "flex";
     creatorBoxx.style.display = 'none';
+    coverartist.style.display = 'none';
+    homeBtn.blur()
 })
 
 homeBtn2.addEventListener('click', () => {
@@ -160,6 +163,7 @@ homeBtn2.addEventListener('click', () => {
     MusicTab.style.display = "flex"
     miniplayerbox.style.display = 'none';
     creatorBoxx.style.display = 'none';
+    coverartist.style.display = 'flex';
     window.scrollTo(0,0)
 })
 
@@ -170,10 +174,12 @@ Library.addEventListener('click', () => {
     creatorBoxx.style.display = 'none';
     musicBox.style.display = "none";
     banner.style.display = "none";
+    coverartist.style.display = 'none';
     albumBox.style.display = "";
     artistsBoxx.scrollTo(0,0);
     artistsBoxx.style.display = "none";
-    MusicTab.style.display = "flex"
+    MusicTab.style.display = "flex";
+    Library.blur()
 })
 
 Library2.addEventListener('click', () => {
@@ -185,6 +191,7 @@ Library2.addEventListener('click', () => {
     artistsBoxx.scrollTo(0,0);
     artistsBoxx.style.display = "none";
     MusicTab.style.display = "none";
+    coverartist.style.display = 'flex';
     miniplayerbox.style.display = 'flex';
     creatorBoxx.style.display = 'none';
     window.scrollTo(0,0)
@@ -200,7 +207,8 @@ Discover.addEventListener('click', () => {
     creatorBoxx.style.display = 'none';
     input.value = '';
     input2.value = '';
-    search('')
+    search('');
+    Discover.blur()
 })
 
 // Discover2.addEventListener('click', () => {
@@ -267,6 +275,7 @@ playBtn.addEventListener('click', () => {
     playBtn.classList.toggle('pause');
     playBtn2.classList.toggle('pause');
     disk.classList.toggle('play');
+    playBtn.blur()
 })
 
 playBtn2.addEventListener('click', () => {
@@ -299,6 +308,7 @@ forwardBtn.addEventListener('click', () => {
     if (disk.classList.contains('play')) {
         music.play()
     }
+    forwardBtn.blur()
 })
 
 
@@ -319,6 +329,7 @@ backwardBtn.addEventListener('click', () => {
     if (disk.classList.contains('play')) {
         music.play()
     }
+    backwardBtn.blur()
 })
 
 repeatBtn.addEventListener('click', () => {
@@ -330,6 +341,7 @@ repeatBtn.addEventListener('click', () => {
         repeatBtn.setAttribute('title', 'Disable repeat album');
     }
     repeatBtn.classList.toggle('active');
+    repeatBtn.blur()
 })
 
 
@@ -343,6 +355,7 @@ shuffleBtn.addEventListener('click', () => {
         shuffleBtn.setAttribute('title','Disable shuffle');
     }
     shuffleBtn.classList.toggle('active');
+    shuffleBtn.blur()
 })
 
 createBtn.addEventListener('click', () => {
@@ -440,12 +453,14 @@ setInterval(() => {
 
 seekBar.addEventListener('input', () => {
     music.currentTime = seekBar.value;
+    seekBar.blur()
 })
 
 volumeBar.addEventListener('input', () => {
     music.volume = volumeBar.value/100;
     volumeMuteBtn.style.display = "none";
     volumeBtn.style.display = "block";
+    volumeBar.blur()
 })
 
 const playMusic = () => {
@@ -509,6 +524,9 @@ const artistsBox = (artist_name) => {
 
     // Banner artist
     const name_artist = document.querySelector('.name-artist');
+
+    coverartist.innerHTML = `<img src='img/artists/${artist_name}.jpg'>`
+
     name_artist.innerHTML = artist_name;
     artistsBoxx.style.backgroundImage = `url(img/background/${artist_name.replaceAll(' ','_')}.jpg)`;
     
@@ -541,6 +559,7 @@ const artistsBox = (artist_name) => {
     playAlbumBtn.addEventListener('click', () => {
         albumSongs = albumtemp;
         activeMusic(albumSongs[0]);
+        playAlbumBtn.blur()
     })    
 }
     
@@ -647,7 +666,7 @@ const customAlbumBox = (ID,albumname, creator, cover, description, items) => {
             albumtemp.push(i)
         }
     }
-    
+
     const div = document.createElement("div");
     div.classList.add('gap');
     div.style.height = "150px";
@@ -664,6 +683,7 @@ const customAlbumBox = (ID,albumname, creator, cover, description, items) => {
     playAlbumcustomBtn.addEventListener('click', () => {
         albumSongs = albumtemp;
         activeMusic(albumSongs[0]);
+        playAlbumcustomBtn.blur()
     })    
 }
 
