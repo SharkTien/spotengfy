@@ -50,7 +50,6 @@ const link = document.createElement('link');
 const input = document.querySelector('.search-bar');
 const input2 = document.querySelector('.search-bar2');
 const albumBox = document.querySelector('.box2')
-const failsearch = document.querySelector('.notfound');
 const extentButton = document.querySelector('.extent-button');
 const extentButton2 = document.querySelector('.extent-button2');
 const scrollAlbumArtists = document.querySelector('.scrollAlbumArtists');
@@ -585,7 +584,8 @@ for (let i = 0; i < songs.length; i++) {
 // Generate list of artists
 
 p = [];
-notAvailableArtists = ['Clever']
+notAvailableArtists = ['Clever', 'mj apanay','PAR SG','Vũ Thanh Vân','Saabirose','SIVAN','New$oulZ','THDC','Han Kim','Lã Thắng','Dfoxie37', 'Myhai',
+'VSOUL', 'MFREE', 'TUYEN VO','Sweet Liquor','GREY D','Khoi','Việt Anh','Monstar','Mahidu','NIEE', 'D.BLue','Phúc Du','$eadreak','W/N','Erik','Linh','Nâu','Young Crizzbe','Hoàng Dũng','Đạt G','HAST', 'Dab','RPT Orijinn', 'kis','DucMinh','Ronboogz', 'sy','KEI','Galaxyy', 'Kim Nguyen Martian' ]
 
 for (artist of artists) {
     item = artist;
@@ -596,7 +596,12 @@ for (artist of artists) {
         }
     }
 }
-artists = p;
+function arrange(array) {
+    array.sort((a,b) => a.localeCompare(b));
+    return array
+}
+
+artists = arrange(p);
 
 // Generate Artists' albums
 
@@ -643,7 +648,18 @@ const getAlbum = () => {
 const customAlbumBox = (ID,albumname, creator, cover, description, items) => {    
     creatorBoxx.style.display = 'block';
     albumBox.style.display = "none";
+    if (ID === "00001") {
+        songs = songs_buivinh;
+        
+        const shuffleSongs = songs_buivinh.slice();
 
+        for (let i = shuffleSongs.length - 1; i >= 0; i--) {
+            const randIndex = Math.floor(Math.random() * (i + 1));
+            const temp = shuffleSongs[i];
+            shuffleSongs[i] = shuffleSongs[randIndex];
+            shuffleSongs[randIndex] = temp;
+        }
+    }
     // Banner creator's album
     const coverimg = document.querySelector('.cover-img');
     const coverinfor = document.querySelector('.cover-infor');
@@ -694,30 +710,47 @@ getAlbum();
 const search = (a) => {
     songList = document.getElementById('song-list');
     songItems = songList.querySelectorAll(".songItem");
-    notFound = true;
-    for (songItem of songItems) {
-        songItem.classList.remove("hide");
-        }
-    for (songItem of songItems) {
-        songname = removeToneMark(songItem.querySelector("h5").textContent.toLowerCase());
-        artistname = removeToneMark(songItem.querySelector(".subtitle").textContent.toLowerCase());
+    songList.innerHTML = `
+    <li class = "checkpoint">
+        <button class = "run"></button>
+        <span>#</span>
+        <img>
+        <h5>Title<div class="subtitle"></div></h5>
+    </li> 
+    `;
 
-        if (songname.includes(a) != true && artistname.includes(a) != true) {
-            songItem.classList.add("hide")
-            }
-        }   
+    for (let i = 0; i < songs.length; i++) {
+        songname = removeToneMark(songs[i].name.toLowerCase());
+        artistname = removeToneMark(songs[i].artist.toLowerCase());
+        if (songname.includes(a) || artistname.includes(a)) {
+            li = document.createElement("li");
+            li.classList.add('songItem');
+            li.innerHTML = `
+            <button class="run" onclick="activeMusic(${i})"><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></button>
+            <span>${i+1}</span>
+            <img src=${songs[i].cover}>
+            <h5>
+                ${songs[i].name}
+                <div class="subtitle">${songs[i].artist}</div>
+            </h5>
+            `;
+        
+        songList.appendChild(li);
+        }
+    }
 
-    for (songItem of songItems) {
-        if (songItem.classList.contains("hide") != true) {    
-            notFound = false
-        }
-        }
-    if (notFound) {
-        failsearch.style.display = "block";   
-    } else {
-        failsearch.style.removeProperty("display");
+    const div = document.createElement("div");
+    div.classList.add('gap');
+    div.style.height = "150px";
+    songList.appendChild(div);
+
+    if (songList.children.length <= 2) {
+        nf = document.createElement("div");
+        nf.classList.add('notfound');
+        nf.innerHTML = 'No results found for your music'
+        songList.appendChild(nf)
     }
-    }
+}
 
 
 function removeToneMark(str) {

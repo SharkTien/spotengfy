@@ -1,4 +1,4 @@
-let songs = [
+songs = [
     {
         id: '00013',
         name: 'Die For You',

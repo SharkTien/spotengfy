@@ -464,15 +464,10 @@ header nav ul li button {
     color: #fff;
     font-size: 25px;
     font-family: 'Be Vietnam Pro';
-    display: flex;
     text-align: center;
-    display: none;
     margin-top: 20px;
 }
 
-.songItem.hide {
-    display: none;
-}
 
 .songItemAlbum:hover,
 .songItem:hover {
@@ -1328,6 +1323,10 @@ header nav ul li button {
         color: #fff;
         align-items: center;
         padding: 50px 50px 50px 50px;
+    }
+
+    .creator-boxx .introduce-album {
+        padding: 0;
     }
 
     .creator-boxx .introduce-album {
