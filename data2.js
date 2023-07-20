@@ -754,7 +754,7 @@ songs_buivinh = [
         name: "XTC(Xích Thêm Chút)(Remix)",
         path: "audio/Xích Thêm Chút - XTC Remix _ RPT Groovie ft TLinh x RPT MCK (Prod. by fat_benn & RPT LT)_ RAPITALOVE.mp3",
         artist: 'Rapital, Groovie, Lã Thắng, tlinh, RPT MCK',
-        cover: 'img/banner/10015.jpg',
+        cover: 'img/banner/10017.jpg',
     },
     {
         id: '10018',
