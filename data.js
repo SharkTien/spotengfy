@@ -28,6 +28,13 @@ let songs = [
         cover: 'img/banner/00012.jpg',
     },
     {
+        id: '00085',
+        name: "telepatía",
+        path: "audio/Kali Uchis _ telepatía.mp3",
+        artist: 'Kali Uchis',
+        cover: 'img/banner/00085.jpg',
+    },
+    {
         id: '00014',
         name: 'Die For You (with Ariana Grande) - Remix',
         path: 'audio/The Weeknd Ariana Grande - Die For You.mp3',
@@ -82,6 +89,13 @@ let songs = [
         path: 'audio/Hard Feelings _ Lorde.ogg',
         artist: 'Lorde',
         cover: 'img/banner/00006.jpg',
+    },
+    {
+        id: '00086',
+        name: 'Head In The Clouds',
+        path: 'audio/joji - Head in the Clouds.mp3',
+        artist: '88rising, Joji',
+        cover: 'img/banner/00086.jpg',
     },
     {
         id: '00010',
@@ -161,6 +175,27 @@ let songs = [
         cover: 'img/banner/00001.jpg',
     },
     {
+        id: '000075',
+        name: 'Những vì tinh tú trong đôi mắt em (Soft Version)',
+        path: 'audio/Những Vì Tinh Tú Trong Đôi Mắt Em.mp3',
+        artist: 'HaiSam',
+        cover: 'img/banner/00075.jpg',
+    },
+    {
+        id: '000076',
+        name: 'Name (feat. Tori Kelly)',
+        path: 'audio/Justin Bieber - Name.mp3',
+        artist: 'Justin Bieber, Tori Kelly',
+        cover: 'img/banner/00076.jpg',
+    },
+    {
+        id: '00077',
+        name: 'Fashion Tán Gái',
+        path: 'audio/FASHION TÁN GÁI.mp3',
+        artist: 'Low G, Wren Evans',
+        cover: 'img/banner/00077.jpg',
+    },
+    {
         id: '00002',
         name: 'Head In The Clouds',
         path: 'audio/Head In The Clouds _ Hayd.ogg',
@@ -201,6 +236,13 @@ let songs = [
         path: 'audio/WEAN - mot nguoi vi em (midnight).mp3',
         artist: 'WEAN',
         cover: 'img/banner/00009.jpg',
+    },
+    {
+        id: '00078',
+        name: 'Apocalypse',
+        path: 'audio/Apocalypse - Cigarettes After Sex.mp3',
+        artist: 'Cigarettes After Sex',
+        cover: 'img/banner/00078.jpg',
     },
     {
         id: '00008',
@@ -258,6 +300,13 @@ let songs = [
         path: 'audio/SZA - Open Arms (Audio) ft. Travis Scott.mp3',
         artist: 'SZA, Travis Scott',
         cover: 'img/banner/00032.jpg',
+    },
+    {
+        id: '00079',
+        name: 'K.',
+        path: 'audio/K. - Cigarettes After Sex.mp3',
+        artist: 'Cigarettes After Sex',
+        cover: 'img/banner/00079.jpg',
     },
     {
         id: '00055',
@@ -344,6 +393,13 @@ let songs = [
         cover: 'img/banner/00032.jpg',
     },
     {
+        id: '00080',
+        name: 'Sweet',
+        path: 'audio/Sweet - Cigarettes After Sex.mp3',
+        artist: 'Cigarettes After Sex',
+        cover: 'img/banner/00080.jpg',
+    },
+    {
         id: '00045',
         name: 'listen up - Radio Edit',
         path: 'audio/SOLOMON - listen up (Radio Edit).mp3',
@@ -414,6 +470,13 @@ let songs = [
         cover: 'img/banner/00052.jpg',
     },
     {
+        id: '00081',
+        name: 'Cry',
+        path: 'audio/Cry - Cigarettes After Sex.mp3',
+        artist: 'Cigarettes After Sex',
+        cover: 'img/banner/00081.jpg',
+    },
+    {
         id: '00053',
         name: "Face To Face",
         path: "audio/Ruel - Face To Face.mp3",
@@ -454,6 +517,20 @@ let songs = [
         path: 'audio/Cochise, $NOT - Tell Em.mp3',
         artist: 'Cochise, $NOT',
         cover: 'img/banner/00063.jpg',
+    },
+    {
+        id: '00082',
+        name: 'Heavenly',
+        path: 'audio/Heavenly - Cigarettes After Sex.mp3',
+        artist: 'Cigarettes After Sex',
+        cover: 'img/banner/00082.jpg',
+    },
+    {
+        id: '00083',
+        name: 'Pistol',
+        path: 'audio/Pistol - Cigarettes After Sex.mp3',
+        artist: 'Cigarettes After Sex',
+        cover: 'img/banner/00083.jpg',
     },
     {
         id: '00064',
@@ -517,5 +594,40 @@ let songs = [
         path: "audio/Johnny Stimson - Flower.mp3",
         artist: 'Johnny Stimson',
         cover: 'img/banner/00073.jpg',
+    },
+    {
+        id: '00074',
+        name: "Violent Crimes",
+        path: "audio/Kanye West - Violent Crimes.mp3",
+        artist: 'Kanye West',
+        cover: 'img/banner/00074.jpg',
+    },
+    {
+        id: '00084',
+        name: "Moonlight",
+        path: "audio/Kali Uchis - Moonlight.mp3",
+        artist: 'Kali Uchis',
+        cover: 'img/banner/00084.jpg',
+    },
+    {
+        id: '00087',
+        name: "Sanctuary",
+        path: "audio/Sanctuary.mp3",
+        artist: 'Joji',
+        cover: 'img/banner/00087.jpg',
+    },
+    {
+        id: '00088',
+        name: "Circles",
+        path: "audio/Post Malone - Circles.mp3",
+        artist: 'Post Malone',
+        cover: 'img/banner/00088.jpg',
+    },
+    {
+        id: '00089',
+        name: "Get You (feat. Kali Uchis)",
+        path: "audio/Get You (feat. Kali Uchis).mp3",
+        artist: 'Daniel Caesar, Kali Uchis',
+        cover: 'img/banner/00089.jpg',
     }
 ]

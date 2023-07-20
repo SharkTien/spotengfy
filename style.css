@@ -202,12 +202,9 @@ header nav ul li button {
     text-overflow: ellipsis;
 }
 
-
 .mini-player .mini-artist {
     color: gray;
 }
-
-
 
 .mini-player img {
     width: 50px;
@@ -226,7 +223,7 @@ header nav ul li button {
 }
 
 
-.box2, .artists-boxx {
+.box2, .artists-boxx, .creator-boxx {
     align-items: center;
     padding: 0;
     width: 100%;
@@ -239,13 +236,15 @@ header nav ul li button {
 }
 
 
-.artists-boxx .name-artist {
+
+.artists-boxx .name-artist, .creator-boxx h1 {
     font-size: 40px;
     color: #fff;
     font-family: 'Be Vietnam Pro Black';
 }
 
-.artists-boxx {
+
+.artists-boxx, .creator-boxx {
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -265,37 +264,87 @@ header nav ul li button {
     margin-left: 25px;
 }
 
-.artists-play {
+.artists-play, .button-play-cover-box {
     height: 80px;
     width: 100%;
     background: #111;
     padding: 15px 25px 0 25px;
 }
 
-.artists-play button {
-    height: 40px;
-    width: 40px;
+.artists-play button, .button-play-cover-box button {
+    height: 60px;
+    width: 60px;
     border-radius: 50%;
+    background-color: #fff;
     border: none;
 }
 
-.artists-boxx .introduce-artist {
-    display: flex;
+.button-play-cover-box button {
+    background-color: rgba(147,71,71,255);
+}
+
+.button-play-cover-box button:hover {
+    background-color: rgba(150,83,83,255);
+}
+
+.artists-boxx .introduce-artist, .creator-boxx .introduce-album {
+    display: block;
     width: 100%;
-    height: 36vh;
+    height: 250px;
     background: transparent;
     color: #fff;
     align-items: center;
     padding: 0 0 0 25px;
 }
 
-.artists-boxx .playlist-artists {
+.creator-boxx .introduce-album {
+    background: linear-gradient(to bottom, rgba(147,71,71,255), #111);
+    height: 450px;
+    padding-top: 1px;
+}
+
+.creator-boxx .cover-img {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.creator-boxx .cover-img img {
+    width: 180px;
+    height: 180px;
+    margin-left: -25px;
+    box-shadow: 0px 0px 40px 20px rgba(0,0,0,0.5);
+}
+
+.artists-boxx .playlist-artists, .creator-boxx .playlist-creator {
     width: 100%;
     height: 75vh;
     background: #111;
 }
 
-.music-box {
+.cover-infor {
+    align-items: center;
+    padding: 0 25px 25px 0;
+    font-family: 'Be Vietnam Pro';
+    width: fit-content;
+}
+
+.cover-infor p {
+    color: rgba(255,255,255,0.8);
+    margin: 20px 0 20px 0;
+    font-size: 15px;
+}
+
+.cover-infor h3 {
+    font-size: 13px;
+}
+
+.music-box, .playlist-artists, .playlist-creator {
     height: 100%;
     width: 100%;
     border: none;
@@ -305,7 +354,7 @@ header nav ul li button {
     overflow-y: scroll;
 }
 
-.music-box ul {
+.music-box ul, .playlist-artists ul, .playlist-creator ul{
     width: 95%;
     height: 70%;
 }
@@ -375,15 +424,15 @@ header nav ul li button {
 
 .checkpoint h5 .subtitle,
 .albumItem .subtitle,
-.albumcustomItem .subtitle,
 .create-album .subtitle {
     display: none;
 }
 
 .songItemAlbum h5 .subtitle,
-.songItem h5 .subtitle {
+.songItem h5 .subtitle,
+.albumcustomItem .subtitle {
     font-size: 15px;
-    color: #dedede;
+    color: gray;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -444,7 +493,7 @@ header nav ul li button {
     width: 500px;
     border-radius: 12px;
     height: fit-content;
-    background: #111;
+    background: linear-gradient(to bottom, #000, 10%, #111);
     box-shadow: 0 40px 100px rgba(255,255,255,0.1);
     padding: 30px;
     overflow: hidden;
@@ -1246,7 +1295,7 @@ header nav ul li button {
         max-height: 35px;
     }
     
-    .box2, .artists-boxx {
+    .box2, .artists-boxx, .creator-boxx {
         align-items: center;
         padding: 20px 0 0 50px;
         width: 100%;
@@ -1257,11 +1306,11 @@ header nav ul li button {
         border: none;
     }
 
-    .artists-boxx {
+    .artists-boxx, .creator-boxx {
         padding: 0;
     }    
 
-    .artists-boxx .introduce-artist {
+    .artists-boxx .introduce-artist, .creator-boxx .introduce-album {
         display: flex;
         width: 100%;
         height: 65vh;
@@ -1269,6 +1318,10 @@ header nav ul li button {
         color: #fff;
         align-items: center;
         padding: 50px 50px 50px 50px;
+    }
+
+    .creator-boxx .introduce-album {
+        background: linear-gradient(to bottom, rgba(147,71,71,255), #111);
     }
     
     .artists-boxx .subtitle {
@@ -1279,21 +1332,22 @@ header nav ul li button {
         margin-left: 50px;
     }
 
-    .artists-play button {
+    .artists-play button, .button-play-cover-box button {
         height: 60px;
         width: 60px;
         border-radius: 50%;
         border: none;
+        background-color: #fff;
     }
-    
-    .artists-play {
+
+    .artists-play, .button-play-cover-box {
         height: 100px;
         width: 100%;
         background: #111;
         padding: 25px 50px 0 50px;
     }
 
-    .music-box::-webkit-scrollbar {
+    .music-box::-webkit-scrollbar, .playlist-artists::-webkit-scrollbar, .playlist-creator::-webkit-scrollbar {
         display: block;
     }
 
@@ -1305,7 +1359,7 @@ header nav ul li button {
     }
 
     
-    .artists-boxx {
+    .artists-boxx, .creator-boxx {
         width: 100%;
         height: 90vh;
         background-size: cover;
@@ -1313,7 +1367,7 @@ header nav ul li button {
         background-position-y: -100px;
         overflow-y: scroll;
     }
-    .artists-boxx .name-artist {
+    .artists-boxx .name-artist, .creator-boxx h1 {
         font-size: 70px;
         color: #fff;
         font-family: 'Be Vietnam Pro Black';
@@ -1360,4 +1414,53 @@ header nav ul li button {
     .play-btn2 {
         display: none;
     }
+
+    .gap {
+        display: none;
+    }
+    
+    .creator-boxx .cover-img {
+        width: 700px;
+        height: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .creator-boxx .cover-img img {
+        width: 250px;
+        height: 250px;
+        box-shadow: 0px 0px 40px 20px rgba(0,0,0,0.5);
+    }
+    
+    .button-play-cover-box button {
+        background-color: rgba(147,71,71,255);
+    }
+    
+    .button-play-cover-box button:hover {
+        background-color: rgba(150,83,83,255);
+    }
+
+    .cover-infor {
+        margin-top: -80px;
+        align-items: center;
+        font-family: 'Be Vietnam Pro';
+        width: fit-content;
+    }
+
+    .cover-infor h1 {
+        font-size: 85px;
+    }
+
+    .cover-infor p {
+        color: rgba(255,255,255,0.8);
+        margin: 20px 0 20px 0;
+        font-size: 15px;
+    }
+
+    .cover-infor h3 {
+        font-size: 13px;
+    }
+
 }

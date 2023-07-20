@@ -60,6 +60,7 @@ const backButton2 = document.querySelector('.back-button2');
 const albumArtists = document.querySelector('.album.artists');
 const artistsBoxx = document.querySelector('.artists-boxx');
 const playAlbumBtn = document.querySelector('.play-album');
+const playAlbumcustomBtn = document.querySelector('.play-album-btn');
 const albumCustom = document.querySelector('.album.custom');
 const layerCreateAlbum = document.querySelector('.layer-create-album');
 const closeAlbumGeneratorBtn = document.querySelector('.create-album-box .title .close');
@@ -68,6 +69,7 @@ const albumname = document.getElementById('albumname');
 const searchbox = document.querySelector('.search2')
 const miniplayer = document.querySelector('.mini-player');
 const miniplayerbox = document.querySelector('.box-mini-player');
+const creatorBoxx = document.querySelector('.creator-boxx');
 
 const spacebarkey = 32;
 const leftKey = 37;
@@ -81,6 +83,7 @@ albumBox.style.display = "none";
 backButton.style.display = 'none';
 backButton2.style.display = 'none';
 artistsBoxx.style.display = 'none';
+creatorBoxx.style.display = 'none';
 searchbox.style.display = 'none';
 miniplayerbox.style.display = 'none';
 albumSongs = [];
@@ -144,7 +147,8 @@ homeBtn.addEventListener('click', () => {
     banner.style.display = "flex";
     albumBox.style.display = "none";
     artistsBoxx.style.display = "none";
-    MusicTab.style.display = "flex"
+    MusicTab.style.display = "flex";
+    creatorBoxx.style.display = 'none';
 })
 
 homeBtn2.addEventListener('click', () => {
@@ -155,6 +159,7 @@ homeBtn2.addEventListener('click', () => {
     artistsBoxx.style.display = "none";
     MusicTab.style.display = "flex"
     miniplayerbox.style.display = 'none';
+    creatorBoxx.style.display = 'none';
     window.scrollTo(0,0)
 })
 
@@ -162,6 +167,7 @@ homeBtn2.addEventListener('click', () => {
 
 Library.addEventListener('click', () => {
     albumtemp = [];
+    creatorBoxx.style.display = 'none';
     musicBox.style.display = "none";
     banner.style.display = "none";
     albumBox.style.display = "";
@@ -180,6 +186,7 @@ Library2.addEventListener('click', () => {
     artistsBoxx.style.display = "none";
     MusicTab.style.display = "none";
     miniplayerbox.style.display = 'flex';
+    creatorBoxx.style.display = 'none';
     window.scrollTo(0,0)
 })
 
@@ -190,6 +197,7 @@ Discover.addEventListener('click', () => {
     albumBox.style.display = "none";
     artistsBoxx.style.display = "none";
     MusicTab.style.display = "flex";
+    creatorBoxx.style.display = 'none';
     input.value = '';
     input2.value = '';
     search('')
@@ -212,6 +220,7 @@ Search2.addEventListener('click', () => {
     musicBox.style.removeProperty('display');
     banner.style.display = "none";
     albumBox.style.display = "none";
+    creatorBoxx.style.display = 'none';
     artistsBoxx.style.display = "none";
     MusicTab.style.display = "none";
     miniplayerbox.style.display = 'flex';
@@ -219,6 +228,18 @@ Search2.addEventListener('click', () => {
     input2.value = '';
     search('');
     window.scrollTo(0,0)
+})
+
+music.addEventListener('pause', () => {
+    if (!playBtn.classList.contains('pause')) {
+        playBtn.click();
+    }
+})
+
+music.addEventListener('play', () => {
+    if (playBtn.classList.contains('pause')) {
+        playBtn.click();
+    }
 })
 
 volumeBtn.addEventListener('click', () => {
@@ -325,8 +346,7 @@ shuffleBtn.addEventListener('click', () => {
 })
 
 createBtn.addEventListener('click', () => {
-    var date = new Date();
-    custom_albums.push({albumName: albumname.value, createdDate: `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()} ${date.getDay()}/${date.getMonth()}/${date.getFullYear()}`, items: []});
+    custom_albums.push({albumName: albumname.value, discription: '', create: '', items: []});
     albumname.value = '';
     layerCreateAlbum.style.display = "none";
 
@@ -377,7 +397,7 @@ const setMusic = (i) => {
     setTimeout (() => {
         seekBar.max = music.duration;
         musicDuration.innerHTML = formatTime(music.duration);
-    }, 400);
+    }, 150);
     title.textContent = 'Spotengfy | ' + song.name + ' - ' + song.artist;
     
     link.rel = 'shortcut icon';
@@ -470,6 +490,7 @@ for (let i = 0; i < songs.length; i++) {
     addSongItem(num, i, "song-list", "songItem");
 }
 const div = document.createElement("div");
+div.classList.add('gap');
 div.style.height = "150px";
 songList.appendChild(div);
 
@@ -503,6 +524,11 @@ const artistsBox = (artist_name) => {
             albumtemp.push(i)
         }
     }
+    
+    const div = document.createElement("div");
+    div.classList.add('gap');
+    div.style.height = "150px";
+    songList.appendChild(div)
 
     albumSongsShuffle = albumtemp.slice();
     for (let i = albumSongsShuffle.length - 1; i >= 0; i--) {
@@ -566,11 +592,11 @@ const getAlbum = () => {
         const li = document.createElement("button");
         li.classList.add("albumcustomItem");
         li.innerHTML = `
-            <img src="img/00001.jpg">
+            <img src="${i.cover}">
             <h1>${i.albumName}</h1>
-            <div class="subtitle">Album</div>
+            <div class="subtitle">${i.creator}</div>
         `;
-        // li.addEventListener('click', () => artistsBox(i.albumName));
+        li.addEventListener('click', () => customAlbumBox(i.id, i.albumName, i.creator, i.cover, i.description, i.items));
         albumListcustom.appendChild(li);
     }
         
@@ -580,7 +606,7 @@ const getAlbum = () => {
         createAlbumBtn.innerHTML = `
                 <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#b9b9b9}</style><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM200 344V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H248v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
                 <h1>Create Album</h1>
-                <div class="subtitle">album</div>
+                <div class="subtitle">coming soon</div>
             `;
         // li.addEventListener('click', () => artistsBox(i.albumName));
         albumListcustom.appendChild(createAlbumBtn);
@@ -594,6 +620,53 @@ const getAlbum = () => {
         addAlbumcustomItem(customAlbum)
     }    
 }
+
+const customAlbumBox = (ID,albumname, creator, cover, description, items) => {    
+    creatorBoxx.style.display = 'block';
+    albumBox.style.display = "none";
+
+    // Banner creator's album
+    const coverimg = document.querySelector('.cover-img');
+    const coverinfor = document.querySelector('.cover-infor');
+    coverimg.innerHTML = `<img src='${cover}'>`;
+
+    coverinfor.innerHTML = `
+        <h1>${albumname}</h1>   
+        <p>${description}</p>
+        <h3>${creator} • ${items.length} songs</h3>
+    `;
+    // Playlist generating
+    songListCreator = document.getElementById('song-list-creator');
+    songListCreator.innerHTML = '';
+    
+    num = 0;
+    for (let i = 0; i < songs.length; i++) {
+        if (items.includes(songs[i].id)) {
+            num += 1;
+            addSongItem(num, i, 'song-list-creator','songItemAlbum');
+            albumtemp.push(i)
+        }
+    }
+    
+    const div = document.createElement("div");
+    div.classList.add('gap');
+    div.style.height = "150px";
+    songList.appendChild(div)
+
+    albumSongsShuffle = albumtemp.slice();
+    for (let i = albumSongsShuffle.length - 1; i >= 0; i--) {
+        const randIndex = Math.floor(Math.random() * (i + 1));
+        const temp = albumSongsShuffle[i];
+        albumSongsShuffle[i] = albumSongsShuffle[randIndex];
+        albumSongsShuffle[randIndex] = temp;
+    }
+        
+    playAlbumcustomBtn.addEventListener('click', () => {
+        albumSongs = albumtemp;
+        activeMusic(albumSongs[0]);
+    })    
+}
+
 
 getAlbum();
 
@@ -675,5 +748,3 @@ backButton2.addEventListener('click', () => {
     albumCustom.classList.toggle('extent');
     scrollAlbumCustom.scrollTo(0,0)
 })
-
-
