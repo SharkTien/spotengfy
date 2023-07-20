@@ -16,9 +16,10 @@ custom_albums = [
         albumName: 'Dream?',
         creator: 'White_wolf',
         cover: 'img/custom_cover/00002.jpg',
-        description: 'Nothin here justadrem. Not a nightmare just a memory. Btw I hope u guys unuderstand sth, extactly what? idk.',
+        description: 'Nothin here just a dream. Not a nightmare just a memory. Btw I hope u guys understand sth, exactly what? idk.',
         items: ['10000','10001','10002','10003','10004','10005','10006','10007','10008','10009','10010','10011','10012','10013','10014','10015',
-                '10016','10017','10018','10019','10020','10021','10022','10023','10024','10025','10026','10027','10028','10029'
+                '10016','10017','10018','10019','10020','10021','10022','10023','10024','10025','10026','10027','10028','10029','00016','10030',
+                '10031','10032','10033','10034','10035','10036','10037','10038','10039','10040'
                 ]
     },
     

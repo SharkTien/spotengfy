@@ -585,8 +585,9 @@ for (let i = 0; i < songs.length; i++) {
 // Generate list of artists
 
 p = [];
-notAvailableArtists = ['Clever', 'mj apanay','PAR SG','Vũ Thanh Vân','Saabirose','SIVAN','New$oulZ','THDC','Han Kim','Lã Thắng','Dfoxie37', 'Myhai',
-'VSOUL', 'MFREE', 'TUYEN VO','Sweet Liquor','GREY D','Khoi','Việt Anh','Monstar','Mahidu','NIEE', 'D.BLue','Phúc Du','$eadreak','W/N','Erik','Linh','Nâu','Young Crizzbe','Hoàng Dũng','Đạt G','HAST', 'Dab','RPT Orijinn', 'kis','DucMinh','Ronboogz', 'sy','KEI','Galaxyy', 'Kim Nguyen Martian' ]
+notAvailableArtists = ['Clever', 'mj apanay','PAR SG','Vũ Thanh Vân','Saabirose','SIVAN','Nguyên','Seth','New$oulZ','THDC','Han Kim','Lã Thắng','Dfoxie37', 'Myhai',
+'VSOUL', 'MFREE', 'TUYEN VO','Sweet Liquor','GREY D','B Ray','Phùng Khánh Linh','Minh Lý','Wikin 25 Táo','Sáo','MASEW','Young H',"Sol'Bass",'Nah','Chú 13','Khói','Bảo Uyên','Jay Kem','Khoi','Việt Anh','Monstar','Mahidu','NIEE', 'D.BLue','Phúc Du','$eadreak','W/N','DatG',
+'Erik','Linh','Nâu','Orange','Young Crizzbe','Hoàng Dũng','Đạt G','HAST', 'Dab','RPT Orijinn', 'kis','DucMinh','Ronboogz', 'sy','KEI','Galaxyy', 'Kim Nguyen Martian' ]
 
 for (artist of artists) {
     item = artist;
