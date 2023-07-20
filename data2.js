@@ -715,7 +715,7 @@ songs_buivinh = [
         cover: 'img/banner/10011.jpg',
     },
     {
-        id: '100012',
+        id: '10012',
         name: 'Có Em',
         path: 'audio/Có em - Madihu ft. Low G.mp3',
         artist: 'Mahidu, Low G',
