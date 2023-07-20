@@ -231,7 +231,7 @@ Search2.addEventListener('click', () => {
 })
 
 music.addEventListener('pause', () => {
-    if (!playBtn.classList.contains('pause')) {
+    if (!playBtn.classList.contains('pause') && !music.ended) {
         playBtn.click();
     }
 })
