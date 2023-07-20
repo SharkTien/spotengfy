@@ -132,6 +132,7 @@ input.addEventListener('input', () => {
     banner.style.display = "none";
     musicBox.style.display = "flex";
     albumBox.style.display = "none";
+    creatorBoxx.style.display = "none";
     artistsBoxx.style.display = "none";
     search(removeToneMark(input.value.toLowerCase()));
 })
