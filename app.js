@@ -59,7 +59,7 @@ const backButton2 = document.querySelector('.back-button2');
 const albumArtists = document.querySelector('.album.artists');
 const artistsBoxx = document.querySelector('.artists-boxx');
 const playAlbumBtn = document.querySelector('.play-album');
-const playAlbumcustomBtn = document.querySelector('.play-btn3');
+const playAlbumBtn2 = document.querySelector('.play-album2');
 const albumCustom = document.querySelector('.album.custom');
 const layerCreateAlbum = document.querySelector('.layer-create-album');
 const closeAlbumGeneratorBtn = document.querySelector('.create-album-box .title .close');
@@ -588,7 +588,7 @@ for (let i = 0; i < songs.length; i++) {
 // Generate list of artists
 
 p = [];
-notAvailableArtists = ['Clever', 'mj apanay','PAR SG','Vũ Thanh Vân','Saabirose','SIVAN','Nguyên','Seth','New$oulZ','THDC','Han Kim','Lã Thắng','Dfoxie37', 'Myhai',
+notAvailableArtists = ['Clever','bbygirl','mj apanay','PAR SG','Vũ Thanh Vân','Saabirose','SIVAN','Nguyên','Seth','New$oulZ','THDC','Han Kim','Lã Thắng','Dfoxie37', 'Myhai',
 'VSOUL', 'MFREE', 'TUYEN VO','Sweet Liquor','GREY D','B Ray','Phùng Khánh Linh','Minh Lý','Wikin 25 Táo','Sáo','MASEW','Young H',"Sol'Bass",'Nah','Chú 13','Khói','Bảo Uyên','Jay Kem','Khoi','Việt Anh','Monstar','Mahidu','NIEE', 'D.BLue','Phúc Du','$eadreak','W/N','DatG',
 'Erik','Linh','Nâu','Orange','Young Crizzbe','Hoàng Dũng','Đạt G','HAST', 'Dab','RPT Orijinn', 'kis','DucMinh','Ronboogz', 'sy','KEI','Galaxyy', 'Kim Nguyen Martian' ]
 
@@ -700,21 +700,11 @@ const customAlbumBox = (ID,albumname, creator, cover, description, items) => {
         albumSongsShuffle[i] = albumSongsShuffle[randIndex];
         albumSongsShuffle[randIndex] = temp;
     }
-        
     
-    playAlbumcustomBtn.addEventListener('click', () => {
-        if (playBtn.className.includes('pause')) {
-            albumSongs = albumtemp;
-            activeMusic(albumSongs[0]);
-            // music.play();
-        } else {
-            music.pause();
-        }
-        playBtn.classList.toggle('pause');
-        playBtn2.classList.toggle('pause');
-        playAlbumcustomBtn.classList.toggle('pause');
-        disk.classList.toggle('play');
-        playAlbumcustomBtn.blur()
+    playAlbumBtn2.addEventListener('click', () => {
+        albumSongs = albumtemp;
+        activeMusic(albumSongs[0]);
+        playAlbumBtn2.blur()
     })
 }
 
