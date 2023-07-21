@@ -73,13 +73,13 @@ header {
 }
 
 .mb svg {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
 }
 
 .mb p {
     color: #fff;
-    font-size: 8px;
+    font-size: 10px;
 }
 
 header .header-brand {
@@ -609,7 +609,8 @@ header nav ul li button {
 }
 
 .artist-name {
-    font-size: 20px;
+    margin-top: 5px;
+    font-size: 15px;
 }
 
 .disk {
@@ -1377,6 +1378,20 @@ header nav ul li button {
         display: block;
         text-align: center;
         height: 45px;
+    }
+
+    
+    .timebox .current-time {
+        font-size: 12px;
+    }
+
+    .timebox .song-duration {
+        font-size: 12px;
+    }
+
+    
+    .artist-name {
+        font-size: 18px;
     }
 
     
