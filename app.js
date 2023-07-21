@@ -588,7 +588,7 @@ for (let i = 0; i < songs.length; i++) {
 // Generate list of artists
 
 p = [];
-notAvailableArtists = ['Clever','bbygirl','mj apanay','PAR SG','Vũ Thanh Vân','Saabirose','SIVAN','Nguyên','Seth','New$oulZ','THDC','Han Kim','Lã Thắng','Dfoxie37', 'Myhai',
+notAvailableArtists = ['Clever','Trí Dũng','Fishy','Lil Uzi Vert','Cam','Jenevieve','MinhLai','Anh Phan','Negav','sped up nightcore', 'ARIZONATEARS','bbygirl','DWELLS','Wxrdie','PAR SG','Vũ Thanh Vân','Saabirose','SIVAN','Nguyên','Seth','New$oulZ','THDC','Han Kim','Lã Thắng','Dfoxie37', 'Myhai',
 'VSOUL', 'MFREE', 'TUYEN VO','Sweet Liquor','GREY D','B Ray','Phùng Khánh Linh','Minh Lý','Wikin 25 Táo','Sáo','MASEW','Young H',"Sol'Bass",'Nah','Chú 13','Khói','Bảo Uyên','Jay Kem','Khoi','Việt Anh','Monstar','Mahidu','NIEE', 'D.BLue','Phúc Du','$eadreak','W/N','DatG',
 'Erik','Linh','Nâu','Orange','Young Crizzbe','Hoàng Dũng','Đạt G','HAST', 'Dab','RPT Orijinn', 'kis','DucMinh','Ronboogz', 'sy','KEI','Galaxyy', 'Kim Nguyen Martian' ]
 
@@ -653,6 +653,7 @@ const getAlbum = () => {
 const customAlbumBox = (ID,albumname, creator, cover, description, items) => {    
     creatorBoxx.style.display = 'block';
     albumBox.style.display = "none";
+    creatorBoxx.scrollTo(0,0);
     if (ID === "00001") {
         songs = songs_buivinh;
         
