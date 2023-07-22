@@ -19,11 +19,20 @@ custom_albums = [
         id: '00001',
         albumName: 'Dream?',
         creator: 'White_wolf',
-        cover: 'img/custom_cover/00002.jpg',
+        cover: 'img/custom_cover/00001.jpg',
         description: 'Nothin here just a dream. Not a nightmare just a memory. Btw I hope u guys understand sth, exactly what? idk.',
         items: ['00048','00105','10004','10005','10006','10007','10008','10009','10010','10011','10012','10013','10014','10015',
                 '10016','10017','10018','10019','10020','10021','10022','10023','10024','10025','10026','10027','10028','00016','10030',
                 '10031','10032','10033','10034','10036','10037','10038','10039','10040'
+                ]
+    },
+    {
+        id: '00002',
+        albumName: 'Ebullacholia',
+        creator: 'ryteg',
+        cover: 'img/custom_cover/00002.jpg',
+        description: "Someone set a fire in my music taste. If you feel melancholic or a little depressed, here can be your analgesic.",
+        items: ['00134','00000','00042','00146','00030','00147','00073','00003','00016','00019','00001'
                 ]
     },
     

@@ -565,16 +565,16 @@ const artistsBox = (artist_name) => {
     div.classList.add('gap');
     div.style.height = "120px";
     songList.appendChild(div)
-
-    albumSongsShuffle = albumtemp.slice();
-    for (let i = albumSongsShuffle.length - 1; i >= 0; i--) {
-        const randIndex = Math.floor(Math.random() * (i + 1));
-        const temp = albumSongsShuffle[i];
-        albumSongsShuffle[i] = albumSongsShuffle[randIndex];
-        albumSongsShuffle[randIndex] = temp;
-    }
         
     playAlbumBtn.addEventListener('click', () => {
+        albumSongsShuffle = albumtemp.slice();
+        for (let i = albumSongsShuffle.length - 1; i >= 0; i--) {
+            const randIndex = Math.floor(Math.random() * (i + 1));
+            const temp = albumSongsShuffle[i];
+            albumSongsShuffle[i] = albumSongsShuffle[randIndex];
+            albumSongsShuffle[randIndex] = temp;
+        }
+        
         albumSongs = albumtemp;
         Statusbox.innerHTML = `Album: ${artist_name}`;
         activeMusic(albumSongs[0]);
@@ -671,19 +671,7 @@ const customAlbumBox = (ID,albumname, creator, cover, description, items) => {
     creatorBoxx.style.display = 'block';
     albumBox.style.display = "none";
     creatorBoxx.scrollTo(0,0);
-
-    if (ID === "00001") {
-        songs = songs_buivinh;
-        
-        const shuffleSongs = songs_buivinh.slice();
-
-        for (let i = shuffleSongs.length - 1; i >= 0; i--) {
-            const randIndex = Math.floor(Math.random() * (i + 1));
-            const temp = shuffleSongs[i];
-            shuffleSongs[i] = shuffleSongs[randIndex];
-            shuffleSongs[randIndex] = temp;
-        }
-    }
+    
     // Banner creator's album
     const coverimg = document.querySelector('.cover-img');
     const coverinfor = document.querySelector('.cover-infor');
@@ -711,16 +699,15 @@ const customAlbumBox = (ID,albumname, creator, cover, description, items) => {
     div.classList.add('gap');
     div.style.height = "120px";
     songList.appendChild(div)
-
-    albumSongsShuffle = albumtemp.slice();
-    for (let i = albumSongsShuffle.length - 1; i >= 0; i--) {
-        const randIndex = Math.floor(Math.random() * (i + 1));
-        const temp = albumSongsShuffle[i];
-        albumSongsShuffle[i] = albumSongsShuffle[randIndex];
-        albumSongsShuffle[randIndex] = temp;
-    }
     
     playAlbumBtn2.addEventListener('click', () => {
+        albumSongsShuffle = albumtemp.slice();
+        for (let i = albumSongsShuffle.length - 1; i >= 0; i--) {
+            const randIndex = Math.floor(Math.random() * (i + 1));
+            const temp = albumSongsShuffle[i];
+            albumSongsShuffle[i] = albumSongsShuffle[randIndex];
+            albumSongsShuffle[randIndex] = temp;
+        }
         Statusbox.innerHTML = `Album: ${albumname} - ${creator}`
         albumSongs = albumtemp;
         activeMusic(albumSongs[0]);
