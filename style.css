@@ -613,6 +613,17 @@ header nav ul li button {
     font-size: 15px;
 }
 
+.status {
+    color: gray;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    height: 50px;
+}
+
 .disk {
     position: relative;
     display: block;
@@ -1032,6 +1043,10 @@ header nav ul li button {
     
     }
     
+    .status {
+        display: none
+    }
+    
     .music-player {
         width: 88%;
         border-radius: 12px;
@@ -1041,8 +1056,13 @@ header nav ul li button {
         padding: 20px;
         overflow: hidden;
         color: #fff;
-        display: flex;
         align-items: center;
+    }
+
+    .music-player-box {
+        display: flex;
+        padding: 0;
+        margin: 0;
     }
     
     .disk-box {

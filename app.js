@@ -70,6 +70,7 @@ const miniplayer = document.querySelector('.mini-player');
 const miniplayerbox = document.querySelector('.box-mini-player');
 const creatorBoxx = document.querySelector('.creator-boxx');
 const coverartist = document.querySelector('.cover-artist');
+const Statusbox = document.querySelector('.status');
 
 const spacebarkey = 32;
 const leftKey = 37;
@@ -390,6 +391,7 @@ const formatTime = (time) => {
 const setMusic = (i) => {  
     if (albumSongs.includes(i)) {
     } else {
+        Statusbox.innerHTML = '';
         albumSongs = [];
         albumSongsShuffle = []
     }
@@ -518,10 +520,9 @@ path_cover_artists = 'img/artists/'
 // Generate playlist of specific artist albums
 const albumList = document.getElementById("artists-suggested")
 const albumListcustom = document.getElementById("created-album");
-albumtemp = [];
 
 const artistsBox = (artist_name) => {
-    
+    albumtemp = [];
     artistsBoxx.style.display = 'block';
     albumBox.style.display = "none";
 
@@ -561,6 +562,7 @@ const artistsBox = (artist_name) => {
         
     playAlbumBtn.addEventListener('click', () => {
         albumSongs = albumtemp;
+        Statusbox.innerHTML = `Album: ${artist_name}`;
         activeMusic(albumSongs[0]);
         playAlbumBtn.blur()
     })    
@@ -651,9 +653,11 @@ const getAlbum = () => {
 }
 
 const customAlbumBox = (ID,albumname, creator, cover, description, items) => {    
+    albumtemp = [];
     creatorBoxx.style.display = 'block';
     albumBox.style.display = "none";
     creatorBoxx.scrollTo(0,0);
+
     if (ID === "00001") {
         songs = songs_buivinh;
         
@@ -703,6 +707,7 @@ const customAlbumBox = (ID,albumname, creator, cover, description, items) => {
     }
     
     playAlbumBtn2.addEventListener('click', () => {
+        Statusbox.innerHTML = `Album: ${albumname} - ${creator}`
         albumSongs = albumtemp;
         activeMusic(albumSongs[0]);
         playAlbumBtn2.blur()

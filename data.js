@@ -7,13 +7,6 @@ songs = [
         cover: 'img/banner/00013.jpg',
     },
     {
-        id: '00035',
-        name: 'golden hour - Ruel Remix',
-        path: 'audio/JVKE - golden hour (Ruel Remix) .mp3',
-        artist: 'JVKE, Ruel',
-        cover: 'img/banner/00035.jpg',
-    },
-    {
         id: '00009',
         name: 'MOT NGUOI VI EM',
         path: 'audio/mot nguoi vi em (midnight) _ WEAN.ogg',
@@ -96,6 +89,13 @@ songs = [
         path: 'audio/joji - Head in the Clouds.mp3',
         artist: '88rising, Joji',
         cover: 'img/banner/00086.jpg',
+    },
+    {
+        id: '00035',
+        name: 'golden hour - Ruel Remix',
+        path: 'audio/JVKE - golden hour (Ruel Remix) .mp3',
+        artist: 'JVKE, Ruel',
+        cover: 'img/banner/00035.jpg',
     },
     {
         id: '00010',
