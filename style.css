@@ -176,7 +176,7 @@ header nav ul li button {
     width: 100%;
     justify-content: center;
     align-items: center;
-    height: 60px;
+    height: 80px;
     background: transparent;
     display: flex;
 }
@@ -184,7 +184,7 @@ header nav ul li button {
 .mini-player {
     border: none;
     cursor: default;
-    padding: 5px 100px 5px 5px;
+    padding: 7px 100px 7px 7px;
     width: 95%;
     border-radius: 5px;
     bottom: 55px;
@@ -195,10 +195,12 @@ header nav ul li button {
     align-items: center;
 }
 
+
 .mini-player h1 {
     width: 100%;
     font-family: "Be Vietnam Pro";
-    font-size: 12px;
+    font-size: 13px;
+    text-align: left;
     color: #fff;
     white-space: nowrap;
     overflow: hidden;
@@ -207,13 +209,15 @@ header nav ul li button {
 
 .mini-player .mini-artist {
     color: gray;
+    margin-top: 4px;
+    font-size: 11px;
 }
 
 .mini-player img {
     width: 40px;
     height: 40px;
     border-radius: 5px;
-    margin: 0 15px 0 0;
+    margin: 0 7px 0 0;
 }
 
 .box {
