@@ -58,7 +58,7 @@ songs = [
     {
         id: '00003',
         name: 'Cắt kéo trên Lênin',
-        path: 'audio/Cắt kéo trên Lênin _ Low G _ Rap Nhà Làm.mp3',
+        path: 'audio/00003.m4a',
         artist: 'Low G',
         cover: 'img/banner/00003.jpg',
     },
@@ -100,7 +100,7 @@ songs = [
     {
         id: '00010',
         name: 'magnolia',
-        path: 'audio/magnolia _ keshi.ogg',
+        path: 'audio/00010.aac',
         artist: 'keshi',
         cover: 'img/banner/00010.jpg',
     },
@@ -219,7 +219,7 @@ songs = [
     {
         id: '00017',
         name: 'Nhìn Những Mùa Thu Đi',
-        path: 'audio/My Anh - nhìn những mùa thu đi.mp3',
+        path: 'audio/00017.aac',
         artist: 'My Anh',
         cover: 'img/banner/00017.jpg',
     },
@@ -269,7 +269,7 @@ songs = [
     {
         id: '00029',
         name: 'Bây Giờ Tháng Mấy',
-        path: 'audio/BÂY GIỜ THÁNG MẤY.mp3',
+        path: 'audio/00029.aac',
         artist: 'Nguyễn Thùy Linh',
         cover: 'img/banner/00029.jpg',
     },
@@ -374,7 +374,7 @@ songs = [
     {
         id: '00042',
         name: 'Hái Sao',
-        path: 'audio/HÁI SAO.mp3',
+        path: 'audio/00042.m4a',
         artist: 'Pixel Neko, Thắng',
         cover: 'img/banner/00042.jpg',
     },
@@ -1186,7 +1186,7 @@ songs = [
     {
         id: '00134',
         name: "Steal The Show",
-        path: "audio/00134.mp3",
+        path: "audio/00134.aac",
         artist: 'Lauv',
         cover: 'img/banner/00134.jpg',
     },
@@ -1280,5 +1280,12 @@ songs = [
         path: "audio/00147.mp3",
         artist: 'beabadoobee, Clairo',
         cover: 'img/banner/00147.jpg',
+    },
+    {
+        id: '00148',
+        name: "Dangerously",
+        path: "audio/00148.m4a",
+        artist: 'Charlie Puth',
+        cover: 'img/banner/00148.jpg',
     }
 ]
