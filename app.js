@@ -239,6 +239,20 @@ Search2.addEventListener('click', () => {
     window.scrollTo(0,0)
 })
 
+miniplayer.addEventListener('click', () => {
+    banner.style.display = 'none';
+    searchbox.style.display = 'none';
+    musicBox.style.display = 'none';
+    creatorBoxx.style.display = 'none';
+    albumBox.style.display = 'none';
+    artistsBoxx.style.display = 'none';
+    MusicTab.style.display = 'flex';
+    miniplayerbox.style.display = 'flex';
+    window.scrollTo(0,0);
+    miniplayer.blur();
+})
+
+
 music.addEventListener('pause', () => {
     if (!playBtn.classList.contains('pause') && !music.ended) {
         playBtn.click();
