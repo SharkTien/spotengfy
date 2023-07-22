@@ -444,8 +444,8 @@ const setMusic = (i) => {
 
 
 setMusic(0);
-music.volume = 0.8;
-volumeBar.value = 80;
+music.volume = 1;
+volumeBar.value = 100;
 
 setInterval(() => {
     seekBar.value = music.currentTime;
