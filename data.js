@@ -493,7 +493,7 @@ songs = [
     {
         id: '00059',
         name: 'god of the sunsets',
-        path: 'audio/SEB - god of the sunsets.mp3',
+        path: 'audio/00059.aac',
         artist: 'SEB',
         cover: 'img/banner/00059.jpg',
     },
