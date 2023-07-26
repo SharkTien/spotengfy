@@ -255,13 +255,17 @@ miniplayer.addEventListener('click', () => {
 
 music.addEventListener('pause', () => {
     if (!playBtn.classList.contains('pause') && !music.ended) {
-        playBtn.click();
+        playBtn.classList.toggle('pause');
+        playBtn2.classList.toggle('pause');
+        disk.classList.toggle('play');
     }
 })
 
 music.addEventListener('play', () => {
     if (playBtn.classList.contains('pause')) {
-        playBtn.click();
+        playBtn.classList.toggle('pause');
+        playBtn2.classList.toggle('pause');
+        disk.classList.toggle('play');
     }
 })
 
@@ -500,6 +504,15 @@ const activeMusic = (i) => {
 }
 
 
+navigator.mediaSession.setActionHandler(
+    'nexttrack',
+    () => {forwardBtn.click()}
+);
+navigator.mediaSession.setActionHandler(
+    'previoustrack',
+    () => {backwardBtn.click()}
+);
+
 const addSongItem = (number, i, songList_id, IdItem) => {
     songList = document.getElementById(songList_id);
     li = document.createElement("li");
@@ -604,8 +617,8 @@ for (let i = 0; i < songs.length; i++) {
 // Generate list of artists
 
 p = [];
-notAvailableArtists = ['Clever','Trí Dũng','Fishy','Groovie','Lil Uzi Vert','Cam','Jenevieve','MinhLai','LeeHi','Anh Phan','Negav','sped up nightcore', 'ARIZONATEARS','bbygirl','DWELLS','Wxrdie','PAR SG','Vũ Thanh Vân','Saabirose','SIVAN','Nguyên','Seth','New$oulZ','THDC','Han Kim','Lã Thắng','Dfoxie37', 'Myhai',
-'VSOUL', 'MFREE', 'TUYEN VO','Sweet Liquor','GREY D','B Ray','Phùng Khánh Linh','Minh Lý','Wikin 25 Táo','Sáo','MASEW','Young H',"Sol'Bass",'Nah','Chú 13','Khói','Bảo Uyên','Jay Kem','Khoi','Việt Anh','Monstar','Mahidu','NIEE', 'D.BLue','Phúc Du','$eadreak','W/N','DatG',
+notAvailableArtists = ['Clever','Trí Dũng','Fishy','Groovie','Lil Uzi Vert','Cam','Jenevieve','Clams Casino','kyuuwaii','MinhLai','LeeHi','Anh Phan','Negav','sped up nightcore', 'ARIZONATEARS','bbygirl','DWELLS','Wxrdie','PAR SG','Vũ Thanh Vân','Saabirose','SIVAN','Nguyên','Seth','New$oulZ','THDC','Han Kim','Lã Thắng','Dfoxie37', 'Myhai',
+'VSOUL', 'MFREE', 'TUYEN VO','Sweet Liquor','GREY D','B Ray','V#','Phùng Khánh Linh','Minh Lý','Wikin 25 Táo','Sáo','MASEW','Young H',"Sol'Bass",'Nah','Chú 13','Khói','Khánh DaLa','Bảo Uyên','Jay Kem','Khoi','Việt Anh','Tiên Tiên','Mahidu','NIEE', 'D.BLue','Phúc Du','$eadreak','W/N','DatG',
 'Erik','Linh','Nâu','Orange','Young Crizzbe','Hoàng Dũng','Đạt G','HAST', 'Dab','RPT Orijinn', 'kis','DucMinh','Ronboogz', 'sy','KEI','Galaxyy', 'Kim Nguyen Martian' ]
 
 for (artist of artists) {

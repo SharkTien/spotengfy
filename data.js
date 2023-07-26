@@ -631,6 +631,13 @@ songs = [
         cover: 'img/banner/00089.jpg',
     },
     {
+        id: '10003',
+        name: "100 Questions (feat. B Ray)",
+        path: "audio/10003.aac",
+        artist: 'V#, B Ray',
+        cover: 'img/banner/10003.jpg',
+    },
+    {
         id: '10004',
         name: 'whatever happens, happens (feat. Saabirose)',
         path: 'audio/PAR SG - whatever happens, happens ft. Saabirose.mp3',
@@ -758,10 +765,10 @@ songs = [
     },
     {
         id: '10022',
-        name: "Đứa Nào Làm Em Buồn? (Feat. Hoàng Dũng)",
-        path: "audio/Lyric Video _ đứa nào làm em buồn_ - Phúc Du ft. Hoàng Dũng.mp3",
-        artist: 'Phúc Du, Hoàng Dũng',
-        cover: 'img/banner/10020.jpg',
+        name: "Qua Ngày Mai",
+        path: "audio/10022.aac",
+        artist: 'Tiên Tiên',
+        cover: 'img/banner/10022.jpg',
     },
     {
         id: '10023',
@@ -783,19 +790,19 @@ songs = [
         path: "audio/Tôi Chỉ Muốn Là Người Duy Nhất Em Yêu.mp3",
         artist: 'Linh',
         cover: 'img/banner/10025.jpg',
-    },    
+    },
     {
         id: '10026',
-        name: "Dự báo thời tiết hôm nay mưa",
-        path: "audio/GREY D - dự báo thời tiết hôm nay mưa _ official visualizer (320 kbps).mp3",
-        artist: 'GREY D',
+        name: "Đâu Ai Vì Nhau",
+        path: "audio/10026.aac",
+        artist: 'Khánh DaLa',
         cover: 'img/banner/10026.jpg',
-    },  
+    },
     {
         id: '10027',
         name: "Tình Yêu Chậm Trễ",
         path: "audio/Tình Yêu Chậm Trễ - Monstar (Slow Ver) by Khoi.mp3",
-        artist: 'Khoi, Monstar',
+        artist: 'Khoi, GREY D',
         cover: 'img/banner/10027.jpg',
     },
     {
@@ -874,6 +881,13 @@ songs = [
         path: "audio/ONLY.mp3",
         artist: 'LeeHi',
         cover: 'img/banner/10040.jpg',
+    },
+    {
+        id: '10041',
+        name: "Ngủ Ngoan Em nhé",
+        path: "audio/10041.aac",
+        artist: 'GREY D',
+        cover: 'img/banner/10041.jpg',
     },
     {
         id: '00090',
@@ -1287,5 +1301,12 @@ songs = [
         path: "audio/00148.m4a",
         artist: 'Charlie Puth',
         cover: 'img/banner/00148.jpg',
+    },
+    {
+        id: '00149',
+        name: "Can't Get Over You (Joji ft. Clams Casino) (kyuuwaii Cover)",
+        path: "audio/00149.aac",
+        artist: 'kyuuwaii',
+        cover: 'img/banner/00149.jpg',
     }
 ]
