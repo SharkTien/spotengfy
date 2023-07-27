@@ -890,6 +890,27 @@ songs = [
         cover: 'img/banner/10041.jpg',
     },
     {
+        id: '10042',
+        name: "2 5 - Live Version",
+        path: "audio/10042.m4a",
+        artist: 'Táo',
+        cover: 'img/banner/10042.jpg',
+    },
+    {
+        id: '10043',
+        name: "Anh Là Ai? (feat. Dick, DT & UMIE)",
+        path: "audio/10043.m4a",
+        artist: 'RAP VIỆT, Dick, DT, UMIE',
+        cover: 'img/banner/10043.jpg',
+    },
+    {
+        id: '10044',
+        name: "Blue Tequila",
+        path: "audio/10044.aac",
+        artist: 'Táo',
+        cover: 'img/banner/10044.jpg',
+    },
+    {
         id: '00090',
         name: "She's A 10 But...",
         path: "audio/ARTAN feat. Spencer Elmer - She's A 10 But....mp3",

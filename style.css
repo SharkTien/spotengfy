@@ -255,10 +255,6 @@ header nav ul li button {
     text-align: center;
 }
 
-.artists-boxx .name-artist {
-    text-align: center;
-}
-
 
 .artists-boxx, .creator-boxx {
     width: 100%;
@@ -283,23 +279,28 @@ header nav ul li button {
     height: 70px;
     width: 100%;
     background: #111;
-    padding: 0px;
-    padding-left: 10px;
+    padding: 0 25px 0 25px;
 }
 
-.artists-play button, .button-play-cover-box button {
+.artists-play button, .button-play-cover-box .play-album2 {
     height: 50px;
     width: 50px;
     border-radius: 50%;
     background-color: #fff;
     border: none;
+    float: right;
 }
 
-.button-play-cover-box button {
+.button-play-cover-box .shuffle-album-btn {
+    height: 50px;
+    width: 50px;
+}
+
+.button-play-cover-box .play-album2 {
     background-color: rgba(147,71,71,255);
 }
 
-.button-play-cover-box button:hover {
+.button-play-cover-box .play-album2:hover {
     background-color: rgba(150,83,83,255);
 }
 
@@ -310,7 +311,7 @@ header nav ul li button {
     background: linear-gradient(to bottom, rgb(255,255,255), #111);
     color: #fff;
     align-items: center;
-    padding: 0 0 0 25px;
+    padding: 0;
 }
 
 .creator-boxx .introduce-album {
@@ -331,7 +332,6 @@ header nav ul li button {
 .creator-boxx .cover-img img, .artists-boxx .cover-artist img {
     width: 180px;
     height: 180px;
-    margin-left: -25px;
     box-shadow: 0px 40px 40px 20px rgba(0,0,0,0.5);
     margin-top: 30px;
     object-fit: cover;
@@ -345,13 +345,12 @@ header nav ul li button {
 
 .artists-boxx .playlist-artists, .creator-boxx .playlist-creator {
     width: 100%;
-    height: 75vh;
     background: #111;
 }
 
 .cover-infor {
     align-items: center;
-    padding: 0 25px 25px 0;
+    padding: 0 25px 25px 25px;
     font-family: 'Be Vietnam Pro';
     width: fit-content;
 }
@@ -374,6 +373,11 @@ header nav ul li button {
     justify-content: center;
     overflow: hidden;
     overflow-y: scroll;
+}
+
+.playlist-artists, .playlist-creator {
+    overflow-y: hidden;
+    min-height: 500px;    
 }
 
 .music-box ul, .playlist-artists ul, .playlist-creator ul{
@@ -510,14 +514,22 @@ header nav ul li button {
 .music-player {
     width: 500px;
     border-radius: 12px;
-    height: 100vh;
+    height: calc(100vh - 55px);
     background: linear-gradient(to bottom, #000, 10%, #111);
+    align-items: center;
     box-shadow: 0 40px 100px rgba(255,255,255,0.1);
     padding: 30px;
+    display: flex;
     overflow: hidden;
     color: #fff;
 }
 
+.music-player-box {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: fit-content;
+}
 
 .music-name,
 .artist-name {
@@ -900,8 +912,17 @@ header nav ul li button {
     height: 20px;
 }
 
-.shuffle-btn.active svg, .repeat-btn.active svg{
+.shuffle-album-btn svg {
+    width: 28px;
+    height: 28px;
+}
+
+.shuffle-btn.active svg, .repeat-btn.active svg {
     fill: #ffffff;
+}
+
+.shuffle-album-btn.active svg{
+    fill: rgba(150,83,83,255)
 }
 
 .btnbox {
@@ -1384,13 +1405,10 @@ header nav ul li button {
         color: #fff;
     }
 
-    .artists-play button, .button-play-cover-box button {
-        height: 60px;
-        width: 60px;
-        border-radius: 50%;
-        border: none;
-        background-color: #fff;
-    }
+    .artists-play button {
+        margin-left: 20px;
+    }    
+
 
     .artists-play, .button-play-cover-box {
         height: 100px;
@@ -1398,7 +1416,31 @@ header nav ul li button {
         background: #111;
         padding: 25px 50px 0 50px;
     }
+    
+    .artists-play button, .button-play-cover-box .play-album2 {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        border: none;
+        background-color: #fff;
+        float: left;
+    }
 
+    .music-box, .playlist-artists, .playlist-creator {
+        height: 100%;
+        width: 100%;
+        border: none;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+
+    .music-box ul, .playlist-artists ul, .playlist-creator ul{
+        width: 95%;
+        height: 70%;
+    }    
+    
     .music-box::-webkit-scrollbar, .playlist-artists::-webkit-scrollbar, .playlist-creator::-webkit-scrollbar {
         display: block;
     }
@@ -1502,11 +1544,21 @@ header nav ul li button {
         box-shadow: 0px 0px 40px 20px rgba(0,0,0,0.5);
     }
     
-    .button-play-cover-box button {
+    .button-play-cover-box .shuffle-album-btn {
+        display: none;
+    }
+    
+    .button-play-cover-box {
+        padding-left: 70px;
+    }
+
+    .button-play-cover-box .play-album2 {
+        width: 60px;
+        height: 60px;
         background-color: rgba(147,71,71,255);
     }
     
-    .button-play-cover-box button:hover {
+    .button-play-cover-box .play-album2:hover {
         background-color: rgba(150,83,83,255);
     }
 

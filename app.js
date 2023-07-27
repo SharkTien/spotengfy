@@ -31,6 +31,7 @@ const forwardBtn = document.querySelector('.forward-btn');
 const backwardBtn = document.querySelector('.backward-btn');
 const repeatBtn = document.querySelector('.repeat-btn');
 const shuffleBtn = document.querySelector('.shuffle-btn');
+const shuffleAlbumBtn = document.querySelector('.shuffle-album-btn');
 const homeBtn = document.querySelector('.Home');
 const homeBtn2 = document.querySelector('.Home2')
 const Library = document.querySelector('.Library');
@@ -247,7 +248,7 @@ miniplayer.addEventListener('click', () => {
     albumBox.style.display = 'none';
     artistsBoxx.style.display = 'none';
     MusicTab.style.display = 'flex';
-    miniplayerbox.style.display = 'flex';
+    miniplayerbox.style.display = 'none';
     window.scrollTo(0,0);
     miniplayer.blur();
 })
@@ -370,13 +371,32 @@ shuffleBtn.addEventListener('click', () => {
     if (shuffle) {
         shuffle = !!false;
         shuffleBtn.setAttribute('title','Enable shuffle');
+        shuffleAlbumBtn.setAttribute('title','Enable shuffle album');
     } else {
         shuffle = !!true;
         shuffleBtn.setAttribute('title','Disable shuffle');
+        shuffleAlbumBtn.setAttribute('title','Disable shuffle album');
     }
     shuffleBtn.classList.toggle('active');
+    shuffleAlbumBtn.classList.toggle('active');
     shuffleBtn.blur()
 })
+
+shuffleAlbumBtn.addEventListener('click', () => {
+    if (shuffle) {
+        shuffle = !!false;
+        shuffleBtn.setAttribute('title','Enable shuffle');
+        shuffleAlbumBtn.setAttribute('title','Enable shuffle album');
+    } else {
+        shuffle = !!true;
+        shuffleBtn.setAttribute('title','Disable shuffle');
+        shuffleAlbumBtn.setAttribute('title','Disable shuffle album');
+    }
+    shuffleBtn.classList.toggle('active');
+    shuffleAlbumBtn.classList.toggle('active');
+    shuffleAlbumBtn.blur()
+})
+
 
 createBtn.addEventListener('click', () => {
     custom_albums.push({albumName: albumname.value, discription: '', create: '', items: []});
@@ -595,7 +615,7 @@ const artistsBox = (artist_name) => {
         
         albumSongs = albumtemp;
         Statusbox.innerHTML = `Album: ${artist_name}`;
-        activeMusic(albumSongs[0]);
+        activeMusic((shuffle) ? albumSongsShuffle[0] : albumSongs[0]);
         playAlbumBtn.blur()
     })    
 }
@@ -623,7 +643,7 @@ for (let i = 0; i < songs.length; i++) {
 
 p = [];
 notAvailableArtists = ['Clever','Trí Dũng','Fishy','Groovie','Lil Uzi Vert','Cam','Jenevieve','Clams Casino','kyuuwaii','MinhLai','LeeHi','Anh Phan','Negav','sped up nightcore', 'ARIZONATEARS','bbygirl','DWELLS','Wxrdie','PAR SG','Vũ Thanh Vân','Saabirose','SIVAN','Nguyên','Seth','New$oulZ','THDC','Han Kim','Lã Thắng','Dfoxie37', 'Myhai',
-'VSOUL', 'MFREE', 'TUYEN VO','Sweet Liquor','GREY D','B Ray','V#','Phùng Khánh Linh','Minh Lý','Wikin 25 Táo','Sáo','MASEW','Young H',"Sol'Bass",'Nah','Chú 13','Khói','Khánh DaLa','Bảo Uyên','Jay Kem','Khoi','Việt Anh','Tiên Tiên','Mahidu','NIEE', 'D.BLue','Phúc Du','$eadreak','W/N','DatG',
+'VSOUL','MFREE','TUYEN VO','RAP VIỆT','Dick','DT','UMIE','Sweet Liquor','GREY D','B Ray','V#','Phùng Khánh Linh','Minh Lý','Wikin 25 Táo','Sáo','MASEW','Young H',"Sol'Bass",'Nah','Chú 13','Khói','Khánh DaLa','Bảo Uyên','Jay Kem','Khoi','Việt Anh','Tiên Tiên','Mahidu','NIEE', 'D.BLue','Phúc Du','$eadreak','W/N','DatG',
 'Erik','Linh','Nâu','Orange','Young Crizzbe','Hoàng Dũng','Đạt G','HAST', 'Dab','RPT Orijinn', 'kis','DucMinh','Ronboogz', 'sy','KEI','Galaxyy', 'Kim Nguyen Martian' ]
 
 for (artist of artists) {
@@ -728,7 +748,7 @@ const customAlbumBox = (ID,albumname, creator, cover, description, items) => {
         }
         Statusbox.innerHTML = `Album: ${albumname} - ${creator}`
         albumSongs = albumtemp;
-        activeMusic(albumSongs[0]);
+        activeMusic((shuffle) ? albumSongsShuffle[0] : albumSongs[0]);
         playAlbumBtn2.blur()
     })
 }
@@ -831,3 +851,4 @@ backButton2.addEventListener('click', () => {
     albumCustom.classList.toggle('extent');
     scrollAlbumCustom.scrollTo(0,0)
 })
+
