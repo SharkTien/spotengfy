@@ -1051,6 +1051,13 @@ songs = [
         cover: 'img/banner/00112.jpg',
     },
     {
+        id: '00156',
+        name: "The Archer",
+        path: "audio/00156.aac",
+        artist: 'Taylor Swift',
+        cover: 'img/banner/00156.jpg',
+    },
+    {
         id: '00113',
         name: "Màu Đỏ (Interlude)",
         path: "audio/00113.mp3",
@@ -1177,6 +1184,13 @@ songs = [
         cover: 'img/banner/00130.jpg',
     },
     {
+        id: '00155',
+        name: "my tears ricochet",
+        path: "audio/00155.aac",
+        artist: 'Taylor Swift',
+        cover: 'img/banner/00155.jpg',
+    },
+    {
         id: '00131',
         name: "Hiểu Thứ Tha",
         path: "audio/00131.mp3",
@@ -1217,6 +1231,13 @@ songs = [
         path: "audio/00136.mp3",
         artist: 'NewJeans',
         cover: 'img/banner/00136.jpg',
+    },
+    {
+        id: '00154',
+        name: "long story short",
+        path: "audio/00154.aac",
+        artist: 'Taylor Swift',
+        cover: 'img/banner/00154.jpg',
     },
     {
         id: '00137',
@@ -1261,11 +1282,32 @@ songs = [
         cover: 'img/banner/00142.jpg',
     },
     {
+        id: '00151',
+        name: "Butterflies",
+        path: "audio/00151.aac",
+        artist: 'Abe Parker',
+        cover: 'img/banner/00151.jpg',
+    },
+    {
         id: '00143',
         name: "Take Off Everything, Pt. 2",
         path: "audio/00143.mp3",
         artist: 'Lønelo, DWELLS',
         cover: 'img/banner/00143.jpg',
+    },
+    {
+        id: '00152',
+        name: "Nothing New (feat. Phoebe Bridgers)",
+        path: "audio/00152.aac",
+        artist: 'Taylor Swift',
+        cover: 'img/banner/00152.jpg',
+    },
+    {
+        id: '00153',
+        name: "I Almost Do",
+        path: "audio/00153.aac",
+        artist: 'Taylor Swift',
+        cover: 'img/banner/00152.jpg',
     },
     {
         id: '00144',
@@ -1308,5 +1350,12 @@ songs = [
         path: "audio/00149.aac",
         artist: 'kyuuwaii',
         cover: 'img/banner/00149.jpg',
+    },
+    {
+        id: '00150',
+        name: "Numb Little Bug",
+        path: "audio/00150.aac",
+        artist: 'Em Beihold',
+        cover: 'img/banner/00150.jpg',
     }
 ]

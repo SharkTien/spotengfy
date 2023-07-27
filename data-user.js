@@ -33,7 +33,7 @@ custom_albums = [
         cover: 'img/custom_cover/00002.jpg',
         description: "Someone set a fire in my music taste. If you feel melancholic or a little depressed, here can be your analgesic.",
         items: ['00134','00000','00042','00146','00030','00147','00073','00003','00016','00019','00001','00010','00056','00127','00017',
-                '00011','00061','00059','00149','00132','00041'
+                '00011','00061','00059','00149','00132','00041','00150','00151'
                 ]
     },
     

@@ -246,9 +246,13 @@ header nav ul li button {
 
 .artists-boxx .name-artist, .creator-boxx h1 {
     font-size: 28px;
-    text-align: left;
     color: #fff;
+    text-align: left;
     font-family: 'Be Vietnam Pro Black';
+}
+
+.artists-boxx .name-artist {
+    text-align: center;
 }
 
 
@@ -269,7 +273,6 @@ header nav ul li button {
     font-weight: 900;
     font-size: 20px;
     color: #fff;
-    margin-left: 25px;
 }
 
 .artists-play, .button-play-cover-box {
@@ -452,6 +455,7 @@ header nav ul li button {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 
 .songItemAlbum .run,
 .songItem .run,
