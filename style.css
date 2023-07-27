@@ -255,6 +255,10 @@ header nav ul li button {
     text-align: center;
 }
 
+.artists-boxx .name-artist {
+    text-align: center;
+}
+
 
 .artists-boxx, .creator-boxx {
     width: 100%;
