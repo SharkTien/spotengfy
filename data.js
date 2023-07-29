@@ -715,6 +715,13 @@ songs = [
         cover: 'img/banner/10014.jpg',
     },
     {
+        id: '00157',
+        name: "Mở Mắt",
+        path: "audio/00157.aac",
+        artist: 'Lil Wuyn, Đen',
+        cover: 'img/banner/00157.jpg',
+    },
+    {
         id: '10015',
         name: 'NGTANOISE',
         path: 'audio/Han Kim - Voicemail 語音郵件.mp3',
@@ -764,6 +771,13 @@ songs = [
         cover: 'img/banner/10021.jpg',
     },
     {
+        id: '00158',
+        name: "Go Crazy",
+        path: "audio/00158.aac",
+        artist: 'Chris Brown, Young Thug',
+        cover: 'img/banner/00158.jpg',
+    },
+    {
         id: '10022',
         name: "Qua Ngày Mai",
         path: "audio/10022.aac",
@@ -811,6 +825,13 @@ songs = [
         path: "audio/Trước Khi Em Tồn Tại (Piano Version) - Thắng _ Việt Anh Cover.mp3",
         artist: 'Thắng, Việt Anh',
         cover: 'img/banner/10028.jpg',
+    },
+    {
+        id: '00159',
+        name: "Dusk Till Dawn (feat. Sia) - Radio Edit",
+        path: "audio/00159.aac",
+        artist: 'ZAYN, Sia',
+        cover: 'img/banner/00159.jpg',
     },
     {
         id: '10030',

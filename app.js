@@ -16,7 +16,6 @@ for (let i = shuffleSongs.length - 1; i >= 0; i--) {
     shuffleSongs[randIndex] = temp;
 }
 
-
 const music = document.querySelector('#audio');
 
 const seekBar = document.querySelector('.seek-bar');
@@ -549,7 +548,7 @@ const addSongItem = (number, i, songList_id, IdItem) => {
     </h5>
     `;
     songList.appendChild(li);
-    };  
+    };
 
 const activeMusicandblur = (i) => {
     activeMusic(i);
@@ -642,7 +641,7 @@ for (let i = 0; i < songs.length; i++) {
 // Generate list of artists
 
 p = [];
-notAvailableArtists = ['Clever','Trí Dũng','Fishy','Groovie','Lil Uzi Vert','Cam','Jenevieve','Clams Casino','kyuuwaii','MinhLai','LeeHi','Anh Phan','Negav','sped up nightcore', 'ARIZONATEARS','bbygirl','DWELLS','Wxrdie','PAR SG','Vũ Thanh Vân','Saabirose','SIVAN','Nguyên','Seth','New$oulZ','THDC','Han Kim','Lã Thắng','Dfoxie37', 'Myhai',
+notAvailableArtists = ['Clever','Lil Wuyn','Young Thug','Chris Brown','Sia','ZAYN','Đen','Trí Dũng','Fishy','Groovie','Lil Uzi Vert','Cam','Jenevieve','Clams Casino','kyuuwaii','MinhLai','LeeHi','Anh Phan','Negav','sped up nightcore', 'ARIZONATEARS','bbygirl','DWELLS','Wxrdie','PAR SG','Vũ Thanh Vân','Saabirose','SIVAN','Nguyên','Seth','New$oulZ','THDC','Han Kim','Lã Thắng','Dfoxie37', 'Myhai',
 'VSOUL','MFREE','TUYEN VO','RAP VIỆT','Dick','DT','UMIE','Sweet Liquor','GREY D','B Ray','V#','Phùng Khánh Linh','Minh Lý','Wikin 25 Táo','Sáo','MASEW','Young H',"Sol'Bass",'Nah','Chú 13','Khói','Khánh DaLa','Bảo Uyên','Jay Kem','Khoi','Việt Anh','Tiên Tiên','Mahidu','NIEE', 'D.BLue','Phúc Du','$eadreak','W/N','DatG',
 'Erik','Linh','Nâu','Orange','Young Crizzbe','Hoàng Dũng','Đạt G','HAST', 'Dab','RPT Orijinn', 'kis','DucMinh','Ronboogz', 'sy','KEI','Galaxyy', 'Kim Nguyen Martian' ]
 
@@ -655,6 +654,7 @@ for (artist of artists) {
         }
     }
 }
+
 function arrange(array) {
     array.sort((a,b) => a.localeCompare(b));
     return array

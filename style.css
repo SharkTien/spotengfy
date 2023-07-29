@@ -424,8 +424,8 @@ header nav ul li button {
 .checkpoint h5 {
     font-family: "Be Vietnam Pro";
     width: 100%;
-    font-size: 15px;
-    margin-left: 20px;
+    font-size: 13px;
+    margin-left: 15px;
     color: #fff;
     white-space: nowrap;
     overflow: hidden;
@@ -454,7 +454,7 @@ header nav ul li button {
 .songItemAlbum h5 .subtitle,
 .songItem h5 .subtitle,
 .albumcustomItem .subtitle {
-    font-size: 11px;
+    font-size: 10px;
     color: gray;
     margin-top: 2px;
     font-family: 'Be Vietnam Pro';
