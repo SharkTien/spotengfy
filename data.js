@@ -932,6 +932,13 @@ songs = [
         cover: 'img/banner/10044.jpg',
     },
     {
+        id: '10045',
+        name: "Vương",
+        path: "audio/10045.aac",
+        artist: 'RPT MCK',
+        cover: 'img/banner/10045.jpg',
+    },
+    {
         id: '00090',
         name: "She's A 10 But...",
         path: "audio/ARTAN feat. Spencer Elmer - She's A 10 But....mp3",
