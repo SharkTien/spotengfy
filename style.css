@@ -245,10 +245,14 @@ header nav ul li button {
 
 
 .artists-boxx .name-artist, .creator-boxx h1 {
-    font-size: 28px;
+    font-size: 30px;
     color: #fff;
     text-align: left;
     font-family: 'Be Vietnam Pro Black';
+}
+
+.creator-boxx.compilation h1 {
+    font-size: 25px;
 }
 
 .artists-boxx .name-artist {
@@ -317,6 +321,10 @@ header nav ul li button {
 .creator-boxx .introduce-album {
     height: fit-content;
     background: linear-gradient(to bottom, rgba(147,71,71,255), #111);
+}
+
+.creator-boxx.compilation .introduce-album {
+    background: linear-gradient(to bottom, rgba(20,43,89,255), #111);
 }
 
 .creator-boxx .cover-img, .artists-boxx .cover-artist {
@@ -544,7 +552,8 @@ header nav ul li button {
 
 
 #artists-suggested, 
-#created-album {
+#created-album,
+#compilation-album {
     display: flex;
     width: 100%;
     height: auto;
@@ -958,14 +967,16 @@ header nav ul li button {
 }
 
 .box2 .scrollAlbumArtists,
-.box2 .scrollAlbumCustom {
+.box2 .scrollAlbumCustom,
+.box2 .scrollCompilation {
     width: 100%;
     height: auto;
     overflow-x: auto;
 }
 
 .box2 .scrollAlbumArtists.extent,
-.box2 .scrollAlbumCustom.extent {
+.box2 .scrollAlbumCustom.extent,
+.box2 .scrollCompilation.extent {
     width: 100%;
     height: 100%;
     overflow-y: scroll;
@@ -974,7 +985,9 @@ header nav ul li button {
 .album .extent-button,
 .album .back-button,
 .album .extent-button2,
-.album .back-button2 {
+.album .back-button2,
+.album .extent-button3,
+.album .back-button3 {
     display: none;
     font-size: 20px;
     width: 100px;
@@ -1238,7 +1251,7 @@ header nav ul li button {
     .checkpoint h5 {
         width: fit-content;
         font-size: 20px;
-        margin-left: 180px;
+        margin-left: 50px;
         color: #fff;
     }
 
@@ -1251,7 +1264,7 @@ header nav ul li button {
         background: transparent;
         float: left;
         border: none;
-        margin-right: 100px;
+        margin-right: 50px;
         color: rgba(163, 133, 133, 0.15)
     }
 
@@ -1266,7 +1279,7 @@ header nav ul li button {
     .albumcustomItem .subtitle,
     .create-album .subtitle {
         font-size: 15px;
-        color: #dedede;
+        color: gray;
         display: block;
     }
 
@@ -1322,14 +1335,16 @@ header nav ul li button {
     }
 
     .box2 .scrollAlbumArtists,
-    .box2 .scrollAlbumCustom {
+    .box2 .scrollAlbumCustom,
+    .box2 .scrollCompilation {
         width: 100%;
         height: 300px;
         overflow: hidden;
     }
 
     .box2 .scrollAlbumArtists.extent,
-    .box2 .scrollAlbumCustom.extent {
+    .box2 .scrollAlbumCustom.extent,
+    .box2 .scrollCompilation {
         width: 100%;
         height: 100%;
         overflow-y: scroll;
@@ -1344,14 +1359,18 @@ header nav ul li button {
     .album .extent-button,
     .album .back-button,
     .album .extent-button2,
-    .album .back-button2 {
+    .album .back-button2,
+    .album .extent-button3,
+    .album .back-button3 {
         display: block;
     }
 
     .album .extent-button:hover,
     .album .back-button:hover,
     .album .extent-button2:hover,
-    .album .back-button2:hover {
+    .album .back-button2:hover,
+    .album .extent-button3:hover,
+    .album .back-button3:hover {
         color: #fff;
         text-decoration: underline;
     }
@@ -1383,11 +1402,11 @@ header nav ul li button {
     .artists-boxx .introduce-artist, .creator-boxx .introduce-album {
         display: flex;
         width: 100%;
-        height: 65vh;
+        height: 400px;
         background: transparent;
         color: #fff;
         align-items: center;
-        padding: 50px 50px 50px 50px;
+        padding: 20px 20px 20px 20px;
     }
 
     .creator-boxx .introduce-album {
@@ -1477,12 +1496,17 @@ header nav ul li button {
         overflow-y: scroll;
     }
     .artists-boxx .name-artist, .creator-boxx h1 {
-        font-size: 70px;
+        font-size: 40px;
         color: #fff;
         font-family: 'Be Vietnam Pro Black';
-        margin-top: 100px;
         text-align: left;
     }
+
+    
+    .creator-boxx.compilation h1 {
+        font-size: 35px;
+    }
+
     ::-webkit-scrollbar {
         width: 10px;
     }
@@ -1498,12 +1522,14 @@ header nav ul li button {
     }
     
     .scrollAlbumArtists::-webkit-scrollbar,
-    .scrollAlbumCustom::-webkit-scrollbar {
+    .scrollAlbumCustom::-webkit-scrollbar,
+    .scrollCompilation::-webkit-scrollbar {
         display: block;
     }    
 
     #artists-suggested, 
-    #created-album {
+    #created-album,
+    #compilation-album {
         display: block;
         width: 100%;
         height: 100%;
@@ -1530,17 +1556,21 @@ header nav ul li button {
     }
     
     .creator-boxx .cover-img {
-        width: 700px;
-        height: 180px;
+        width: fit-content;
+        height: 250px;
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 0 auto;
+        margin: 0 80px 0 80px;
+        padding: 0;
     }
 
     .creator-boxx .cover-img img {
         width: 250px;
         height: 250px;
+        margin: 0;
+        padding: 0;
         box-shadow: 0px 0px 40px 20px rgba(0,0,0,0.5);
     }
     
@@ -1563,14 +1593,13 @@ header nav ul li button {
     }
 
     .cover-infor {
-        margin-top: -80px;
         align-items: center;
         font-family: 'Be Vietnam Pro';
         width: fit-content;
     }
 
     .cover-infor h1 {
-        font-size: 85px;
+        font-size: 75px;
     }
 
     .cover-infor p {
@@ -1580,7 +1609,8 @@ header nav ul li button {
     }
 
     .cover-infor h3 {
-        font-size: 13px;
+        font-size: 14px;
+        color: #fff;
     }
 
     .artist-boxx .cover-artist {

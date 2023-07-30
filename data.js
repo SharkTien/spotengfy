@@ -1406,5 +1406,82 @@ songs = [
         path: "audio/00150.aac",
         artist: 'Em Beihold',
         cover: 'img/banner/00150.jpg',
+    },
+    {
+        id: '00160',
+        name: "The Greatest Show",
+        path: "audio/00160.aac",
+        artist: 'Hugh Jackman, Keala Settle, Zac Efron, Zendaya, The Greatest Showman Ensemble',
+        cover: 'img/custom_cover/10001.jpg'
+    },
+    {
+        id: '00161',
+        name: "A Million Dreams",
+        path: "audio/00161.aac",
+        artist: 'Ziv Zaifman, Hugh Jackman, Michelle Williams',
+        cover: 'img/custom_cover/10001.jpg'
+    },
+    {
+        id: '00162',
+        name: "A Million Dreams (Reprise)",
+        path: "audio/00162.aac",
+        artist: 'Hugh Jackman, Austyn Johnson, Cameron Seely',
+        cover: 'img/custom_cover/10001.jpg'
+    },
+    {
+        id: '00163',
+        name: "Come Alive",
+        path: "audio/00163.aac",
+        artist: 'Hugh Jackman, Keala Settle, Daniel Everidge, Zendaya, The Greatest Showman Ensemble',
+        cover: 'img/custom_cover/10001.jpg'
+    },
+    {
+        id: '00164',
+        name: "The Other Side",
+        path: "audio/00164.aac",
+        artist: 'Hugh Jackman, Zac Efron',
+        cover: 'img/custom_cover/10001.jpg'
+    },
+    {
+        id: '00165',
+        name: "Never Enough",
+        path: "audio/00165.aac",
+        artist: 'Loren Alllred',
+        cover: 'img/custom_cover/10001.jpg'
+    },
+    {
+        id: '00166',
+        name: "This Is Me",
+        path: "audio/00166.aac",
+        artist: 'Keala Settle, The Greatest Showman Ensemble',
+        cover: 'img/custom_cover/10001.jpg'
+    },
+    {
+        id: '00167',
+        name: "Rewrite The Stars",
+        path: "audio/00167.aac",
+        artist: 'Zac Efron, Zendaya',
+        cover: 'img/custom_cover/10001.jpg'
+    },
+    {
+        id: '00168',
+        name: "Tightrope",
+        path: "audio/00168.aac",
+        artist: 'Michelle Williams',
+        cover: 'img/custom_cover/10001.jpg'
+    },
+    {
+        id: '00169',
+        name: "Never Enough (Reprise)",
+        path: "audio/00169.aac",
+        artist: 'Lorren Allred',
+        cover: 'img/custom_cover/10001.jpg'
+    },
+    {
+        id: '00170',
+        name: "From Now On",
+        path: "audio/00170.aac",
+        artist: 'Hugh Jackman, The Greatest Showman Ensemble',
+        cover: 'img/custom_cover/10001.jpg'
     }
 ]

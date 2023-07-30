@@ -52,15 +52,19 @@ const input2 = document.querySelector('.search-bar2');
 const albumBox = document.querySelector('.box2')
 const extentButton = document.querySelector('.extent-button');
 const extentButton2 = document.querySelector('.extent-button2');
+const extentButton3 = document.querySelector('.extent-button3');
 const scrollAlbumArtists = document.querySelector('.scrollAlbumArtists');
-const scrollAlbumCustom = document.querySelector('.scrollAlbumCustom')
+const scrollAlbumCustom = document.querySelector('.scrollAlbumCustom');
+const scrollCompilation = document.querySelector('.scrollCompilation');
 const backButton = document.querySelector('.back-button');
 const backButton2 = document.querySelector('.back-button2');
+const backButton3 = document.querySelector('.back-button3');
 const albumArtists = document.querySelector('.album.artists');
 const artistsBoxx = document.querySelector('.artists-boxx');
 const playAlbumBtn = document.querySelector('.play-album');
 const playAlbumBtn2 = document.querySelector('.play-album2');
 const albumCustom = document.querySelector('.album.custom');
+const albumCompilation = document.querySelector('.album.compilation')
 const layerCreateAlbum = document.querySelector('.layer-create-album');
 const closeAlbumGeneratorBtn = document.querySelector('.create-album-box .title .close');
 const createBtn = document.querySelector('.create-album-box .body .create');
@@ -83,6 +87,7 @@ musicBox.style.display = "none";
 albumBox.style.display = "none";
 backButton.style.display = 'none';
 backButton2.style.display = 'none';
+backButton3.style.display = 'none';
 artistsBoxx.style.display = 'none';
 creatorBoxx.style.display = 'none';
 searchbox.style.display = 'none';
@@ -532,16 +537,14 @@ navigator.mediaSession.setActionHandler(
     () => {backwardBtn.click()}
 );
 
-const addSongItem = (number, i, songList_id, IdItem) => {
+const addSongItem = (number, i, coveralbum, songList_id, IdItem) => {
     songList = document.getElementById(songList_id);
     li = document.createElement("li");
     li.classList.add(IdItem);
     li.innerHTML = `
     <button class="run" onclick="activeMusicandblur(${i}); this.blur();"><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></button>
     <span>${number}</span>
-    <div>
-    <img src=${songs[i].cover}>
-    </div>
+    ` + ((coveralbum) ? `<div><img src=${songs[i].cover}></div>` : ``) + `
     <h5>
         ${songs[i].name}
         <div class="subtitle">${songs[i].artist}</div>
@@ -558,7 +561,7 @@ const activeMusicandblur = (i) => {
 num = 0;
 for (let i = 0; i < songs.length; i++) {
     num += 1;
-    addSongItem(num, i, "song-list", "songItem");
+    addSongItem(num, i, true, "song-list", "songItem");
 }
 const div = document.createElement("div");
 div.classList.add('gap');
@@ -571,6 +574,7 @@ path_cover_artists = 'img/artists/'
 // Generate playlist of specific artist albums
 const albumList = document.getElementById("artists-suggested")
 const albumListcustom = document.getElementById("created-album");
+const albumListcompilation = document.getElementById("compilation-album");
 
 const artistsBox = (artist_name) => {
     albumtemp = [];
@@ -593,7 +597,7 @@ const artistsBox = (artist_name) => {
     for (let i = 0; i < songs.length; i++) {
         if (songs[i].artist.includes(artist_name)) {
             num += 1;
-            addSongItem(num, i, 'song-list-artists','songItemAlbum');
+            addSongItem(num, i, true, 'song-list-artists','songItemAlbum');
             albumtemp.push(i)
         }
     }
@@ -643,7 +647,7 @@ for (let i = 0; i < songs.length; i++) {
 p = [];
 notAvailableArtists = ['Clever','Lil Wuyn','Young Thug','Chris Brown','Sia','ZAYN','Đen','Trí Dũng','Fishy','Groovie','Lil Uzi Vert','Cam','Jenevieve','Clams Casino','kyuuwaii','MinhLai','LeeHi','Anh Phan','Negav','sped up nightcore', 'ARIZONATEARS','bbygirl','DWELLS','Wxrdie','PAR SG','Vũ Thanh Vân','Saabirose','SIVAN','Nguyên','Seth','New$oulZ','THDC','Han Kim','Lã Thắng','Dfoxie37', 'Myhai',
 'VSOUL','MFREE','TUYEN VO','RAP VIỆT','Dick','DT','UMIE','Sweet Liquor','GREY D','B Ray','V#','Phùng Khánh Linh','Minh Lý','Wikin 25 Táo','Sáo','MASEW','Young H',"Sol'Bass",'Nah','Chú 13','Khói','Khánh DaLa','Bảo Uyên','Jay Kem','Khoi','Việt Anh','Tiên Tiên','Mahidu','NIEE', 'D.BLue','Phúc Du','$eadreak','W/N','DatG',
-'Erik','Linh','Nâu','Orange','Young Crizzbe','Hoàng Dũng','Đạt G','HAST', 'Dab','RPT Orijinn', 'kis','DucMinh','Ronboogz', 'sy','KEI','Galaxyy', 'Kim Nguyen Martian' ]
+'Erik','Linh','Nâu','Orange','Ziv Zaifman','Michelle Williams','Austyn Johnson','Cameron Seely','Hugh Jackman','Keala Settle','Loren Alllred','Daniel Everidge','Zac Efron','Zendaya','The Greatest Showman Ensemble','Young Crizzbe','Hoàng Dũng','Đạt G','HAST', 'Dab','RPT Orijinn', 'kis','DucMinh','Ronboogz', 'sy','KEI','Galaxyy', 'Kim Nguyen Martian' ]
 
 for (artist of artists) {
     item = artist;
@@ -679,10 +683,10 @@ const getAlbum = () => {
             <h1>${i.albumName}</h1>
             <div class="subtitle">${i.creator}</div>
         `;
-        li.addEventListener('click', () => customAlbumBox(i.id, i.albumName, i.creator, i.cover, i.description, i.items));
+        li.addEventListener('click', () => customAlbumBox(i.id, i.albumName, i.creator, i.cover, i.description, i.items, ''));
         albumListcustom.appendChild(li);
     }
-        
+    
     const add_createAlbumBtn = () => {
         const createAlbumBtn = document.createElement("button");
         createAlbumBtn.classList.add('create-album');
@@ -697,28 +701,52 @@ const getAlbum = () => {
         // createAlbumBtn.addEventListener('click', () => {
         //     layerCreateAlbum.style.display = "flex";  
         // })
-    }    
+    }
+    
+    const addCompilationItem = (i) => {
+        const li = document.createElement("button");
+        li.classList.add("albumcustomItem");
+        li.innerHTML = `
+            <img src="${i.cover}">
+            <h1>${i.albumName}</h1>
+            <div class="subtitle">${i.creator}</div>
+        `;
+        li.addEventListener('click', () => customAlbumBox(i.id, i.albumName, i.creator, i.cover, '', i.items, i.established));
+        albumListcompilation.appendChild(li);
+    }
+    
     add_createAlbumBtn();
     for (customAlbum of custom_albums) {
         addAlbumcustomItem(customAlbum)
     }    
+
+    for (compilationAlbum of compilation_albums) {
+        addCompilationItem(compilationAlbum)
+    }
 }
 
-const customAlbumBox = (ID,albumname, creator, cover, description, items) => {    
+const customAlbumBox = (ID,albumname, creator, cover, description, items, established) => {    
     albumtemp = [];
+    coveralbum = true;
     creatorBoxx.style.display = 'block';
     albumBox.style.display = "none";
     creatorBoxx.scrollTo(0,0);
-    
+    if (ID.startsWith('1')) {
+        creatorBoxx.classList.add('compilation');
+        coveralbum = false        
+    } else {
+        creatorBoxx.classList.remove('compilation')
+    }
     // Banner creator's album
     const coverimg = document.querySelector('.cover-img');
     const coverinfor = document.querySelector('.cover-infor');
     coverimg.innerHTML = `<img src='${cover}'>`;
 
     coverinfor.innerHTML = `
+        <h3>${creatorBoxx.classList.contains('compilation') ? 'Compilation' : 'Public Album'}</h3>
         <h1>${albumname}</h1>   
         <p>${description}</p>
-        <h3>${creator}  •  ${items.length} songs</h3>
+        <h3>${creator}  • ${creatorBoxx.classList.contains('compilation') ? established + '•' : ''} ${items.length} songs</h3>
     `;
     // Playlist generating
     songListCreator = document.getElementById('song-list-creator');
@@ -728,7 +756,7 @@ const customAlbumBox = (ID,albumname, creator, cover, description, items) => {
     for (let i = 0; i < songs.length; i++) {
         if (items.includes(songs[i].id)) {
             num += 1;
-            addSongItem(num, i, 'song-list-creator','songItemAlbum');
+            addSongItem(num, i, coveralbum, 'song-list-creator','songItemAlbum');
             albumtemp.push(i)
         }
     }
@@ -823,6 +851,7 @@ extentButton.addEventListener('click', () => {
     backButton.style.display = 'block';
     scrollAlbumArtists.classList.add('extent');
     albumCustom.style.display = "none";
+    albumCompilation.style.display = "none";
     albumArtists.classList.add('extent');
 })
 
@@ -832,6 +861,7 @@ backButton.addEventListener('click', () => {
     scrollAlbumArtists.classList.toggle('extent');
     albumCustom.style.removeProperty('display');
     albumArtists.classList.toggle('extent');
+    albumCompilation.style.removeProperty('display');
     scrollAlbumArtists.scrollTo(0,0)
 })
 
@@ -840,6 +870,7 @@ extentButton2.addEventListener('click', () => {
     backButton2.style.display = 'block';
     scrollAlbumCustom.classList.add('extent');
     albumArtists.style.display = "none";
+    albumCompilation.style.display = "none";
     albumCustom.classList.add('extent');
 })
 
@@ -849,6 +880,26 @@ backButton2.addEventListener('click', () => {
     scrollAlbumCustom.classList.toggle('extent');
     albumArtists.style.removeProperty('display');
     albumCustom.classList.toggle('extent');
+    albumCompilation.style.removeProperty('display');
+    scrollAlbumCustom.scrollTo(0,0)
+})
+
+extentButton3.addEventListener('click', () => {
+    extentButton3.style.display = 'none';
+    backButton3.style.display = 'block';
+    scrollCompilation.classList.add('extent');
+    albumArtists.style.display = "none";
+    albumCustom.style.display = "none";
+    albumCompilation.classList.add('extent')
+})
+
+backButton3.addEventListener('click', () => {
+    backButton3.style.display = 'none';
+    extentButton3.style.display = 'block';
+    scrollCompilation.classList.toggle('extent');
+    albumArtists.style.removeProperty('display');
+    albumCustom.style.removeProperty('display');
+    albumCompilation.classList.toggle('extent');
     scrollAlbumCustom.scrollTo(0,0)
 })
 

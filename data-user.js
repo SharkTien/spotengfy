@@ -38,3 +38,16 @@ custom_albums = [
     },
     
 ]
+
+
+compilation_albums = [
+    {
+        id: '10001',
+        albumName: 'The Greatest Showman (Original Motion Picture Soundtrack)',
+        creator: 'Various Artists',
+        established: '2017',
+        cover: 'img/custom_cover/10001.jpg',
+        items: ['00160','00161','00162','00163','00164','00165','00166','00167','00168','00169','00170'
+        ]
+    }
+]
