@@ -170,6 +170,9 @@ homeBtn2.addEventListener('click', () => {
     miniplayerbox.style.display = 'none';
     creatorBoxx.style.display = 'none';
     coverartist.style.display = 'flex';
+    homeBtn2.classList.add('active');
+    Library2.classList.remove('active');
+    Search2.classList.remove('active');
     window.scrollTo(0,0)
 })
 
@@ -200,6 +203,9 @@ Library2.addEventListener('click', () => {
     coverartist.style.display = 'flex';
     miniplayerbox.style.display = 'flex';
     creatorBoxx.style.display = 'none';
+    homeBtn2.classList.remove('active');
+    Library2.classList.add('active');
+    Search2.classList.remove('active');
     window.scrollTo(0,0)
 })
 
@@ -238,6 +244,9 @@ Search2.addEventListener('click', () => {
     artistsBoxx.style.display = "none";
     MusicTab.style.display = "none";
     miniplayerbox.style.display = 'flex';
+    homeBtn2.classList.remove('active');
+    Library2.classList.remove('active');
+    Search2.classList.add('active');
     input.value = '';
     input2.value = '';
     search('');
@@ -419,16 +428,22 @@ closeAlbumGeneratorBtn.addEventListener('click', () => {
 // SETUP MUSIC
 
 const formatTime = (time) => {
-    let min = Math.floor(time / 60);
+    let hour = Math.floor(time / 3600);
+    let min = Math.floor((time % 3600) / 60);
     if (min < 10) {
         min = `0${min}`;
     }
-    let sec = Math.floor(time % 60);
+    let sec = Math.floor((time % 3600) % 60);
     if (sec < 10) {
         sec = `0${sec}`;
     }
-    return `${min} : ${sec}`;
-}
+
+    if (hour) {
+        return `${hour} : ${min} : ${sec}`;
+    } else {
+        return `${min} : ${sec}`;
+    }
+};
 
 const setMusic = (i) => {  
     if (albumSongs.includes(i)) {
@@ -452,10 +467,14 @@ const setMusic = (i) => {
     artistName.innerHTML = song.artist;
     disk.style.backgroundImage = `url('${song.cover}')`;
     currentTime.innerHTML = '00:00';
-    setTimeout (() => {
+    // setTimeout (() => {
+    //     seekBar.max = music.duration;
+    //     musicDuration.innerHTML = formatTime(music.duration);
+    // }, 150);
+    music.onloadedmetadata = () => {
         seekBar.max = music.duration;
         musicDuration.innerHTML = formatTime(music.duration);
-    }, 150);
+    }
     title.textContent = 'Spotengfy | ' + song.name + ' - ' + song.artist;
     
     link.rel = 'shortcut icon';
@@ -742,25 +761,37 @@ const customAlbumBox = (ID,albumname, creator, cover, description, items, establ
     const coverinfor = document.querySelector('.cover-infor');
     coverimg.innerHTML = `<img src='${cover}'>`;
 
+    // Playlist generating
+    songListCreator = document.getElementById('song-list-creator');
+    songListCreator.innerHTML = '';
     coverinfor.innerHTML = `
         <h3>${creatorBoxx.classList.contains('compilation') ? 'Compilation' : 'Public Album'}</h3>
         <h1>${albumname}</h1>   
         <p>${description}</p>
-        <h3>${creator}  • ${creatorBoxx.classList.contains('compilation') ? established + '•' : ''} ${items.length} songs</h3>
-    `;
-    // Playlist generating
-    songListCreator = document.getElementById('song-list-creator');
-    songListCreator.innerHTML = '';
-    
+        <h3>${creator}  • ${creatorBoxx.classList.contains('compilation') ? established + '•' : ''} ${items.length} songs • loading ...</h3>
+        `;
+
     num = 0;
+    timeAlbum = 0;
     for (let i = 0; i < songs.length; i++) {
         if (items.includes(songs[i].id)) {
             num += 1;
             addSongItem(num, i, coveralbum, 'song-list-creator','songItemAlbum');
+            const audio = new Audio(songs[i].path);
+            audio.onloadedmetadata = () => {
+                timeAlbum += audio.duration;
+                coverinfor.innerHTML = `
+                    <h3>${creatorBoxx.classList.contains('compilation') ? 'Compilation' : 'Public Album'}</h3>
+                    <h1>${albumname}</h1>   
+                    <p>${description}</p>
+                    <h3>${creator}  • ${creatorBoxx.classList.contains('compilation') ? established + '•' : ''} ${items.length} songs • ${formatTime(timeAlbum)}</h3>
+                    `;
+    
+            }
             albumtemp.push(i)
         }
     }
-
+    
     const div = document.createElement("div");
     div.classList.add('gap');
     div.style.height = "120px";

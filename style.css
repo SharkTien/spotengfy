@@ -44,7 +44,7 @@ input, select {
 
 header {
     width: 100%;
-    height: 55px;
+    height: 40px;
 }
 
 .pc {
@@ -83,8 +83,8 @@ header {
 }
 
 header .header-brand {
-    font-family: 'Be Vietnam Pro';
-    font-size: 30px;
+    font-family: 'Be Vietnam Pro';  
+    font-size: 25px;
     font-weight: 900;
     color: #111;
     display: block;
@@ -145,6 +145,28 @@ header nav ul li button {
     position: absolute;
     font-size: 20px;
     padding: 5px 0px 0px 15px;
+}
+
+.Home2 svg,
+.Library2 svg,
+.Search2 svg {
+    fill: gray;
+}
+
+.mb p {
+    color: gray
+}
+
+.Home2.active p,
+.Library2.active p,
+.Search2.active p {
+    color: #fff;
+}
+
+.Home2.active svg,
+.Library2.active svg,
+.Search2.active svg {
+    fill: #ffffff;
 }
 
 .search2 input {
@@ -304,8 +326,17 @@ header nav ul li button {
     background-color: rgba(147,71,71,255);
 }
 
+.creator-boxx.compilation .play-album2 {
+    background-color: rgba(20,43,89,255);
+}
+
 .button-play-cover-box .play-album2:hover {
     background-color: rgba(150,83,83,255);
+}
+
+
+.creator-boxx.compilation .play-album2:hover {
+    background-color: rgba(50,73,119,255);
 }
 
 .artists-boxx .introduce-artist, .creator-boxx .introduce-album {
@@ -371,6 +402,8 @@ header nav ul li button {
 
 .cover-infor h3 {
     font-size: 13px;
+    height: fit-content;
+    width: 100%;
 }
 
 .music-box, .playlist-artists, .playlist-creator {
@@ -522,7 +555,7 @@ header nav ul li button {
 .music-player {
     width: 500px;
     border-radius: 12px;
-    height: calc(100vh - 55px);
+    height: calc(100vh - 40px);
     background: linear-gradient(to bottom, #000, 10%, #111);
     align-items: center;
     box-shadow: 0 40px 100px rgba(255,255,255,0.1);
@@ -556,7 +589,7 @@ header nav ul li button {
 #compilation-album {
     display: flex;
     width: 100%;
-    height: auto;
+    height: fit-content;
 }
 
 .layer-create-album {
@@ -934,6 +967,10 @@ header nav ul li button {
     fill: rgba(150,83,83,255)
 }
 
+.creator-boxx.compilation .shuffle-album-btn.active svg{
+    fill: rgba(20,43,89,255)
+}
+
 .btnbox {
     display: flex;
     width: 75%;
@@ -949,7 +986,7 @@ header nav ul li button {
 
 .album {
     width: 100%;
-    height: 250px;
+    height: fit-content;
     overflow: hidden;
 }
 
@@ -1012,7 +1049,7 @@ header nav ul li button {
     background: transparent;
     list-style-type: none;
     font-family: 'Be Vietnam Pro';    
-    margin: 0 10px 25px 10px;
+    margin: 0 10px 0px 10px;
     transition: .2s linear;
 }
 
@@ -1310,7 +1347,7 @@ header nav ul li button {
         border-radius: 12px;
         list-style-type: none;
         font-family: 'Be Vietnam Pro';    
-        margin: 0 30px 80px 40px;
+        margin: 0 30px 80px 30px;
         transition: .2s linear;
     }
 
@@ -1587,6 +1624,8 @@ header nav ul li button {
         height: 60px;
         background-color: rgba(147,71,71,255);
     }
+
+    
     
     .button-play-cover-box .play-album2:hover {
         background-color: rgba(150,83,83,255);
