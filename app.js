@@ -16,6 +16,14 @@ for (let i = shuffleSongs.length - 1; i >= 0; i--) {
     shuffleSongs[randIndex] = temp;
 }
 
+for (let i = songs.length - 1; i >= 0; i--) {
+    const randIndex = Math.floor(Math.random() * (i + 1));
+    const temp = songs[i];
+    songs[i] = songs[randIndex];
+    songs[randIndex] = temp;
+}
+
+
 const music = document.querySelector('#audio');
 
 const seekBar = document.querySelector('.seek-bar');
