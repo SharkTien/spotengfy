@@ -768,26 +768,14 @@ const customAlbumBox = (ID,albumname, creator, cover, description, items, establ
         <h3>${creatorBoxx.classList.contains('compilation') ? 'Compilation' : 'Public Album'}</h3>
         <h1>${albumname}</h1>   
         <p>${description}</p>
-        <h3>${creator}  • ${creatorBoxx.classList.contains('compilation') ? established + '•' : ''} ${items.length} songs • loading ...</h3>
+        <h3>${creator}  • ${creatorBoxx.classList.contains('compilation') ? established + '•' : ''} ${items.length} songs</h3>
         `;
 
     num = 0;
-    timeAlbum = 0;
     for (let i = 0; i < songs.length; i++) {
         if (items.includes(songs[i].id)) {
             num += 1;
             addSongItem(num, i, coveralbum, 'song-list-creator','songItemAlbum');
-            const audio = new Audio(songs[i].path);
-            audio.onloadedmetadata = () => {
-                timeAlbum += audio.duration;
-                coverinfor.innerHTML = `
-                    <h3>${creatorBoxx.classList.contains('compilation') ? 'Compilation' : 'Public Album'}</h3>
-                    <h1>${albumname}</h1>   
-                    <p>${description}</p>
-                    <h3>${creator}  • ${creatorBoxx.classList.contains('compilation') ? established + '•' : ''} ${items.length} songs • ${formatTime(timeAlbum)}</h3>
-                    `;
-    
-            }
             albumtemp.push(i)
         }
     }
