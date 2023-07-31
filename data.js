@@ -1408,6 +1408,20 @@ songs = [
         cover: 'img/banner/00150.jpg',
     },
     {
+        id: '00171',
+        name: "Numb Little Bug (Piano Version)",
+        path: "audio/00171.aac",
+        artist: 'Em Beihold',
+        cover: 'img/banner/00171.jpg',
+    },
+    {
+        id: '00172',
+        name: "Stunnin' (feat. Harm Franklin)",
+        path: "audio/00172.aac",
+        artist: 'Curtis Waters, Harm Franklin',
+        cover: 'img/banner/00172.jpg',
+    },
+    {
         id: '00160',
         name: "The Greatest Show",
         path: "audio/00160.aac",
@@ -1483,5 +1497,19 @@ songs = [
         path: "audio/00170.aac",
         artist: 'Hugh Jackman, The Greatest Showman Ensemble',
         cover: 'img/custom_cover/10001.jpg'
+    },
+    {
+        id: '00173',
+        name: "BIRTHDAY (feat. learning) (Reprise)",
+        path: "audio/00173.aac",
+        artist: 'Curtis Waters, LEARNING',
+        cover: 'img/banner/00173.jpg'
+    },
+    {
+        id: '00174',
+        name: "Here With Me",
+        path: "audio/00174.aac",
+        artist: 'd4vd',
+        cover: 'img/banner/00174.jpg'
     }
 ]
