@@ -1446,7 +1446,7 @@ songs = [
         id: '00165',
         name: "Never Enough",
         path: "audio/00165.aac",
-        artist: 'Loren Alllred',
+        artist: 'Loren Allred',
         cover: 'img/custom_cover/10001.jpg'
     },
     {
@@ -1474,7 +1474,7 @@ songs = [
         id: '00169',
         name: "Never Enough (Reprise)",
         path: "audio/00169.aac",
-        artist: 'Lorren Allred',
+        artist: 'Loren Allred',
         cover: 'img/custom_cover/10001.jpg'
     },
     {

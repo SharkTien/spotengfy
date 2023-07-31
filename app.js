@@ -674,7 +674,7 @@ for (let i = 0; i < songs.length; i++) {
 p = [];
 notAvailableArtists = ['Clever','Lil Wuyn','Young Thug','Chris Brown','Sia','ZAYN','Đen','Trí Dũng','Fishy','Groovie','Lil Uzi Vert','Cam','Jenevieve','Clams Casino','kyuuwaii','MinhLai','LeeHi','Anh Phan','Negav','sped up nightcore', 'ARIZONATEARS','bbygirl','DWELLS','Wxrdie','PAR SG','Vũ Thanh Vân','Saabirose','SIVAN','Nguyên','Seth','New$oulZ','THDC','Han Kim','Lã Thắng','Dfoxie37', 'Myhai',
 'VSOUL','MFREE','TUYEN VO','RAP VIỆT','Dick','DT','UMIE','Sweet Liquor','GREY D','B Ray','V#','Phùng Khánh Linh','Minh Lý','Wikin 25 Táo','Sáo','MASEW','Young H',"Sol'Bass",'Nah','Chú 13','Khói','Khánh DaLa','Bảo Uyên','Jay Kem','Khoi','Việt Anh','Tiên Tiên','Mahidu','NIEE', 'D.BLue','Phúc Du','$eadreak','W/N','DatG',
-'Erik','Linh','Nâu','Orange','Ziv Zaifman','Michelle Williams','Austyn Johnson','Cameron Seely','Hugh Jackman','Keala Settle','Loren Alllred','Daniel Everidge','Zac Efron','Zendaya','The Greatest Showman Ensemble','Young Crizzbe','Hoàng Dũng','Đạt G','HAST', 'Dab','RPT Orijinn', 'kis','DucMinh','Ronboogz', 'sy','KEI','Galaxyy', 'Kim Nguyen Martian' ]
+'Erik','Linh','Nâu','Orange','Ziv Zaifman','Michelle Williams','Austyn Johnson','Cameron Seely','Hugh Jackman','Keala Settle','Loren Allred','Daniel Everidge','Zac Efron','Zendaya','The Greatest Showman Ensemble','Young Crizzbe','Hoàng Dũng','Đạt G','HAST', 'Dab','RPT Orijinn', 'kis','DucMinh','Ronboogz', 'sy','KEI','Galaxyy', 'Kim Nguyen Martian' ]
 
 for (artist of artists) {
     item = artist;
@@ -780,12 +780,11 @@ const customAlbumBox = (ID,albumname, creator, cover, description, items, establ
         `;
 
     num = 0;
-    for (let i = 0; i < songs.length; i++) {
-        if (items.includes(songs[i].id)) {
-            num += 1;
-            addSongItem(num, i, coveralbum, 'song-list-creator','songItemAlbum');
-            albumtemp.push(i)
-        }
+    for (item of items) {
+        num += 1;    
+        i = songs.indexOf(songs.find((song) => song.id === item));
+        addSongItem(num, i, coveralbum, 'song-list-creator','songItemAlbum');
+        albumtemp.push(i)
     }
     
     const div = document.createElement("div");
