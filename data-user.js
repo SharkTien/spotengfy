@@ -31,9 +31,9 @@ custom_albums = [
         albumName: 'Ebullacholia',
         creator: 'ryteg',
         cover: 'img/custom_cover/00002.jpg',
-        description: "Someone set a fire in my music taste. If you feel melancholic or a little depressed, here can be your analgesic.",
-        items: ['00134','00000','00042','00030','00147','00073','00003','00019','00010','00017',
-                '00011','00061','00059','00149','00041','00171','00151','10044','00172','00173','00174'
+        description: "If you feel melancholic or a little depressed, here can be your analgesic.",
+        items: ['00000','00042','00030','00147','00073','00003','00010','00017',
+                '00011','00061','00059','00149','00171','00151','10044','00172','00173','00174','00175'
                 ]
     },
     

@@ -1395,7 +1395,7 @@ songs = [
     },
     {
         id: '00149',
-        name: "Can't Get Over You (Joji ft. Clams Casino) (kyuuwaii Cover)",
+        name: "Can't Get Over You (kyuuwaii Cover)",
         path: "audio/00149.aac",
         artist: 'kyuuwaii',
         cover: 'img/banner/00149.jpg',
@@ -1511,5 +1511,12 @@ songs = [
         path: "audio/00174.aac",
         artist: 'd4vd',
         cover: 'img/banner/00174.jpg'
+    },
+    {
+        id: '00175',
+        name: "To The Bone",
+        path: "audio/00175.aac",
+        artist: 'Pamungkas',
+        cover: 'img/banner/00175.jpg'
     }
 ]
