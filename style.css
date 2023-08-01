@@ -439,7 +439,6 @@ header nav ul li button {
     font-family: 'Be Vietnam Pro';
 }
 
-
 .songItemAlbum span,
 .songItem span,
 .checkpoint span {
@@ -471,6 +470,18 @@ header nav ul li button {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+
+.songItemAlbum.playing h5,
+.songItem.playing h5{
+    color: rgba(225, 120, 90, 255);
+}
+
+
+.songItemAlbum.playing span,
+.songItem.playing span{
+    color: rgba(225, 120, 90, 255);
 }
 
 .albumItem h1,

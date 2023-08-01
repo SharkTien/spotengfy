@@ -107,6 +107,7 @@ albumSongsShuffle = [];
 function handlePress(event) {
     if (event.keyCode === spacebarkey && !typing) {
         playBtn.click();
+        event.preventDefault();
     }
 
     if (event.keyCode === leftKey) {
@@ -454,13 +455,41 @@ const formatTime = (time) => {
 };
 
 const setMusic = (i) => {  
+    songListCreator = document.getElementById('song-list-creator');
+    songListArtist = document.getElementById('song-list-artists');
+    songList = document.getElementById('song-list');
+    if (songListCreator.children.length > 0) {
+        for (item of songListCreator.children) {
+            item.classList.remove('playing')
+        }
+        try {
+            songListCreator.children[(shuffle) ? albumtempShuffle.indexOf(i) : albumtemp.indexOf(i)].classList.add('playing');
+        } catch (error) {}
+    }
+    if (songListArtist.children.length > 0) {
+        for (item of songListArtist.children) {
+            item.classList.remove('playing')
+        }
+        try {
+            songListArtist.children[(shuffle) ? albumtempShuffle.indexOf(i) : albumtemp.indexOf(i)].classList.add('playing');;
+        } catch (error) {}
+    }
+    for (item of songList.children) {
+        try {
+            item.classList.remove('playing')
+        } catch (error) {}
+    }
+
+    try {
+        songList.children[searchList.indexOf(i)+1].classList.add('playing')
+    } catch (error) {}
+
     if (albumSongs.includes(i)) {
     } else {
         Statusbox.innerHTML = '';
         albumSongs = [];
         albumSongsShuffle = []
     }
-
 
     seekBar.value = 0;
     if (albumSongs.length > 0) {
@@ -566,10 +595,13 @@ navigator.mediaSession.setActionHandler(
 
 const addSongItem = (number, i, coveralbum, songList_id, IdItem) => {
     songList = document.getElementById(songList_id);
-    li = document.createElement("li");
-    li.classList.add(IdItem);
-    li.innerHTML = `
-    <button class="run" onclick="activeMusicandblur(${i}); this.blur();"><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></button>
+    const item = document.createElement("li");
+    item.classList.add(IdItem);
+    if (currentMusic === i) {
+        item.classList.add('playing')
+    }
+    item.innerHTML = `
+    <button class="run" onclick="activeMusic(${i}); this.blur();"><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></button>
     <span>${number}</span>
     ` + ((coveralbum) ? `<div><img src=${songs[i].cover}></div>` : ``) + `
     <h5>
@@ -577,13 +609,8 @@ const addSongItem = (number, i, coveralbum, songList_id, IdItem) => {
         <div class="subtitle">${songs[i].artist}</div>
     </h5>
     `;
-    songList.appendChild(li);
+    songList.appendChild(item);
     };
-
-const activeMusicandblur = (i) => {
-    activeMusic(i);
-    this.blur()
-}
     
 num = 0;
 for (let i = 0; i < songs.length; i++) {
@@ -628,7 +655,14 @@ const artistsBox = (artist_name) => {
             albumtemp.push(i)
         }
     }
-    
+    albumtempShuffle = albumtemp.slice();
+        for (let i = albumtempShuffle.length - 1; i >= 0; i--) {
+            const randIndex = Math.floor(Math.random() * (i + 1));
+            const temp = albumtempShuffle[i];
+            albumtempShuffle[i] = albumtempShuffle[randIndex];
+            albumtempShuffle[randIndex] = temp;
+        }
+
     const div = document.createElement("div");
     div.classList.add('gap');
     div.style.height = "120px";
@@ -812,6 +846,7 @@ getAlbum();
 
 // Search items
 const search = (a) => {
+    searchList = [];
     songList = document.getElementById('song-list');
     songItems = songList.querySelectorAll(".songItem");
     songList.innerHTML = `
@@ -822,16 +857,21 @@ const search = (a) => {
         <h5>Title<div class="subtitle"></div></h5>
     </li> 
     `;
-
+    num = 0;
     for (let i = 0; i < songs.length; i++) {
         songname = removeToneMark(songs[i].name.toLowerCase());
         artistname = removeToneMark(songs[i].artist.toLowerCase());
         if (songname.includes(a) || artistname.includes(a)) {
+            num ++;
+            searchList.push(i);
             li = document.createElement("li");
             li.classList.add('songItem');
+            if (currentMusic === i) {
+                li.classList.add('playing')
+            }
             li.innerHTML = `
-            <button class="run" onclick="activeMusic(${i})"><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></button>
-            <span>${i+1}</span>
+            <button class="run" onclick="activeMusic(${i}); this.blur();"><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></button>
+            <span>${num}</span>
             <img src=${songs[i].cover}>
             <h5>
                 ${songs[i].name}
