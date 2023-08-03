@@ -32,9 +32,19 @@ custom_albums = [
         creator: 'ryteg',
         cover: 'img/custom_cover/00002.jpg',
         description: "If you feel melancholic or a little depressed, here can be your analgesic.",
-        items: ['00000','00042','00030','00147','00073','00003','00010','00017',
+        items: ['00000','00042','00030','00147','00073','00003','00010','00017','00178',
                 '00011','00061','00059','00149','00171','00151','10044','00172','00173','00174','00175'
                 ]
+    },
+    {
+        id: '00003',
+        albumName: 'hot damn',
+        creator: 'Tâm Nguyên',
+        cover: 'img/custom_cover/00003.jpg',
+        description: "hot, sexy, chaotic & dominance",
+        items: ['00179','00180','00181','00182'
+            
+        ]
     },
     
 ]

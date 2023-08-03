@@ -1518,5 +1518,54 @@ songs = [
         path: "audio/00175.aac",
         artist: 'Pamungkas',
         cover: 'img/banner/00175.jpg'
+    },
+    {
+        id: '00176',
+        name: "august",
+        path: "audio/00176.aac",
+        artist: 'Taylor Swift',
+        cover: 'img/banner/00155.jpg'
+    },
+    {
+        id: '00177',
+        name: "epiphany",
+        path: "audio/00177.aac",
+        artist: 'Taylor Swift',
+        cover: 'img/banner/00155.jpg'
+    },
+    {
+        id: '00178',
+        name: "House on a Hill",
+        path: "audio/00178.aac",
+        artist: 'Eric Nam, Em Beihold',
+        cover: 'img/banner/00178.jpg'
+    },
+    {
+        id: '00179',
+        name: "Breathe",
+        path: "audio/00179.aac",
+        artist: 'Kansh',
+        cover: 'img/banner/00179.jpg'
+    },
+    {
+        id: '00180',
+        name: "Hot",
+        path: "audio/00180.aac",
+        artist: 'Liili',
+        cover: 'img/banner/00180.jpg'
+    },
+    {
+        id: '00181',
+        name: "Lunatic",
+        path: "audio/00181.aac",
+        artist: 'UPSAHL',
+        cover: 'img/banner/00181.jpg'
+    },
+    {
+        id: '00182',
+        name: "Do I Wanna Know?",
+        path: "audio/00182.aac",
+        artist: 'Arctic Monkeys',
+        cover: 'img/banner/00182.jpg'
     }
 ]

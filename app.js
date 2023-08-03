@@ -278,17 +278,17 @@ miniplayer.addEventListener('click', () => {
 
 music.addEventListener('pause', () => {
     if (!playBtn.classList.contains('pause') && !music.ended) {
-        playBtn.classList.toggle('pause');
-        playBtn2.classList.toggle('pause');
-        disk.classList.toggle('play');
+        playBtn.classList.add('pause');
+        playBtn2.classList.add('pause');
+        disk.classList.remove('play');
     }
 })
 
 music.addEventListener('play', () => {
     if (playBtn.classList.contains('pause')) {
-        playBtn.classList.toggle('pause');
-        playBtn2.classList.toggle('pause');
-        disk.classList.toggle('play');
+        playBtn.classList.remove('pause');
+        playBtn2.classList.remove('pause');
+        disk.classList.add('play');
     }
 })
 
@@ -706,7 +706,7 @@ for (let i = 0; i < songs.length; i++) {
 // Generate list of artists
 
 p = [];
-notAvailableArtists = ['Clever','LEARNING','Harm Franklin','Lil Wuyn','Young Thug','Chris Brown','Sia','ZAYN','Đen','Trí Dũng','Fishy','Groovie','Lil Uzi Vert','Cam','Jenevieve','Clams Casino','kyuuwaii','MinhLai','LeeHi','Anh Phan','Negav','sped up nightcore', 'ARIZONATEARS','bbygirl','DWELLS','Wxrdie','PAR SG','Vũ Thanh Vân','Saabirose','SIVAN','Nguyên','Seth','New$oulZ','THDC','Han Kim','Lã Thắng','Dfoxie37', 'Myhai',
+notAvailableArtists = ['Clever','Eric Nam','Kansh','Liili','UPSAHL','Arctic Monkeys','LEARNING','Harm Franklin','Lil Wuyn','Young Thug','Chris Brown','Sia','ZAYN','Đen','Trí Dũng','Fishy','Groovie','Lil Uzi Vert','Cam','Jenevieve','Clams Casino','kyuuwaii','MinhLai','LeeHi','Anh Phan','Negav','sped up nightcore', 'ARIZONATEARS','bbygirl','DWELLS','Wxrdie','PAR SG','Vũ Thanh Vân','Saabirose','SIVAN','Nguyên','Seth','New$oulZ','THDC','Han Kim','Lã Thắng','Dfoxie37', 'Myhai',
 'VSOUL','MFREE','TUYEN VO','RAP VIỆT','Dick','DT','UMIE','Sweet Liquor','GREY D','B Ray','V#','Phùng Khánh Linh','Minh Lý','Wikin 25 Táo','Sáo','MASEW','Young H',"Sol'Bass",'Nah','Chú 13','Khói','Khánh DaLa','Bảo Uyên','Jay Kem','Khoi','Việt Anh','Tiên Tiên','Mahidu','NIEE', 'D.BLue','Phúc Du','$eadreak','W/N','DatG',
 'Erik','Linh','Nâu','Orange','Ziv Zaifman','Michelle Williams','Austyn Johnson','Cameron Seely','Hugh Jackman','Keala Settle','Loren Allred','Daniel Everidge','Zac Efron','Zendaya','The Greatest Showman Ensemble','Young Crizzbe','Hoàng Dũng','Đạt G','HAST', 'Dab','RPT Orijinn', 'kis','DucMinh','Ronboogz', 'sy','KEI','Galaxyy', 'Kim Nguyen Martian' ]
 
@@ -776,7 +776,7 @@ const getAlbum = () => {
         albumListcompilation.appendChild(li);
     }
     
-    add_createAlbumBtn();
+    // add_createAlbumBtn();
     for (customAlbum of custom_albums) {
         addAlbumcustomItem(customAlbum)
     }    
