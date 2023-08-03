@@ -1567,5 +1567,61 @@ songs = [
         path: "audio/00182.aac",
         artist: 'Arctic Monkeys',
         cover: 'img/banner/00182.jpg'
+    },
+    {
+        id: '00183',
+        name: "American Boy",
+        path: "audio/00183.aac",
+        artist: 'Estelle, Kanye West',
+        cover: 'img/banner/00183.jpg'
+    },
+    {
+        id: '00184',
+        name: "I WANNA BE YOUR SLAVE",
+        path: "audio/00184.aac",
+        artist: 'Måneskin',
+        cover: 'img/banner/00184.jpg'
+    },
+    {
+        id: '00185',
+        name: "Need to Know",
+        path: "audio/00185.aac",
+        artist: 'Doja Cat',
+        cover: 'img/banner/00185.jpg'
+    },
+    {
+        id: '00186',
+        name: "You Right",
+        path: "audio/00186.aac",
+        artist: 'Doja Cat, The Weeknd',
+        cover: 'img/banner/00185.jpg'
+    },
+    {
+        id: '00187',
+        name: "Tap In",
+        path: "audio/00187.aac",
+        artist: 'Saweetie',
+        cover: 'img/banner/00187.jpg'
+    },
+    {
+        id: '00188',
+        name: "Coño",
+        path: "audio/00188.aac",
+        artist: 'Jason Derulo, Jhorrmountain, Puri',
+        cover: 'img/banner/00188.jpg'
+    },
+    {
+        id: '00189',
+        name: "Up",
+        path: "audio/00189.aac",
+        artist: 'Cardi B',
+        cover: 'img/banner/00189.jpg'
+    },
+    {
+        id: '00190',
+        name: "Have Mercy",
+        path: "audio/00190.aac",
+        artist: 'Chlöe',
+        cover: 'img/banner/00190.jpg'
     }
 ]

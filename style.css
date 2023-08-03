@@ -974,6 +974,7 @@ header nav ul li button {
     fill: rgba(225, 120, 90, 255);
 }
 
+
 .shuffle-album-btn.active svg{
     fill: rgba(150,83,83,255)
 }

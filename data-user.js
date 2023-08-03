@@ -42,7 +42,7 @@ custom_albums = [
         creator: 'Tâm Nguyên',
         cover: 'img/custom_cover/00003.jpg',
         description: "hot, sexy, chaotic & dominance",
-        items: ['00179','00180','00181','00182'
+        items: ['00179','00180','00181','00182','00172','00183','00184','00185','00186','00187','00188','00189','00190'
             
         ]
     },
