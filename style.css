@@ -121,20 +121,20 @@ header nav ul li button {
     align-items: center;
     display: flex;
     position: relative;
-    width: 80%;
-    height: 20px;
+    width: 90%;
+    height: 40px;
     /* padding: 25px; */
     border-radius: 20px;
     color: gray;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .search2::before {
     content: '';
     position: absolute;
     width: 100%;
-    height: 40px;
+    height: 30px;
     border-radius: 20px;
     background: rgba(184, 184, 184,.1);
     backdrop-filter: blur(5px);
@@ -143,7 +143,7 @@ header nav ul li button {
 
 .search2 .bi {
     position: absolute;
-    font-size: 20px;
+    font-size: 18px;
     padding: 5px 0px 0px 15px;
 }
 
@@ -171,15 +171,15 @@ header nav ul li button {
 
 .search2 input {
     position: absolute;
-    width: 80%;
+    width: 83%;
     background: none;
     outline: none;
     border: none;
     padding: 0px 10px;
     color: #111;
-    font-size: 18px;
+    font-size: 15px;
     font-family: 'Be Vietnam Pro';
-    margin-left: 45px;
+    margin-left: 40px;
 }
 
 
@@ -416,6 +416,11 @@ header nav ul li button {
     overflow-y: scroll;
 }
 
+.music-box button{
+    border: none;
+    background: transparent;
+}
+
 .playlist-artists, .playlist-creator {
     overflow-y: hidden;
     min-height: 500px;    
@@ -464,8 +469,8 @@ header nav ul li button {
 .checkpoint h5 {
     font-family: "Be Vietnam Pro";
     width: 100%;
+    text-align: left;
     font-size: 13px;
-    margin-left: 15px;
     color: #fff;
     white-space: nowrap;
     overflow: hidden;
@@ -487,11 +492,12 @@ header nav ul li button {
 .albumItem h1,
 .albumcustomItem h1,
 .create-album h1 {
+    margin: 0 auto;
     margin-top: 5px;
     color: #dedede;
     font-size: 15px;
     position: center;
-    max-width: 135px;
+    max-width: 120px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -508,6 +514,7 @@ header nav ul li button {
 .albumcustomItem .subtitle {
     font-size: 10px;
     color: gray;
+    text-align: left;
     margin-top: 2px;
     font-family: 'Be Vietnam Pro';
     font-weight: 900;
@@ -516,6 +523,9 @@ header nav ul li button {
     text-overflow: ellipsis;
 }
 
+.albumcustomItem .subtitle {
+    text-align: center;
+}
 
 .songItemAlbum .run,
 .songItem .run,
@@ -585,7 +595,10 @@ header nav ul li button {
 
 .music-name,
 .artist-name {
-    font-size: 18px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 15px;
     margin: 0 auto;
     margin-top: 0;
     margin-bottom: 0;
@@ -594,6 +607,15 @@ header nav ul li button {
     width: fit-content;
 }
 
+.artist-name {
+    color: gray;
+    font-size: 13px;
+}
+
+.artist-name:hover {
+    color: #fff;
+    text-decoration: underline;
+}
 
 #artists-suggested, 
 #created-album,
@@ -712,9 +734,7 @@ header nav ul li button {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-image: url('img/banner/00000.jpg');
-    background-size: cover;
-    background-position: center;
+    object-fit: cover;
     box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.08);
     animation: rotate 20s linear infinite;
     animation-play-state: paused;
@@ -1038,7 +1058,7 @@ header nav ul li button {
 .album .extent-button3,
 .album .back-button3 {
     display: none;
-    font-size: 20px;
+    font-size: 15px;
     width: 100px;
     border: none;
     font-family: "Be Vietnam Pro";
@@ -1246,7 +1266,7 @@ header nav ul li button {
 
     header nav .search .bi {
         position: absolute;
-        font-size: 30px;
+        font-size: 25px;
         padding: 3px 0px 0px 10px;
     }
 
@@ -1268,7 +1288,7 @@ header nav ul li button {
     .checkpoint {
         width: 100%;
         list-style-type: none;
-        padding: 10px 0 10px 50px;
+        padding: 5px 0 5px 50px;
         display: flex;
         align-items: center;
         border-radius: 10px;
@@ -1281,7 +1301,7 @@ header nav ul li button {
     .checkpoint span {
         display: block;
         width: 100px;
-        font-size: 25px;
+        font-size: 20px;
         color: #fff;
     }
 
@@ -1291,7 +1311,7 @@ header nav ul li button {
     .checkpoint img {
         width: 50px;
         height: 50px;
-        margin-left: 25px;
+        margin-right: 50px;
         object-fit: cover;
     }
 
@@ -1299,8 +1319,7 @@ header nav ul li button {
     .songItem h5,
     .checkpoint h5 {
         width: fit-content;
-        font-size: 20px;
-        margin-left: 50px;
+        font-size: 18px;
         color: #fff;
     }
 
@@ -1327,7 +1346,7 @@ header nav ul li button {
     .albumItem .subtitle,
     .albumcustomItem .subtitle,
     .create-album .subtitle {
-        font-size: 15px;
+        font-size: 13px;
         color: gray;
         display: block;
     }
@@ -1341,7 +1360,7 @@ header nav ul li button {
     }
 
     .album {
-        height: 360px;
+        height: 300px;
     }
 
     .album .albumTitle {
@@ -1352,14 +1371,14 @@ header nav ul li button {
     .albumItem,
     .albumcustomItem,
     .create-album {
-        width: 230px;
-        height: 280px;
+        width: 180px;
+        height: 230px;
         border: none;
         background:rgba(184, 184, 184,.1);
         border-radius: 12px;
         list-style-type: none;
         font-family: 'Be Vietnam Pro';    
-        margin: 0 30px 80px 30px;
+        margin: 0 20px 30px 20px;
         transition: .2s linear;
     }
 
@@ -1372,8 +1391,8 @@ header nav ul li button {
     .albumItem img,
     .albumcustomItem img,
     .create-album svg {
-        width: 170px;
-        height: 170px;
+        width: 140px;
+        height: 140px;
         border-radius: 50%;
         object-fit: cover;
     }
@@ -1401,7 +1420,7 @@ header nav ul li button {
 
 
     .album h5 {
-        font-size: 25px;
+        font-size: 20px;
     }
 
         
@@ -1427,9 +1446,10 @@ header nav ul li button {
     .albumItem h1,
     .albumcustomItem h1,
     .create-album h1 {
+        margin: 0 auto;
         margin-top: 10px;
-        font-size: 25px;
-        max-width: 230px;
+        font-size: 15px;
+        max-width: 140px;
         max-height: 35px;
     }
     
@@ -1521,6 +1541,10 @@ header nav ul li button {
         height: fit-content
     }
 
+
+    .artist-name {
+        font-size: 23px;
+    }
     
     .timebox .current-time {
         font-size: 12px;
@@ -1664,7 +1688,7 @@ header nav ul li button {
         color: #fff;
     }
 
-    .artist-boxx .cover-artist {
+    .artists-boxx .cover-artist {
         display: none;
     }
 }

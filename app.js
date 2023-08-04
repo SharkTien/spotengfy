@@ -502,6 +502,7 @@ const setMusic = (i) => {
     music.src = song.path;
     songName.innerHTML = song.name;
     artistName.innerHTML = song.artist;
+    artistName.addEventListener('click', () => artistsBox(song.artist));
     disk.style.backgroundImage = `url('${song.cover}')`;
     currentTime.innerHTML = '00:00';
     // setTimeout (() => {
@@ -633,7 +634,14 @@ const albumListcompilation = document.getElementById("compilation-album");
 const artistsBox = (artist_name) => {
     albumtemp = [];
     artistsBoxx.style.display = 'block';
+    homeBtn2.classList.remove('active');
+    Search2.classList.remove('active');
+    Library2.classList.add('active');
+    banner.style.display = "none";
+
+    artistsBoxx.scrollTo(0,0);
     albumBox.style.display = "none";
+    musicBox.style.display = "none";
 
     // Banner artist
     const name_artist = document.querySelector('.name-artist');
@@ -849,14 +857,50 @@ const search = (a) => {
     searchList = [];
     songList = document.getElementById('song-list');
     songItems = songList.querySelectorAll(".songItem");
-    songList.innerHTML = `
-    <li class = "checkpoint">
-        <button class = "run"></button>
-        <span>#</span>
-        <img>
-        <h5>Title<div class="subtitle"></div></h5>
-    </li> 
+
+    songList.innerHTML = ``;
+    store_search = [];
+    artist_search = [];
+    for (artist of artists) {
+        if (removeToneMark(artist.toLowerCase()).includes(a)) {
+            item = document.createElement("button");
+            item.classList.add('songItem');
+            item.innerHTML = `
+            <img src='img/artists/${artist}.jpg' style = '
+            width: 50px;
+            height: 50px;
+            margin-left: 25px;
+            object-fit: cover;
+            border-radius: 50%;
+            '>
+            <h5>
+                ${artist}
+                <div class="subtitle">Artist</div>
+            </h5>
+            `;
+            store_search.push(item);
+            artist_search.push(artist);
+        }
+    }
+    if (store_search.length < 5) {
+        for (let i = 0; i < store_search.length; i++) {
+            store_search[i].addEventListener('click', () => {
+                artistsBox(artist_search[i]);
+                item.blur();
+            });
+            songList.appendChild(store_search[i]);
+        }
+    }
+    
+    li = document.createElement('li');
+    li.classList.add('checkpoint');
+    li.innerHTML = `
+    <button class = "run"></button>
+    <span>#</span>
+    <h5>Title<div class="subtitle"></div></h5>
     `;
+    songList.appendChild(li);
+    
     num = 0;
     for (let i = 0; i < songs.length; i++) {
         songname = removeToneMark(songs[i].name.toLowerCase());
