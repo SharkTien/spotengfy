@@ -460,7 +460,7 @@ header nav ul li button {
 .checkpoint img {
     width: 40px;
     height: 40px;
-    margin-left: 5px;
+    margin-right: 15px;
     object-fit: cover;
 }
 
@@ -604,7 +604,7 @@ header nav ul li button {
     margin-bottom: 0;
     text-align: center;
     height: fit-content;
-    width: fit-content;
+    width: 100%;
 }
 
 .artist-name {
@@ -1538,7 +1538,7 @@ header nav ul li button {
         font-size: 25px;
         display: block;
         text-align: center;
-        height: fit-content
+        height: fit-content;
     }
 
 
