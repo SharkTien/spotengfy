@@ -28,7 +28,7 @@ const music = document.querySelector('#audio');
 
 const seekBar = document.querySelector('.seek-bar');
 const songName = document.querySelector('.music-name');
-const artistName = document.querySelector('.artist-name');
+const artistBoxList = document.querySelector('.artists-box-cover');
 const disk = document.querySelector('.disk');
 const currentTime = document.querySelector('.current-time');
 const musicDuration = document.querySelector('.song-duration');
@@ -481,7 +481,7 @@ const setMusic = (i) => {
     }
 
     try {
-        songList.children[searchList.indexOf(i)+1].classList.add('playing')
+        songList.children[searchList.indexOf(i)+1+(artist_search ? artist_search.length : 0)].classList.add('playing')
     } catch (error) {}
 
     if (albumSongs.includes(i)) {
@@ -501,8 +501,27 @@ const setMusic = (i) => {
     currentMusic = i;
     music.src = song.path;
     songName.innerHTML = song.name;
-    artistName.innerHTML = song.artist;
-    artistName.addEventListener('click', () => artistsBox(song.artist));
+    list_artist = song.artist.split(', ');
+    list_item = [];
+    artistBoxList.innerHTML = '';
+    for (let artistname of list_artist) {
+        item = document.createElement('button');
+        item.classList = 'artist-name';
+        item.innerHTML = artistname;
+        list_item.push(item)
+    }
+
+    for (let k = 0; k < list_item.length; k ++) {
+        list_item[k].addEventListener('click', () => artistsBox(list_artist[k]))
+        artistBoxList.appendChild(list_item[k]);
+        comma = document.createElement('span');
+        comma.classList = 'artist-name';
+        comma.classList.add('comma');
+        comma.innerHTML = ',';
+        artistBoxList.appendChild(comma);
+        }
+    artistBoxList.removeChild(comma);
+        
     disk.style.backgroundImage = `url('${song.cover}')`;
     currentTime.innerHTML = '00:00';
     // setTimeout (() => {
@@ -638,7 +657,9 @@ const artistsBox = (artist_name) => {
     Search2.classList.remove('active');
     Library2.classList.add('active');
     banner.style.display = "none";
-
+    musicBox.style.display = "none";
+    creatorBoxx.style.display = "none";
+    
     artistsBoxx.scrollTo(0,0);
     albumBox.style.display = "none";
     musicBox.style.display = "none";

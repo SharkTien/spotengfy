@@ -67,7 +67,7 @@ header {
     margin: 0 10px 0 10px;
     border: none;
     background: transparent;
-    list-style: none;
+    list-style-type: none;
     outline: none;
     -webkit-tap-highlight-color: transparent;
 }
@@ -105,7 +105,7 @@ header nav ul {
 
 header nav ul li {
     display: inline-block;
-    list-style: none;
+    list-style-type: none;
     padding: 0 16px;
 }
 
@@ -595,6 +595,9 @@ header nav ul li button {
 
 .music-name,
 .artist-name {
+    list-style-type: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
     border: none;
     background: transparent;
     color: #fff;
@@ -608,13 +611,39 @@ header nav ul li button {
 }
 
 .artist-name {
+    width: fit-content;
     color: gray;
     font-size: 13px;
+}
+
+.artist-name.comma {
+    margin-right: 10px;
 }
 
 .artist-name:hover {
     color: #fff;
     text-decoration: underline;
+}
+
+.artists-box-scroll {
+    width: 80%;
+    list-style-type: none;
+    border: none;
+    display: flex;
+    background: transparent;
+    margin: 0 auto;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.artists-box-cover {
+    display: flex;
+    margin-bottom: 0;
+    width: fit-content;
+    overflow: hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+    position: relative;
 }
 
 #artists-suggested, 
@@ -755,7 +784,6 @@ header nav ul li button {
 
 .panel {
     width: 100%;
-    justify-content: center;
     align-items: center;
     display: block;
 }   
@@ -1197,8 +1225,7 @@ header nav ul li button {
     }
 
     .panel {
-        width: 80%;
-        justify-content: center;
+        width: 80%; 
         align-items: center;
         display: block;
         margin-right: 20px;
