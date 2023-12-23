@@ -1623,5 +1623,124 @@ songs = [
         path: "audio/00190.aac",
         artist: 'Chlöe',
         cover: 'img/banner/00190.jpg'
+    },
+    {
+        id: '00191',
+        name: "Johnny",
+        path: "audio/00191.m4a",
+        artist: 'An Unexpected End',
+        cover: 'img/banner/00191.jpg'
+    },
+    {
+        id: '00192',
+        name: "Sodus",
+        path: "audio/00192.m4a",
+        artist: 'Cemeteries',
+        cover: 'img/banner/00192.jpg'
+    },
+    {
+        id: '00193',
+        name: "Love You Still (abcdefu romantic version)",
+        path: "audio/00193.m4a",
+        artist: 'Tyler Shaw',
+        cover: 'img/banner/00193.jpg'
+    },
+    {
+        id: '00194',
+        name: "Thơ",
+        path: "audio/00194.m4a",
+        artist: 'Low G',
+        cover: 'img/banner/00194.jpg'
+    },
+    {
+        id: '00195',
+        name: "Kevin's Heart",
+        path: "audio/00195.m4a",
+        artist: 'J. Cole',
+        cover: 'img/banner/00195.jpg'
+    },
+    {
+        id: '00196',
+        name: "Em làm gì mùa dịch ?",
+        path: "audio/00196.m4a",
+        artist: 'QNT',
+        cover: 'img/banner/00196.jpg'
+    },
+    {
+        id: '00197',
+        name: "Those eyes",
+        path: "audio/00197.m4a",
+        artist: 'New West',
+        cover: 'img/banner/00197.jpg'
+    },
+    {
+        id: '00198',
+        name: "Amoeba",
+        path: "audio/00198.m4a",
+        artist: 'Clairo',
+        cover: 'img/banner/00198.jpg'
+    },
+    {
+        id: '00199',
+        name: "Anh Vẫn OK (feat. RPT MCK)",
+        path: "audio/00199.m4a",
+        artist: 'RAP VIỆT, RPT MCK',
+        cover: 'img/banner/00199.jpg'
+    },
+    {
+        id: '00200',
+        name: "Uncomfortable",
+        path: "audio/00200.m4a",
+        artist: 'Halestorm',
+        cover: 'img/banner/00200.jpg'
+    },
+    {
+        id: '00201',
+        name: "Đã Xem",
+        path: "audio/00201.m4a",
+        artist: 'Thắng',
+        cover: 'img/banner/00201.jpg'
+    },
+    {
+        id: '00202',
+        name: "100 Years Love",
+        path: "audio/00202.m4a",
+        artist: 'Nam Đức',
+        cover: 'img/banner/00202.jpg'
+    },
+    {
+        id: '00203',
+        name: "Tương Tư - CLOW, FLEPY (ft. DARKC)",
+        path: "audio/00203.m4a",
+        artist: 'Clow',
+        cover: 'img/banner/00203.jpg'
+    },
+    {
+        id: '00204',
+        name: "Tình Đắng Như Ly Cà Phê",
+        path: "audio/00204.m4a",
+        artist: 'nân, Ngơ',
+        cover: 'img/banner/00204.jpg'
+    },
+    {
+        id: '00205',
+        name: "Sau Bức Màn Nhung (feat. Yuno Bigboi, Tiêu Minh Phụng & Lý Anh Khoa)",
+        path: "audio/00205.m4a",
+        artist: 'RAP VIỆT',
+        cover: 'img/banner/10043.jpg'
+    },
+    {
+        id: '00206',
+        name: "Thanh",
+        path: "audio/00206.m4a",
+        artist: 'Thịnh Suy',
+        cover: 'img/banner/00206.jpg'
+    },
+    {
+        id: '00207',
+        name: "Internet Love",
+        path: "audio/00207.m4a",
+        artist: 'hnhngan',
+        cover: 'img/banner/00207.jpg'
     }
 ]
