@@ -598,7 +598,8 @@ navigator.mediaSession.setActionHandler(
     () => {backwardBtn.click()}
 );
 
-navigator.mediaSession.setActionHandler('play', () => {playBtn.click()}
+navigator.mediaSession.setActionHandler(
+    'play', () => {playBtn.click()}
 );
 
 const addLovedMusic = (i, opt) => {
