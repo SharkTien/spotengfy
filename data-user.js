@@ -1,5 +1,13 @@
 custom_albums = [
     {
+        id: '99999',
+        albumName: 'Liked Music',
+        creator: 'ㅤ',
+        cover: 'img/00001.jpg',
+        description: 'Click ♥ button to add your fafourite songs to this album',
+        items: []
+    },
+    {
         id: '00000',
         albumName: 'Xanax',
         creator: 'Huxn',

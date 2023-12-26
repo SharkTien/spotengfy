@@ -538,6 +538,14 @@ header nav ul li button {
     color: rgba(163, 133, 133, 0.15)
 }
 
+.loved {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: none;
+    margin-right: 10px;
+}
+
 .notfound {
     width: 100%;
     height: 66vh;
@@ -1345,12 +1353,11 @@ header nav ul li button {
     .songItemAlbum h5,
     .songItem h5,
     .checkpoint h5 {
-        width: fit-content;
+        width: 100%;
         font-size: 18px;
         color: #fff;
     }
 
-    
     .songItemAlbum .run,
     .songItem .run,
     .checkpoint .run {
