@@ -197,6 +197,15 @@ Library.addEventListener('click', () => {
     artistsBoxx.style.display = "none";
     MusicTab.style.display = "flex";
     Library.blur()
+    if (backButton.style.display == 'block') {
+        backButton.click()
+    }
+    if (backButton2.style.display == 'block') {
+        backButton2.click()
+    }
+    if (backButton3.style.display == 'block') {
+        backButton3.click()
+    }
 })
 
 Library2.addEventListener('click', () => {
@@ -606,15 +615,19 @@ navigator.mediaSession.setActionHandler(
     'pause', () => {playBtn.click()}
 );
 
-const addLovedMusic = (i, opt) => {
+const addLovedMusic = (item,i,opt) => {
     if (opt == 1) {
         if (custom_albums[0].items.includes(songs[i].id) == false) {
+            item.classList.add("active")
             custom_albums[0].items.push(songs[i].id);
+        } else {
+            item.classList.remove("active");
+            custom_albums[0].items.splice(custom_albums[0].items.indexOf(songs[i].id),1);
         }
     } else {
         custom_albums[0].items.splice(custom_albums[0].items.indexOf(songs[i].id),1);
         creatorBoxx.style.display = 'none';
-        customAlbumBox('99999', 'Liked Music', 'ㅤ', 'img/00001.jpg', 'Click ♥ button to add your fafourite songs to this album', custom_albums[0].items)    
+        customAlbumBox('99999', 'Liked Music', 'ㅤ', 'img/custom_cover/99999.jpg', 'Click ♥ button to add your fafourite songs to this album', custom_albums[0].items)    
     }
     
 }
@@ -626,17 +639,17 @@ const addSongItem = (number, i, coveralbum, temporary_album, songList_id, IdItem
     if (currentMusic === i) {
         item.classList.add('playing')
     }
+    classNameLoved = custom_albums[0].items.includes(songs[i].id) ? `loved active` : `loved`;
     item.innerHTML = `
-    <button class="run" onclick="activeMusic(${i}); this.blur();"><svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></button>
+    <button class="run" onclick="activeMusic(${i}); this.blur();"><svg xmlns="http://www.w3.org/2000/svg" height="15" width="15" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></button>
     <span>${number}</span>
     ` + ((coveralbum) ? `<div><img src=${songs[i].cover}></div>` : ``) + `
     <h5>
         ${songs[i].name}
         <div class="subtitle">${songs[i].artist}</div>
-    </h5>
-    
-    `+ (temporary_album.startsWith('9') ? `<button class="loved" onclick="addLovedMusic(${i},0); this.blur();"><svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></button>
-    `:`<button class="loved" onclick="addLovedMusic(${i},1); this.blur();"><svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path `+(custom_albums[0].items.includes(songs[i].id) ? `fill="#e1785a"` : ``)+` d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg></button>
+    </h5> 
+    `+ (temporary_album.startsWith('9') ? `<button class="loved" onclick="addLovedMusic(this, ${i},0); this.blur();"><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></button>
+    `:`<button class="${classNameLoved}" onclick="addLovedMusic(this,${i},1); this.blur();"><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg></button>
     `);
     songList.appendChild(item);
     };
@@ -744,8 +757,8 @@ for (let i = 0; i < songs.length; i++) {
 // Generate list of artists
 
 p = [];
-notAvailableArtists = ['Clever','Cardi B','nân','Ngơ','Cemeteries','Tyler Shaw','Chlöe','Jason Derulo','Jhorrmountain','Puri','Eric Nam','Estelle','Kansh','Liili','UPSAHL','Arctic Monkeys','LEARNING','Harm Franklin','Lil Wuyn','Young Thug','Chris Brown','Sia','ZAYN','Đen','Trí Dũng','Fishy','Groovie','Lil Uzi Vert','Cam','Jenevieve','Clams Casino','kyuuwaii','MinhLai','LeeHi','Anh Phan','Negav','sped up nightcore', 'ARIZONATEARS','bbygirl','DWELLS','Wxrdie','PAR SG','Vũ Thanh Vân','Saabirose','SIVAN','Nguyên','Seth','New$oulZ','THDC','Han Kim','Lã Thắng','Dfoxie37', 'Myhai',
-'VSOUL','MFREE','TUYEN VO','RAP VIỆT','Dick','DT','UMIE','Sweet Liquor','GREY D','B Ray','V#','Phùng Khánh Linh','Minh Lý','Wikin 25 Táo','Sáo','MASEW','Young H',"Sol'Bass",'Nah','Chú 13','Khói','Khánh DaLa','Bảo Uyên','Jay Kem','Khoi','Việt Anh','Tiên Tiên','Mahidu','NIEE', 'D.BLue','Phúc Du','$eadreak','W/N','DatG',
+notAvailableArtists = ['Clever','Cardi B','nân','Ashbeck','EI Londo','Playboi Carti','thuy','itsnk','Ngơ','Cemeteries','Tyler Shaw','Chlöe','Jason Derulo','Jhorrmountain','Puri','Eric Nam','Estelle','Kansh','Liili','UPSAHL','Arctic Monkeys','LEARNING','Harm Franklin','Lil Wuyn','Young Thug','Chris Brown','Sia','ZAYN','Đen','Trí Dũng','Fishy','Groovie','Lil Uzi Vert','Cam','Jenevieve','Clams Casino','kyuuwaii','MinhLai','LeeHi','Anh Phan','Negav','sped up nightcore', 'ARIZONATEARS','bbygirl','DWELLS','Wxrdie','PAR SG','Vũ Thanh Vân','Saabirose','SIVAN','Nguyên','Seth','New$oulZ','THDC','Han Kim','Lã Thắng','Dfoxie37', 'Myhai',
+'VSOUL','MFREE','TUYEN VO','RAP VIỆT','Dick','DT','UMIE','Sweet Liquor','V#','Phùng Khánh Linh','Minh Lý','Wikin 25 Táo','Sáo','MASEW','Young H',"Sol'Bass",'Nah','Chú 13','Khói','Khánh DaLa','Bảo Uyên','Jay Kem','Khoi','Việt Anh','Tiên Tiên','Mahidu','NIEE', 'D.BLue','Phúc Du','$eadreak','W/N','DatG',
 'Erik','Linh','Nâu','Orange','Ziv Zaifman','Michelle Williams','Austyn Johnson','Cameron Seely','Hugh Jackman','Keala Settle','Loren Allred','Daniel Everidge','Zac Efron','Zendaya','The Greatest Showman Ensemble','Young Crizzbe','Hoàng Dũng','Đạt G','HAST', 'Dab','RPT Orijinn', 'kis','DucMinh','Ronboogz', 'sy','KEI','Galaxyy', 'Kim Nguyen Martian' ]
 
 for (artist of artists) {
@@ -823,6 +836,12 @@ const customAlbumBox = (ID,albumname, creator, cover, description, items, establ
         coveralbum = false        
     } else {
         creatorBoxx.classList.remove('compilation')
+    }
+
+    if (ID.startsWith('9')) {
+        creatorBoxx.classList.add('liked');
+    } else {
+        creatorBoxx.classList.remove('liked');
     }
     // Banner creator's album
     const coverimg = document.querySelector('.cover-img');
@@ -938,7 +957,8 @@ const search = (a) => {
             <h5>
                 ${songs[i].name}
                 <div class="subtitle">${songs[i].artist}</div>
-            </h5><button class="loved" onclick="addLovedMusic(${i},1); this.blur();"><svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path `+(custom_albums[0].items.includes(songs[i].id) ? `fill="#e1785a"` : ``)+` d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg></button>
+            </h5>
+            <button class="loved" onclick="addLovedMusic(this,${i},1); this.blur();"><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path `+(custom_albums[0].items.includes(songs[i].id) ? `fill="#e1785a"` : ``)+` d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg></button>
             `;       
             songList.appendChild(li);
         }

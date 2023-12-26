@@ -1742,5 +1742,145 @@ songs = [
         path: "audio/00207.m4a",
         artist: 'hnhngan',
         cover: 'img/banner/00207.jpg'
+    },
+    {
+        id: '00208',
+        name: "Hello",
+        path: "audio/00208.m4a",
+        artist: 'Adele',
+        cover: 'img/banner/00208.jpg'
+    },
+    {
+        id: '00209',
+        name: "Easy On Me",
+        path: "audio/00209.m4a",
+        artist: 'Adele',
+        cover: 'img/banner/00209.jpg'
+    },
+    {
+        id: '00210',
+        name: "As the World Caves In",
+        path: "audio/00210.m4a",
+        artist: 'Sarah Cothran',
+        cover: 'img/banner/00210.jpg'
+    },
+    {
+        id: '00211',
+        name: "Sugar",
+        path: "audio/00211.m4a",
+        artist: 'Maroon 5',
+        cover: 'img/banner/00211.jpg'
+    },
+    {
+        id: '00212',
+        name: "Creep",
+        path: "audio/00212.m4a",
+        artist: 'Daniela Andrade',
+        cover: 'img/banner/00212.jpg'
+    },
+    {
+        id: '00213',
+        name: "No Surprises",
+        path: "audio/00213.m4a",
+        artist: 'Radiohead',
+        cover: 'img/banner/00213.jpg'
+    },
+    {
+        id: '00214',
+        name: "Lonely (with benny blanco)",
+        path: "audio/00214.m4a",
+        artist: 'Justin Bieber',
+        cover: 'img/banner/00004.jpg'
+    },
+    {
+        id: '00215',
+        name: "Creep",
+        path: "audio/00215.m4a",
+        artist: 'Radiohead',
+        cover: 'img/banner/00215.jpg'
+    },
+    {
+        id: '00216',
+        name: "tình yêu có nghĩa là gì?",
+        path: "audio/00216.m4a",
+        artist: 'tlinh',
+        cover: 'img/banner/00216.jpg'
+    },
+    {
+        id: '00217',
+        name: "những đốm sáng",
+        path: "audio/00217.m4a",
+        artist: 'tlinh',
+        cover: 'img/banner/00216.jpg'
+    },
+    {
+        id: '00218',
+        name: "Gimme Love",
+        path: "audio/00218.m4a",
+        artist: 'Joji',
+        cover: 'img/banner/00087.jpg'
+    },
+    {
+        id: '00219',
+        name: "La Vie En Rose",
+        path: "audio/00219.m4a",
+        artist: 'Daniela Andrade',
+        cover: 'img/banner/00219.jpg'
+    },
+    {
+        id: '00220',
+        name: "STAY",
+        path: "audio/00220.m4a",
+        artist: 'Daniela Andrade',
+        cover: 'img/banner/00220.jpg'
+    },
+    {
+        id: '00221',
+        name: "dự báo thời tiết hôm nay mưa",
+        path: "audio/00221.m4a",
+        artist: 'GREY D',
+        cover: 'img/banner/00221.jpg'
+    },
+    {
+        id: '00222',
+        name: "This Love",
+        path: "audio/00222.m4a",
+        artist: 'Maroon 5',
+        cover: 'img/banner/00222.jpg'
+    },
+    {
+        id: '00223',
+        name: "Booli",
+        path: "audio/00223.m4a",
+        artist: 'Ashbeck, EI Londo',
+        cover: 'img/banner/00223.jpg'
+    },
+    {
+        id: '00224',
+        name: "FE!N",
+        path: "audio/00224.m4a",
+        artist: 'Travis Scott, Playboi Carti',
+        cover: 'img/banner/00224.jpg'
+    },
+    {
+        id: '00225',
+        name: "girls like me don't cry",
+        path: "audio/00225.m4a",
+        artist: 'thuy',
+        cover: 'img/banner/00225.jpg'
+    },
+    {
+        id: '00226',
+        name: "Call Me",
+        path: "audio/00226.m4a",
+        artist: 'Wren Evans, itsnk',
+        cover: 'img/banner/00226.jpg'
+    },
+    {
+        id: '00227',
+        name: "người điên",
+        path: "audio/00227.m4a",
+        artist: 'tlinh',
+        cover: 'img/banner/00216.jpg'
     }
 ]

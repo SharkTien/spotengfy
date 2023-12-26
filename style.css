@@ -357,6 +357,9 @@ header nav ul li button {
 .creator-boxx.compilation .introduce-album {
     background: linear-gradient(to bottom, rgba(20,43,89,255), #111);
 }
+.creator-boxx.liked .introduce-album {
+    background: linear-gradient(to bottom, gray, #111);
+}
 
 .creator-boxx .cover-img, .artists-boxx .cover-artist {
     width: 100%;
@@ -431,6 +434,15 @@ header nav ul li button {
     height: 70%;
 }
 
+.songItemAlbum .loved.active svg,
+.songItem .loved.active svg {
+    fill: rgba(150,83,83,255);
+}
+
+.songItemalbum .loved svg,
+.songItem .loved svg {
+    fill: #fff;
+}
 
 .songItemAlbum,
 .songItem,
@@ -914,7 +926,7 @@ header nav ul li button {
     width: 50px;
     height: 25px;
     margin: 0;
-    right: 10px;
+    right: 20px;
     bottom: 68px;
 }
 
@@ -967,6 +979,8 @@ header nav ul li button {
 .play-btn.pause{
     animation: pulse 2s linear infinite;
 }
+
+
 
 
 @keyframes pulse {
