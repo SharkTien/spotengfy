@@ -602,6 +602,10 @@ navigator.mediaSession.setActionHandler(
     'play', () => {playBtn.click()}
 );
 
+navigator.mediaSession.setActionHandler(
+    'pause', () => {playBtn.click()}
+);
+
 const addLovedMusic = (i, opt) => {
     if (opt == 1) {
         if (custom_albums[0].items.includes(songs[i].id) == false) {
