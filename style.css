@@ -784,6 +784,7 @@ header nav ul li button {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
+    background-size: cover;
     box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.08);
     animation: rotate 20s linear infinite;
     animation-play-state: paused;
