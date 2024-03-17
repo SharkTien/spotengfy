@@ -700,7 +700,7 @@ const artistsBox = (artist_name) => {
     
     num = 0;
     for (let i = 0; i < songs.length; i++) {
-        if (songs[i].artist.includes(artist_name)) {
+        if (songs[i].artist.split(', ').includes(artist_name)) {
             num += 1;
             addSongItem(num, i, true,'', 'song-list-artists','songItemAlbum');
             albumtemp.push(i)

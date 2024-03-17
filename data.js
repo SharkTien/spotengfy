@@ -1882,5 +1882,19 @@ songs = [
         path: "audio/00227.m4a",
         artist: 'tlinh',
         cover: 'img/banner/00216.jpg'
-    }
+    },
+    {
+        id: '00228',
+        name: "Những Lời Hứa Bỏ Quên",
+        path: "audio/00228.m4a",
+        artist: 'Vũ',
+        cover: 'img/banner/00228.jpg'
+    },
+    {
+        id: '00229',
+        name: "Dành Hết Xuân Thì Để Chờ Nhau",
+        path: "audio/00229.m4a",
+        artist: 'Vũ, Hà Anh Tuấn',
+        cover: 'img/banner/00229.jpg'
+    },
 ]
