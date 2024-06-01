@@ -697,7 +697,7 @@ songs = [
         id: '10012',
         name: 'Có Em',
         path: 'audio/Có em - Madihu ft. Low G.mp3',
-        artist: 'Mahidu, Low G',
+        artist: 'Madihu, Low G',
         cover: 'img/banner/10012.jpg',
     },
     {
@@ -1897,4 +1897,116 @@ songs = [
         artist: 'Vũ, Hà Anh Tuấn',
         cover: 'img/banner/00229.jpg'
     },
+    {
+        id: '00230',
+        name: "Sau lời từ khước (Theme Song From 'MAI')",
+        path: "audio/00230.flac",
+        artist: 'Phan Mạnh Quỳnh',
+        cover: 'img/banner/00230.jpg'
+    },
+    {
+        id: '00231',
+        name: "Ngày ấy (Yesterday)",
+        path: "audio/00231.flac",
+        artist: 'Em Ellata',
+        cover: 'img/banner/00231.jpg'
+    },
+    {
+        id: '00232',
+        name: "Bước Qua Mùa Cô Đơn",
+        path: "audio/00232.flac",
+        artist: 'Vũ',
+        cover: 'img/banner/00232.jpg'
+    },
+    {
+        id: '00233',
+        name: "Tháng Tư Là Lời Nói Dối Của Em",
+        path: "audio/00233.flac",
+        artist: 'Hà Anh Tuấn',
+        cover: 'img/banner/00233.jpg'
+    },
+    {
+        id: '00234',
+        name: "Little Bit Better",
+        path: "audio/00234.flac",
+        artist: 'Caleb Hearn, ROSIE',
+        cover: 'img/banner/00234.jpg'
+    },
+    {
+        id: '00235',
+        name: "Phóng Đổ Tim Em",
+        path: "audio/00235.flac",
+        artist: 'Wren Evans, itsnk',
+        cover: 'img/banner/00235.jpg'
+    },
+    {
+        id: '00236',
+        name: "Cầu Vĩnh Tuy",
+        path: "audio/00236.flac",
+        artist: 'Wren Evans, itsnk',
+        cover: 'img/banner/00235.jpg'
+    },
+    {
+        id: '00237',
+        name: "Từng Quen",
+        path: "audio/00237.flac",
+        artist: 'Wren Evans, itsnk',
+        cover: 'img/banner/00235.jpg'
+    },
+    {
+        id: '00238',
+        name: "bé ơi từ từ",
+        path: "audio/00238.flac",
+        artist: 'Wren Evans, itsnk',
+        cover: 'img/banner/00235.jpg'
+    },
+    {
+        id: '00239',
+        name: "Lối Chơi (Interlude)",
+        path: "audio/00239.flac",
+        artist: 'Wren Evans, itsnk',
+        cover: 'img/banner/00235.jpg'
+    },
+    {
+        id: '00240',
+        name: "Tình Yêu Vĩ Mô",
+        path: "audio/00240.flac",
+        artist: 'Wren Evans, itsnk',
+        cover: 'img/banner/00235.jpg'
+    },
+    {
+        id: '00241',
+        name: "Việt Kiều",
+        path: "audio/00241.flac",
+        artist: 'Wren Evans, itsnk',
+        cover: 'img/banner/00235.jpg'
+    },
+    {
+        id: '00242',
+        name: "ĐĐĐ",
+        path: "audio/00242.flac",
+        artist: 'Wren Evans, itsnk',
+        cover: 'img/banner/00235.jpg'
+    },
+    {
+        id: '00243',
+        name: "Quyền Anh",
+        path: "audio/00243.flac",
+        artist: 'Wren Evans, itsnk',
+        cover: 'img/banner/00235.jpg'
+    },
+    {
+        id: '00244',
+        name: "Tò Te Tí",
+        path: "audio/00244.flac",
+        artist: 'Wren Evans, itsnk',
+        cover: 'img/banner/00235.jpg'
+    },
+    {
+        id: '00245',
+        name: "Vì Anh Đâu Có Biết",
+        path: "audio/00245.flac",
+        artist: 'Madihu, Vũ',
+        cover: 'img/banner/00245.jpg'
+    }
 ]

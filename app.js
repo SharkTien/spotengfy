@@ -757,8 +757,8 @@ for (let i = 0; i < songs.length; i++) {
 // Generate list of artists
 
 p = [];
-notAvailableArtists = ['Clever','Cardi B','nân','Ashbeck','EI Londo','Playboi Carti','thuy','itsnk','Ngơ','Cemeteries','Tyler Shaw','Chlöe','Jason Derulo','Jhorrmountain','Puri','Eric Nam','Estelle','Kansh','Liili','UPSAHL','Arctic Monkeys','LEARNING','Harm Franklin','Lil Wuyn','Young Thug','Chris Brown','Sia','ZAYN','Đen','Trí Dũng','Fishy','Groovie','Lil Uzi Vert','Cam','Jenevieve','Clams Casino','kyuuwaii','MinhLai','LeeHi','Anh Phan','Negav','sped up nightcore', 'ARIZONATEARS','bbygirl','DWELLS','Wxrdie','PAR SG','Vũ Thanh Vân','Saabirose','SIVAN','Nguyên','Seth','New$oulZ','THDC','Han Kim','Lã Thắng','Dfoxie37', 'Myhai',
-'VSOUL','MFREE','TUYEN VO','RAP VIỆT','Dick','DT','UMIE','Sweet Liquor','V#','Phùng Khánh Linh','Minh Lý','Wikin 25 Táo','Sáo','MASEW','Young H',"Sol'Bass",'Nah','Chú 13','Khói','Khánh DaLa','Bảo Uyên','Jay Kem','Khoi','Việt Anh','Tiên Tiên','Mahidu','NIEE', 'D.BLue','Phúc Du','$eadreak','W/N','DatG',
+notAvailableArtists = ['Clever','Cardi B','Caleb Hearn','ROSIE','nân','Ashbeck','EI Londo','Playboi Carti','thuy','itsnk','Ngơ','Cemeteries','Tyler Shaw','Chlöe','Jason Derulo','Jhorrmountain','Puri','Eric Nam','Estelle','Kansh','Liili','UPSAHL','Arctic Monkeys','LEARNING','Harm Franklin','Lil Wuyn','Young Thug','Chris Brown','Sia','ZAYN','Đen','Trí Dũng','Fishy','Groovie','Lil Uzi Vert','Cam','Jenevieve','Clams Casino','kyuuwaii','MinhLai','LeeHi','Anh Phan','Negav','sped up nightcore', 'ARIZONATEARS','bbygirl','DWELLS','Wxrdie','PAR SG','Vũ Thanh Vân','Saabirose','SIVAN','Nguyên','Seth','New$oulZ','THDC','Han Kim','Lã Thắng','Dfoxie37', 'Myhai',
+'VSOUL','MFREE','TUYEN VO','RAP VIỆT','Dick','DT','UMIE','Sweet Liquor','V#','Phùng Khánh Linh','Minh Lý','Wikin 25 Táo','Sáo','MASEW','Young H',"Sol'Bass",'Nah','Chú 13','Khói','Khánh DaLa','Bảo Uyên','Jay Kem','Khoi','Việt Anh','Tiên Tiên','NIEE', 'D.BLue','Phúc Du','$eadreak','W/N','DatG',
 'Erik','Linh','Nâu','Orange','Ziv Zaifman','Michelle Williams','Austyn Johnson','Cameron Seely','Hugh Jackman','Keala Settle','Loren Allred','Daniel Everidge','Zac Efron','Zendaya','The Greatest Showman Ensemble','Young Crizzbe','Hoàng Dũng','Đạt G','HAST', 'Dab','RPT Orijinn', 'kis','DucMinh','Ronboogz', 'sy','KEI','Galaxyy', 'Kim Nguyen Martian' ]
 
 for (artist of artists) {
@@ -795,7 +795,7 @@ const getAlbum = () => {
             <h1>${i.albumName}</h1>
             <div class="subtitle">${i.creator}</div>
         `;
-        li.addEventListener('click', () => customAlbumBox(i.id, i.albumName, i.creator, i.cover, i.description, i.items, ''));
+        li.addEventListener('click', () => customAlbumBox(i.id, i.albumName, i.creator, i.color, i.cover, i.description, i.items, ''));
         albumListcustom.appendChild(li);
     }
     
@@ -808,7 +808,7 @@ const getAlbum = () => {
             <h1>${i.albumName}</h1>
             <div class="subtitle">${i.creator}</div>
         `;
-        li.addEventListener('click', () => customAlbumBox(i.id, i.albumName, i.creator, i.cover, '', i.items, i.established));
+        li.addEventListener('click', () => customAlbumBox(i.id, i.albumName, i.creator, i.color, i.cover, '', i.items, i.established));
         albumListcompilation.appendChild(li);
     }
     
@@ -822,7 +822,7 @@ const getAlbum = () => {
     }
 }
 
-const customAlbumBox = (ID,albumname, creator, cover, description, items, established) => {    
+const customAlbumBox = (ID,albumname, creator, color, cover, description, items, established) => {    
     albumtemp = [];
     coveralbum = true;
     creatorBoxx.style.display = 'block';
@@ -832,7 +832,10 @@ const customAlbumBox = (ID,albumname, creator, cover, description, items, establ
         creatorBoxx.scrollTo(0,0);
     }
     if (ID.startsWith('1')) {
-        creatorBoxx.classList.add('compilation');
+        creatorBoxx.classList.add(`compilation`);
+        creatorBoxx.classList.remove('red');
+        creatorBoxx.classList.remove('blue');
+        creatorBoxx.classList.add(color);
         coveralbum = false        
     } else {
         creatorBoxx.classList.remove('compilation')

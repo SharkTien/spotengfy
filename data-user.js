@@ -3,6 +3,7 @@ custom_albums = [
         id: '99999',
         albumName: 'Liked Music',
         creator: 'Playlist',
+        color: 'red',
         cover: 'img/custom_cover/99999.jpg',
         description: 'Click ♥ button to add your fafourite songs to this album',
         items: []
@@ -11,6 +12,7 @@ custom_albums = [
         id: '00000',
         albumName: 'Xanax',
         creator: 'Huxn',
+        color: 'red',
         cover: 'img/custom_cover/00000.jpg',
         description: 'A place when I need some "medicine" to help me heal and fix my emotions from past traumas and kinda works for a me. So I hope it works for you too. Btw, this is a reflection of my music taste. If you wanna know me better, just let it do its work.',
         items: ['00031','00032','00033','00034','00035','00030','00036','00037','00038','00021','00039','00040','00041','00042','00043','00014',
@@ -29,6 +31,7 @@ custom_albums = [
         id: '00001',
         albumName: 'Dream?',
         creator: 'White_wolf',
+        color: 'red',
         cover: 'img/custom_cover/00001.jpg',
         description: 'Nothin here just a dream. Not a nightmare just a memory. Btw I hope u guys understand sth, exactly what? idk.',
         items: ['00048','00105','10003','10004','10005','10006','10007','10008','10009','10010','10011','10012','10013','10014','10015',
@@ -39,34 +42,42 @@ custom_albums = [
     {
         id: '00002',
         albumName: 'Ebullacholia',
-        creator: 'ryteg',
+        creator: 'Teng',
+        color: 'green',
         cover: 'img/custom_cover/00002.jpg',
         description: "If you feel melancholic or a little depressed, here can be your analgesic.",
-        items: ['00000','00042','00030','00147','00073','00003','00010','00017','00178',
-                '00011','00061','00059','00149','00171','00151','10044','00172','00173','00174','00175','10040','00191','00192','00193',
-                '00111','00194','00195','00196','00197','00034','00198','00199','00205','00200','00006','00201','00202','00203','00018',
-                '00204','00206','00207'
+        items: ['00230','00231','00232','00229','00228','00233','00234','00245'
                 ]
     },
     {
         id: '00003',
         albumName: 'hot damn',
-        creator: 'Tâm Nguyên',
+        creator: 'Tammy',
+        color: 'red',
         cover: 'img/custom_cover/00003.jpg',
         description: "hot, sexy, chaotic & dominance",
         items: ['00179','00180','00181','00182','00172','00183','00184','00185','00186','00187','00188','00189','00190'
-            
         ]
     },
     
 ]
 
-
 compilation_albums = [
+    {
+        id: '10002',
+        albumName: 'LOI CHOI: The Neo Pop Punk',
+        creator: 'WrenEvans • itsnk',
+        color: 'red',
+        established: '2023',
+        cover: 'img/banner/00235.jpg',
+        items: ['00235','00226', '00236','00237','00238','00239','00240','00241','00242','00243','00244'
+        ]
+    },
     {
         id: '10001',
         albumName: 'The Greatest Showman (Original Motion Picture Soundtrack)',
         creator: 'Various Artists',
+        color: 'blue',
         established: '2017',
         cover: 'img/custom_cover/10001.jpg',
         items: ['00160','00161','00162','00163','00164','00165','00166','00167','00168','00169','00170'

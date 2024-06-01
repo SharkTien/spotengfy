@@ -354,9 +354,14 @@ header nav ul li button {
     background: linear-gradient(to bottom, rgba(147,71,71,255), #111);
 }
 
-.creator-boxx.compilation .introduce-album {
+.creator-boxx.compilation.blue .introduce-album {
     background: linear-gradient(to bottom, rgba(20,43,89,255), #111);
 }
+
+.creator-boxx.compilation.red .introduce-album {
+    background: linear-gradient(to bottom, rgba(147,71,71,255), #111);
+}
+
 .creator-boxx.liked .introduce-album {
     background: linear-gradient(to bottom, gray, #111);
 }
