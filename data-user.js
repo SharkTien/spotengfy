@@ -46,7 +46,7 @@ custom_albums = [
         color: 'green',
         cover: 'img/custom_cover/00002.jpg',
         description: "If you feel melancholic or a little depressed, here can be your analgesic.",
-        items: ['00230','00231','00232','00229','00228','00233','00234','00245'
+        items: ['00230','00231','00232','00229','00228','00233','00234','00245','00246','00247'
                 ]
     },
     {

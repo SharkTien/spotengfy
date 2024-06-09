@@ -2008,5 +2008,26 @@ songs = [
         path: "audio/00245.flac",
         artist: 'Madihu, Vũ',
         cover: 'img/banner/00245.jpg'
+    },
+    {
+        id: '00246',
+        name: "Đừng Làm Trái Tim Anh Đau",
+        path: "audio/00246.flac",
+        artist: 'Sơn Tùng M-TP',
+        cover: 'img/banner/00246.jpg'
+    },
+    {
+        id2: '00247',
+        name: "mona lisa",
+        path: "audio/00247.flac",
+        artist: 'mxmtoon',
+        cover: 'img/banner/00247.jpg'
+    },
+    {
+        id2: '00248',
+        name: "Chúng Ta Của Tương Lai",
+        path: "audio/00248.flac",
+        artist: 'Sơn Tùng M-TP',
+        cover: 'img/banner/00248.jpg'
     }
 ]
