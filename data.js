@@ -2017,14 +2017,14 @@ songs = [
         cover: 'img/banner/00246.jpg'
     },
     {
-        id2: '00247',
+        id: '00247',
         name: "mona lisa",
         path: "audio/00247.flac",
         artist: 'mxmtoon',
         cover: 'img/banner/00247.jpg'
     },
     {
-        id2: '00248',
+        id: '00248',
         name: "Chúng Ta Của Tương Lai",
         path: "audio/00248.flac",
         artist: 'Sơn Tùng M-TP',
